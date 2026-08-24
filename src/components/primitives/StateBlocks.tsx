@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 type FrameProps = {
   readonly children: ReactNode;
-  readonly className?: string;
+  readonly className?: string | undefined;
 };
 
 function StateFrame({ children, className }: FrameProps) {
@@ -25,8 +25,8 @@ export function LoadingState({
   label = "Loading",
   className,
 }: {
-  readonly label?: string;
-  readonly className?: string;
+  readonly label?: string | undefined;
+  readonly className?: string | undefined;
 }) {
   return (
     <StateFrame className={className}>
@@ -57,9 +57,9 @@ export function EmptyState({
   className,
 }: {
   readonly title: string;
-  readonly description?: string;
-  readonly action?: ReactNode;
-  readonly className?: string;
+  readonly description?: string | undefined;
+  readonly action?: ReactNode | undefined;
+  readonly className?: string | undefined;
 }) {
   return (
     <StateFrame className={className}>
@@ -82,7 +82,7 @@ export function PermissionDeniedState({
   className,
 }: {
   readonly resource: string;
-  readonly className?: string;
+  readonly className?: string | undefined;
 }) {
   return (
     <StateFrame className={cn("border-severe/30 bg-severe-subtle/40", className)}>

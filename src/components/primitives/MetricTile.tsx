@@ -4,11 +4,11 @@ import { StatusBadge, type StatusBadgeProps } from "./StatusBadge";
 export type MetricTileProps = {
   readonly label: string;
   readonly value: string;
-  readonly unit?: string;
+  readonly unit?: string | undefined;
   readonly note: string;
-  readonly tone?: StatusBadgeProps["tone"];
-  readonly badge?: string;
-  readonly className?: string;
+  readonly tone?: StatusBadgeProps["tone"] | undefined;
+  readonly badge?: string | undefined;
+  readonly className?: string | undefined;
 };
 
 /** Compact figure tile. No trend arrows or claims that the data cannot support. */

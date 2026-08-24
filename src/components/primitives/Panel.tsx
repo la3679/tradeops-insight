@@ -3,12 +3,12 @@ import { cn } from "@/lib/utils";
 
 export type PanelProps = {
   readonly title: string;
-  readonly description?: string;
-  readonly actions?: ReactNode;
+  readonly description?: string | undefined;
+  readonly actions?: ReactNode | undefined;
   readonly children: ReactNode;
-  readonly className?: string;
+  readonly className?: string | undefined;
   /** Renders the panel body without inner padding (useful for tables). */
-  readonly flush?: boolean;
+  readonly flush?: boolean | undefined;
 };
 
 /** A titled content region. Uses <section> so it is a real landmark child. */

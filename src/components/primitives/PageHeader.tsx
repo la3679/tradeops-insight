@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 export type PageHeaderProps = {
   readonly title: string;
   readonly summary: string;
-  readonly actions?: ReactNode;
-  readonly meta?: ReactNode;
+  readonly actions?: ReactNode | undefined;
+  readonly meta?: ReactNode | undefined;
 };
 
 export function PageHeader({ title, summary, actions, meta }: PageHeaderProps) {
