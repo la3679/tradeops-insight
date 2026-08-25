@@ -1,0 +1,59 @@
+[project]
+name = "tradeops-copilot"
+version = "0.1.0"
+description = "Synthetic fixed-income exception investigation and governed copilot workflow."
+requires-python = ">=3.12,<3.14"
+license = "Apache-2.0"
+dependencies = []
+
+[dependency-groups]
+dev = [
+  "httpx>=0.28.1,<1",
+  "mypy>=1.18,<2",
+  "pytest>=8.4,<9",
+  "pytest-cov>=7,<8",
+  "ruff>=0.13,<1",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["apps/api"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers -ra"
+testpaths = ["apps/api/tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["tradeops_api"]
+
+[tool.coverage.report]
+fail_under = 90
+show_missing = true
+skip_covered = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "A", "C4", "DTZ", "PTH", "RUF"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["tradeops_api"]
+
+[tool.ruff.lint.per-file-ignores]
+"apps/api/tests/**/*.py" = ["S101"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+plugins = ["pydantic.mypy"]
+mypy_path = ["apps/api/src"]
+
+[[tool.mypy.overrides]]
+module = ["uvicorn.*"]
+ignore_missing_imports = true
