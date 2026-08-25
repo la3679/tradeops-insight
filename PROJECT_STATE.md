@@ -4,7 +4,7 @@ Last updated: 2026-08-24 (America/Phoenix)
 
 ## Resume checkpoint
 
-- Current phase: Phase 1 developer-platform gate passes locally; Phase 2 domain/data implementation is in progress.
+- Current phase: Phase 2 relational schema and complete deterministic rule catalogue pass locally; repository/API behavior is in progress.
 - Branch: `main`
 - Last pushed commit before this checkpoint: `84f6180` (`feat(domain): detect settlement-date mismatches`)
 - GitHub: `la3679/tradeops-insight`, private, default branch `main`.
@@ -13,7 +13,8 @@ Last updated: 2026-08-24 (America/Phoenix)
 - Runtime implemented: dependency-free FastAPI health contracts, validated process settings, and an inert Celery worker composition root.
 - Runtime implemented: immutable synthetic trade facts and the versioned settlement-date mismatch rule with weekend/explicit-holiday handling and review/escalation routes.
 - Runtime implemented: Compose-managed PostgreSQL, Redis, Keycloak, OpenTelemetry Collector, API, worker, and web services plus pinned GitHub CI jobs.
-- Runtime not implemented: persistence behavior, authentication, model providers, remaining exception-rule families, public-data adapters, and observability integrations.
+- Runtime implemented: first Alembic schema for the full documented relational entity set and a deterministic 2,400-trade generator with 300 exception-bearing records across all twelve required categories.
+- Runtime not implemented: repository behavior, authentication, model providers, public-data adapters, and observability integrations.
 
 ## Safety boundaries
 
@@ -34,7 +35,7 @@ Last updated: 2026-08-24 (America/Phoenix)
 | Lint                          | Passed with warnings | `npm run lint`; zero errors and six inherited Fast Refresh export warnings         |
 | Frontend unit/component tests | Passed               | `npm run test`; 11 tests across four files                                         |
 | Automated accessibility smoke | Passed               | `npm run test:a11y`; axe reported zero violations in the rendered overview fixture |
-| Backend/domain tests          | Passed               | 23 tests; strict mypy and Ruff passed; 100% measured branch coverage               |
+| Backend/domain tests          | Passed               | 30 tests; strict mypy and Ruff passed; 100% measured branch coverage               |
 | Compose configuration         | Passed               | `docker compose config --quiet`                                                    |
 | Local stack startup           | Passed               | Seven services started; API, web, Keycloak, and collector probes succeeded         |
 | Integration/E2E tests         | Not run              | Database/queue integration and Playwright harness have not been added yet          |
@@ -55,8 +56,8 @@ Last updated: 2026-08-24 (America/Phoenix)
 
 ## Next three actions
 
-1. Implement reviewed persistence contracts, the first Alembic schema, and repositories.
-2. Complete the deterministic synthetic generator and remaining exception-rule families.
+1. Implement reviewed repository contracts and PostgreSQL integration tests.
+2. Add source provenance, document ingestion, retrieval, and adversarial evidence tests.
 3. Add typed API contracts and integration tests over the local PostgreSQL/Redis stack.
 
 ## Known limitations

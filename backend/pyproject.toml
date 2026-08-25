@@ -36,7 +36,11 @@ testpaths = ["tests"]
 
 [tool.coverage.run]
 branch = true
-omit = ["src/tradeops/**/__main__.py"]
+omit = [
+  "src/tradeops/**/__main__.py",
+  # Declarative schema definitions contain no executable business behavior.
+  "src/tradeops/adapters/persistence/models.py",
+]
 
 [tool.mypy]
 python_version = "3.14"
