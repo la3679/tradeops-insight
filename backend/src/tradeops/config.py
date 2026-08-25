@@ -24,6 +24,8 @@ class Settings(BaseSettings):
     oidc_issuer: str = "http://127.0.0.1:8080/realms/tradeops"
     oidc_audience: str = "tradeops-api"
     demo_dataset_size: int = Field(default=120, ge=24, le=5000)
+    max_request_bytes: int = Field(default=1_048_576, ge=1024, le=10_485_760)
+    rate_limit_per_minute: int = Field(default=120, ge=1, le=10_000)
 
 
 @lru_cache
