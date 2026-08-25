@@ -17,6 +17,11 @@ from tradeops_domain.reconciliation.lifecycle import (
     detect_lifecycle_exceptions,
     trade_fingerprint,
 )
+from tradeops_domain.reconciliation.reconciler import (
+    ReconciliationContext,
+    ReconciliationReport,
+    reconcile_trade,
+)
 from tradeops_domain.reconciliation.reference import ReferencePolicy, detect_reference_exceptions
 
 __all__ = [
@@ -24,6 +29,8 @@ __all__ = [
     "FinancialTolerance",
     "MemoConflict",
     "PayloadIssue",
+    "ReconciliationContext",
+    "ReconciliationReport",
     "ReferencePolicy",
     "SettlementPolicy",
     "calculate_settlement_date",
@@ -32,5 +39,6 @@ __all__ = [
     "detect_financial_exceptions",
     "detect_lifecycle_exceptions",
     "detect_reference_exceptions",
+    "reconcile_trade",
     "trade_fingerprint",
 ]

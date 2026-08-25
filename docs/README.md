@@ -13,6 +13,7 @@ TradeOps Copilot documentation is organized by the decision or audience it suppo
 - [API conventions](api/conventions.md) — versioning, correlation, errors, concurrency, and idempotency.
 - [Domain glossary](product/domain-glossary.md) — synthetic trade, exception, evidence, and review language.
 - [Exception catalog](product/exception-catalog.md) — the twelve rule families and review posture.
+- [Deterministic reconciliation](data/reconciliation.md) — rule inputs, order, outputs, and replay contract.
 
 ## Documentation map
 
@@ -23,7 +24,7 @@ TradeOps Copilot documentation is organized by the decision or audience it suppo
 | `api/`          | API conventions, examples, and generated schema guidance          | In progress |
 | `operations/`   | Local development, deployment, observability, and runbooks        | In progress |
 | `security/`     | Threat model, authentication, authorization, and secure defaults  | Planned     |
-| `data/`         | Synthetic-data contracts, lineage, and source licensing           | Planned     |
+| `data/`         | Synthetic-data contracts, lineage, and source licensing           | In progress |
 | `evaluations/`  | Quality dimensions, fixtures, and reproducible evaluation reports | Planned     |
 
 ## Documentation rules
