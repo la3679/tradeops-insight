@@ -1,7 +1,7 @@
 .PHONY: bootstrap dev seed data-sync format lint typecheck test test-integration test-e2e eval security docs-check build verify
 
 bootstrap:
-	bun install --frozen-lockfile
+	npx bun@1.4.0 install --frozen-lockfile
 	uv sync --directory backend --all-groups --locked
 
 dev:
@@ -9,10 +9,10 @@ dev:
 
 seed:
 	docker compose up -d postgres redis api
-	docker compose exec api alembic upgrade head
+	docker compose exec api uv run --locked --no-dev alembic upgrade head
 
 data-sync:
-	uv run --directory backend --locked pytest tests/adapters/test_provenance.py
+	uv run --directory backend --locked pytest --no-cov tests/adapters/test_provenance.py
 
 format:
 	npx prettier --write .
@@ -31,7 +31,7 @@ test:
 	uv run --directory backend --locked pytest
 
 test-integration:
-	uv run --directory backend --locked pytest tests/adapters tests/worker
+	uv run --directory backend --locked pytest --no-cov tests/adapters tests/worker
 
 test-e2e:
 	npm run test:e2e
@@ -40,8 +40,8 @@ eval:
 	uv run --directory backend --locked python ../scripts/run_eval.py
 
 security:
-	bun audit --production
-	uv export --directory backend --locked --no-dev --no-emit-project --format requirements-txt --output-file backend/requirements-audit.txt
+	npx bun@1.4.0 audit --production
+	uv export --directory backend --locked --no-dev --no-emit-project --format requirements-txt --output-file requirements-audit.txt
 	uvx pip-audit -r backend/requirements-audit.txt
 
 docs-check:

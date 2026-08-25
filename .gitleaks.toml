@@ -1,7 +1,7 @@
 [extend]
 useDefault = true
 
-[[allowlists]]
+[allowlist]
 description = "Deterministic synthetic idempotency fixtures and parameter names"
 regexTarget = "line"
 regexes = [

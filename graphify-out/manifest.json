@@ -500,8 +500,8 @@
     "semantic_hash": ""
   },
   "PROJECT_STATE.md": {
-    "mtime": 1787632676.366065,
-    "ast_hash": "cbaecb1e69d45d572f84498e7f7ca5db",
+    "mtime": 1787665392.4368467,
+    "ast_hash": "1832a5b44d604c8ec34d258cd52e3023",
     "semantic_hash": ""
   },
   "README.md": {
@@ -1045,8 +1045,8 @@
     "semantic_hash": ""
   },
   ".github/workflows/security.yml": {
-    "mtime": 1787632429.957981,
-    "ast_hash": "8ed61e21b41791d3b944a37161c613c2",
+    "mtime": 1787665076.3044713,
+    "ast_hash": "8c1c0ef754c685784cc1eaa266a95159",
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
@@ -1292,6 +1292,11 @@
   "docs/assets/exception-workspace.png": {
     "mtime": 1787631519.4779763,
     "ast_hash": "1dd8dbb9e3892b2350d5427da5007d03",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th.md": {
+    "mtime": 1787664596.0102344,
+    "ast_hash": "11af1bd88c4ebcef0f0de7ae03f20d78",
     "semantic_hash": ""
   }
 }
