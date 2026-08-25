@@ -67,6 +67,13 @@ async def test_embedding_rejects_blank_input() -> None:
         await DeterministicEmbeddingProvider().embed(("",))
 
 
+@pytest.mark.anyio
+async def test_embedding_handles_text_without_word_tokens() -> None:
+    vector = (await DeterministicEmbeddingProvider(dimensions=8).embed(("!!!",)))[0]
+
+    assert vector == (1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)
+
+
 @pytest.mark.parametrize("dimensions", [7, 4_097])
 def test_embedding_dimensions_are_bounded(dimensions: int) -> None:
     with pytest.raises(DomainValidationError, match="dimensions"):

@@ -4,7 +4,12 @@ version = "0.1.0"
 description = "Mock-first providers, retrieval ports, and governed TradeOps workflow orchestration."
 requires-python = ">=3.12,<3.14"
 license = "Apache-2.0"
-dependencies = ["pydantic>=2.13,<3", "tradeops-domain>=0.1.0"]
+dependencies = [
+  "faiss-cpu>=1.12,<2",
+  "numpy>=2,<3",
+  "pydantic>=2.13,<3",
+  "tradeops-domain>=0.1.0",
+]
 
 [tool.uv.sources]
 tradeops-domain = { workspace = true }

@@ -55,5 +55,5 @@ plugins = ["pydantic.mypy"]
 mypy_path = ["apps/api/src", "packages/ai_orchestration/src", "packages/data_connectors/src", "packages/domain/src"]
 
 [[tool.mypy.overrides]]
-module = ["uvicorn.*"]
+module = ["faiss.*", "uvicorn.*"]
 ignore_missing_imports = true
