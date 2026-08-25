@@ -1,41 +1,71 @@
-# TradeOps Insight
+# TradeOps Copilot
 
-Create a new project named "TradeOps Copilot". This first change is only the reviewed frontend foundation, not the complete application.
+TradeOps Copilot is an independent educational portfolio project for investigating synthetic fixed-income trade exceptions. The current repository contains the reviewed React/TypeScript frontend foundation and the Phase 0 product and architecture baseline.
 
-Product: an independent educational portfolio operations console for investigating synthetic fixed-income trade exceptions. It is not affiliated with any financial institution, does not execute trades, and uses only synthetic/public data.
+> TradeOps Copilot is an independent educational portfolio project built with synthetic and public data. It is not affiliated with, endorsed by, or derived from the proprietary systems of any financial institution. It does not execute trades or provide financial advice.
 
-Build only:
-- React + TypeScript strict-mode foundation using the project’s supported Vite, Tailwind, and shadcn/ui stack
-- accessible application shell with left navigation, top status bar, responsive layout, keyboard-visible focus states, and semantic landmarks
-- deep navy/slate neutral palette, restrained teal verified state, amber pending state, red only for genuine high severity
-- compact professional typography and 8-point spacing; no crypto/neon aesthetic, glassmorphism, giant marketing cards, gradients, or fake market drama
-- route structure/placeholders for Overview, Exception Queue, Knowledge, Evaluations, Observability, Audit, Settings, and About
-- a polished Overview screen with clearly labeled deterministic mock data only
-- a persistent visible portfolio disclaimer in About and a concise footer
-- reusable design tokens and small focused components
-- loading, empty, and permission-denied state primitives
-- no backend, database, authentication implementation, API secrets, financial rules, or model calls in this change
-- no casual any, no production console.log, and no invented performance/accuracy claims
+## Current scope
 
-Include a concise root AGENTS.md stating that security, authorization, financial rules, and backend logic are owned outside Lovable; all Lovable output requires review and tests. Keep the change coherent and componentized.
+Implemented:
 
-This project was built with [Lovable](https://lovable.dev).
+- Accessible TanStack Start application shell and responsive navigation
+- Overview dashboard with clearly labeled deterministic synthetic fixtures
+- Route foundations for exceptions, knowledge, evaluations, observability, audit, settings, and About
+- Shared design tokens and focused UI primitives
+- Loading, empty, and permission-denied presentation states
+- Project-scoped Graphify code graph for lower-context repository navigation
 
-## Build with Lovable
+Not yet implemented:
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/d5b87042-8fcf-41cf-aa66-075bf21f45ba).
+- Backend API, worker, persistence, authentication, or authorization
+- Financial and exception-classification rules
+- Model providers, RAG, agent orchestration, or external data adapters
+- End-to-end workflows or production deployment
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+See [PROJECT_STATE.md](PROJECT_STATE.md) for the exact checkpoint and next actions.
 
-## Development
+## Local development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requirements:
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+- Node.js 22 or another version supported by the pinned frontend toolchain
+- npm 11, or Bun when available
+
+```powershell
+git clone https://github.com/la3679/tradeops-insight.git
+cd tradeops-insight
+npm install
 npm run dev
 ```
+
+The default development server prints its local URL after startup. No API key or paid service is required for the current frontend foundation.
+
+## Verification
+
+```powershell
+npm run verify
+```
+
+Individual checks are also available:
+
+```powershell
+npm run format:check
+npm run lint
+npm run typecheck
+npm run build
+```
+
+The test harness is the next frontend-platform milestone and is not yet represented by a passing test command.
+
+## Architecture and safety
+
+- [Product brief](docs/product-brief.md)
+- [Architecture baseline](docs/architecture.md)
+- [ADR 0001: Modular monolith with a background worker](docs/adr/0001-modular-monolith-and-worker.md)
+- [Repository agent boundaries](AGENTS.md)
+
+All trade and operational data must remain deterministic and synthetic. Public reference fixtures require source and license provenance before they are committed. Backend security, authorization, financial rules, persistence, and model behavior are outside Lovable's ownership boundary.
+
+## Lovable
+
+The frontend foundation is connected to the private [TradeOps Insight Lovable project](https://lovable.dev/projects/d5b87042-8fcf-41cf-aa66-075bf21f45ba). Commits pushed to the connected branch sync to Lovable. Lovable output remains draft material that requires review and tests.

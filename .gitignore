@@ -20,6 +20,10 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Graphify local interpreter/cache state
+graphify-out/.graphify_root
+graphify-out/cache/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
