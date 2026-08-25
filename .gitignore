@@ -8,6 +8,14 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.venv/
+backend/.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 dist
 dist-ssr
 .output
@@ -24,6 +32,7 @@ dist-ssr
 graphify-out/.graphify_root
 graphify-out/cache/
 graphify-out/graph.html
+graphify-out/20*/
 
 # Editor directories and files
 .vscode/*

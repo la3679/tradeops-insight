@@ -15,7 +15,14 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
-    "verify": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run build"
+    "verify:web": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run build",
+    "backend:sync": "uv sync --directory backend --all-groups --locked",
+    "backend:test": "uv run --directory backend --locked pytest",
+    "backend:lint": "uv run --directory backend --locked ruff check .",
+    "backend:format:check": "uv run --directory backend --locked ruff format --check .",
+    "backend:typecheck": "uv run --directory backend --locked mypy src tests",
+    "verify:backend": "npm run backend:format:check && npm run backend:lint && npm run backend:typecheck && npm run backend:test",
+    "verify": "npm run verify:web && npm run verify:backend"
   },
   "overrides": {
     "rolldown": "1.2.1"
