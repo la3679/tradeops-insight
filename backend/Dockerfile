@@ -10,6 +10,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
 COPY pyproject.toml uv.lock README.md ./
 RUN uv sync --locked --no-dev --no-install-project
 COPY src ./src
+COPY alembic.ini ./
+COPY migrations ./migrations
 RUN uv sync --locked --no-dev
 
 RUN groupadd --system tradeops && useradd --system --gid tradeops --home-dir /app tradeops \

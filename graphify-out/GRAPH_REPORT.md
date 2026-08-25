@@ -1,16 +1,16 @@
-# Graph Report - tradeops-insight  (2026-08-24)
+# Graph Report - tradeops-insight  (2026-08-25)
 
 ## Corpus Check
-- 258 files · ~65,704 words
+- 259 files · ~65,867 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1559 nodes · 2841 edges · 184 communities (85 shown, 99 thin omitted)
+- 1564 nodes · 2845 edges · 187 communities (88 shown, 99 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 181 edges (avg confidence: 0.52)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1c94de90`
+- Built from commit: `66472924`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -124,20 +124,20 @@
 - clsx
 - ADR 0003: Relational persistence and idempotency
 - ADR 0004: Offline retrieval and explicit agent graph
-- cmdk
+- settings.tsx
 - exception-triage.md
 - tools.py
 - exceptions_.$exceptionId.tsx
 - ReconciliationPolicy
-- Panel.tsx
+- exceptions.tsx
 - ReconciliationInput
 - api/app.py
 - Settings
 - EventDeliveryTracker
 - Design System Master File
-- exceptions.tsx
+- audit.tsx
 - build_golden_dataset
-- StatusBadge.tsx
+- select.tsx
 - health.py
 - SyntheticTrade
 - session.py
@@ -171,7 +171,7 @@
 - @playwright/test
 - prettier
 - @testing-library/jest-dom
-- @testing-library/react
+- Q: Okay i am back you can start again and complete the project just tell me how much time will it take now and how much is already complete
 - @testing-library/user-event
 - @types/jest-axe
 - @types/node
@@ -187,6 +187,9 @@
 - k6-smoke.js
 - k6-websocket.js
 - check_docs.py
+- input-otp.tsx
+- @axe-core/playwright
+- class-variance-authority
 
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 231 edges
@@ -215,15 +218,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (184 total, 99 thin omitted)
+## Communities (187 total, 99 thin omitted)
 
 ### Community 0 - "routeTree.gen.ts"
-Cohesion: 0.09
-Nodes (28): getRouter(), Route, Route, Route, Route, Route, Route, Route (+20 more)
+Cohesion: 0.10
+Nodes (27): getRouter(), Route, Route, Route, Route, Route, Route, AboutRoute (+19 more)
 
 ### Community 1 - "cn"
 Cohesion: 0.06
-Nodes (53): AccordionContent, AccordionItem, AccordionTrigger, Avatar, AvatarFallback, AvatarImage, Card, CardContent (+45 more)
+Nodes (46): AccordionContent, AccordionItem, AccordionTrigger, Avatar, AvatarFallback, AvatarImage, Card, CardContent (+38 more)
 
 ### Community 2 - "sidebar.tsx"
 Cohesion: 0.06
@@ -231,27 +234,27 @@ Nodes (40): Input, Separator, SheetContent, SheetContentProps, SheetDescription,
 
 ### Community 3 - "devDependencies"
 Cohesion: 0.29
-Nodes (7): @axe-core/playwright, eslint-plugin-react-refresh, jsdom, devDependencies, @axe-core/playwright, eslint-plugin-react-refresh, jsdom
+Nodes (7): eslint-plugin-react-refresh, jsdom, devDependencies, eslint-plugin-react-refresh, jsdom, @testing-library/react, @testing-library/react
 
 ### Community 4 - "compilerOptions"
 Cohesion: 0.06
 Nodes (32): DOM, DOM.Iterable, ES2022, eslint.config.js, src/**/*.ts, src/**/*.tsx, vite/client, vite.config.ts (+24 more)
 
 ### Community 5 - "index.tsx"
-Cohesion: 0.25
-Nodes (12): CategoryBars(), ExceptionTable(), QueueLaneList(), CategoryBreakdown, dataAsOf, QueueLane, queueLanes, recentExceptions (+4 more)
+Cohesion: 0.19
+Nodes (17): CategoryBars(), ExceptionTable(), severityTone, stateTone, QueueLaneList(), CategoryBreakdown, dataAsOf, ExceptionRow (+9 more)
 
 ### Community 6 - "pagination.tsx"
 Cohesion: 0.12
 Nodes (21): AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter(), AlertDialogHeader(), AlertDialogOverlay, AlertDialogTitle (+13 more)
 
 ### Community 7 - "utils.ts"
-Cohesion: 0.08
-Nodes (19): Badge(), BadgeProps, badgeVariants, Checkbox, HoverCardContent, InputOTP, InputOTPGroup, InputOTPSeparator (+11 more)
+Cohesion: 0.09
+Nodes (15): Badge(), BadgeProps, badgeVariants, Checkbox, HoverCardContent, PopoverContent, Progress, Slider (+7 more)
 
 ### Community 8 - "__root.tsx"
 Cohesion: 0.12
-Nodes (13): AppFooter(), AppShell(), SideNav(), SideNavProps, StatusBar(), DemoRoleProvider(), LovableErrorOptions, LovableEvents (+5 more)
+Nodes (12): AppFooter(), AppShell(), SideNav(), SideNavProps, DemoRoleProvider(), LovableErrorOptions, LovableEvents, reportLovableError() (+4 more)
 
 ### Community 9 - "server.ts"
 Cohesion: 0.16
@@ -283,7 +286,7 @@ Nodes (10): get_settings(), Validated process configuration with safe local defa
 
 ### Community 16 - "dependencies"
 Cohesion: 0.15
-Nodes (13): class-variance-authority, lucide-react, dependencies, class-variance-authority, lucide-react, @radix-ui/react-checkbox, @radix-ui/react-progress, react (+5 more)
+Nodes (13): cmdk, lucide-react, dependencies, cmdk, lucide-react, @radix-ui/react-checkbox, @radix-ui/react-progress, react (+5 more)
 
 ### Community 17 - "chart.tsx"
 Cohesion: 0.25
@@ -413,21 +416,25 @@ Nodes (3): manifest_version, notice, sources
 Cohesion: 0.50
 Nodes (3): ADR 0003: Relational persistence and idempotency, Consequences, Decision
 
+### Community 118 - "settings.tsx"
+Cohesion: 0.19
+Nodes (12): StatusBar(), StatusBarProps, DemoRoleContext, DemoRoleContextValue, useDemoRole(), DemoRole, demoRoles, AuditPage() (+4 more)
+
 ### Community 120 - "tools.py"
 Cohesion: 0.12
 Nodes (25): ApplyResolutionInput, ApplyResolutionOutput, calculate_settlement_date(), compare_trade_versions(), CompareTradeVersionsInput, CompareTradeVersionsOutput, FieldDifference, BaseModel (+17 more)
 
 ### Community 121 - "exceptions_.$exceptionId.tsx"
-Cohesion: 0.13
-Nodes (23): StatusBarProps, DemoRoleContext, DemoRoleContextValue, ApiError, approveWorkflow(), AuditEvent, auditSchema, DemoRole (+15 more)
+Cohesion: 0.17
+Nodes (19): ApiError, approveWorkflow(), AuditEvent, auditSchema, exceptionListSchema, exceptionSchema, getAuditEvents(), getException() (+11 more)
 
 ### Community 122 - "ReconciliationPolicy"
 Cohesion: 0.16
 Nodes (19): Dependency-free domain layer for deterministic facts and rules., evaluate_reconciliation(), Evaluate all twelve rule families without network or model calls., Versioned tolerances and freshness bounds for the catalogue., ReconciliationPolicy, _baseline(), generate_synthetic_dataset(), _inject() (+11 more)
 
-### Community 123 - "Panel.tsx"
-Cohesion: 0.13
-Nodes (13): PlaceholderSectionProps, PageHeader(), PageHeaderProps, Panel(), PanelProps, Route, scopeExcluded, scopeIncluded (+5 more)
+### Community 123 - "exceptions.tsx"
+Cohesion: 0.11
+Nodes (20): PlaceholderSectionProps, MetricTile(), MetricTileProps, PageHeader(), PageHeaderProps, Panel(), PanelProps, badgeVariants (+12 more)
 
 ### Community 124 - "ReconciliationInput"
 Cohesion: 0.20
@@ -449,17 +456,17 @@ Nodes (13): ApplicationEvent, DeliveryResult, EventDeliveryTracker, Idempotent, 
 Cohesion: 0.11
 Nodes (17): Additional Forbidden Patterns, Anti-Patterns (Do NOT Use), Buttons, Cards, Color Palette, Component Specs, Design System Master File, Global Rules (+9 more)
 
-### Community 129 - "exceptions.tsx"
-Cohesion: 0.22
-Nodes (13): EmptyState(), FrameProps, LoadingState(), PermissionDeniedState(), SkeletonRows(), StateFrame(), useDemoRole(), getExceptions() (+5 more)
+### Community 129 - "audit.tsx"
+Cohesion: 0.42
+Nodes (6): EmptyState(), FrameProps, LoadingState(), PermissionDeniedState(), SkeletonRows(), StateFrame()
 
 ### Community 130 - "build_golden_dataset"
 Cohesion: 0.19
 Nodes (12): BaselineResult, build_golden_dataset(), GoldenCase, Versioned, deterministic mock evaluation dataset., Return exactly 50 independently named synthetic evaluation cases., Evaluate the deterministic expected routing contract without a model key., run_mock_baseline(), Deterministic evaluation datasets and runners. (+4 more)
 
-### Community 131 - "StatusBadge.tsx"
-Cohesion: 0.19
-Nodes (11): severityTone, stateTone, MetricTile(), MetricTileProps, badgeVariants, StatusBadge(), StatusBadgeProps, ExceptionRow (+3 more)
+### Community 131 - "select.tsx"
+Cohesion: 0.25
+Nodes (7): SelectContent, SelectItem, SelectLabel, SelectScrollDownButton, SelectScrollUpButton, SelectSeparator, SelectTrigger
 
 ### Community 132 - "health.py"
 Cohesion: 0.26
@@ -509,15 +516,23 @@ Nodes (3): Evidence and known limitations, Scope, Verification
 Cohesion: 0.50
 Nodes (4): Boundaries, Report a vulnerability, Security Policy, Supported version
 
+### Community 166 - "Q: Okay i am back you can start again and complete the project just tell me how much time will it take now and how much is already complete"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: Okay i am back you can start again and complete the project just tell me how much time will it take now and how much is already complete, Source Nodes
+
+### Community 184 - "input-otp.tsx"
+Cohesion: 0.40
+Nodes (4): InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot
+
 ## Knowledge Gaps
-- **394 isolated node(s):** `tradeops-copilot-backend`, `$schema`, `style`, `rsc`, `tsx` (+389 more)
+- **397 isolated node(s):** `tradeops-copilot-backend`, `$schema`, `style`, `rsc`, `tsx` (+392 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **99 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `cn()` connect `cn` to `exceptions.tsx`, `sidebar.tsx`, `StatusBadge.tsx`, `pagination.tsx`, `utils.ts`, `__root.tsx`, `carousel.tsx`, `command.tsx`, `menubar.tsx`, `form.tsx`, `navigation-menu.tsx`, `chart.tsx`, `Panel.tsx`, `alert.tsx`, `table.tsx`, `breadcrumb.tsx`?**
+- **Why does `cn()` connect `cn` to `audit.tsx`, `sidebar.tsx`, `select.tsx`, `pagination.tsx`, `utils.ts`, `__root.tsx`, `carousel.tsx`, `command.tsx`, `menubar.tsx`, `form.tsx`, `navigation-menu.tsx`, `chart.tsx`, `input-otp.tsx`, `exceptions.tsx`, `alert.tsx`, `table.tsx`, `breadcrumb.tsx`?**
   _High betweenness centrality (0.042) - this node is a cross-community bridge._
 - **Why does `ReconciliationPolicy` connect `ReconciliationPolicy` to `Principal`, `models.py`, `SettlementDatePolicy`, `ReconciliationInput`?**
   _High betweenness centrality (0.025) - this node is a cross-community bridge._
@@ -530,4 +545,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 19 inferred relationships involving `SettlementDatePolicy` (e.g. with `ReconciliationFinding` and `ReconciliationInput`) actually correct?**
   _`SettlementDatePolicy` has 19 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `tradeops-copilot-backend`, `$schema`, `style` to the rest of the system?**
-  _394 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _397 weakly-connected nodes found - possible documentation gaps or missing edges._

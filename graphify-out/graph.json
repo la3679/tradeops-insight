@@ -199,6 +199,45 @@
       "norm_label": "unavailablemodelprovider"
     },
     {
+      "label": "StatusBarProps",
+      "file_type": "code",
+      "source_file": "src/components/shell/StatusBar.tsx",
+      "source_location": "L7",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_components_shell_statusbar_statusbarprops",
+      "community": 118,
+      "community_name": "settings.tsx",
+      "norm_label": "statusbarprops"
+    },
+    {
+      "label": "DemoRoleContextValue",
+      "file_type": "code",
+      "source_file": "src/lib/demo-role.tsx",
+      "source_location": "L12",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_lib_demo_role_demorolecontextvalue",
+      "community": 118,
+      "community_name": "settings.tsx",
+      "norm_label": "demorolecontextvalue"
+    },
+    {
+      "label": "DemoRole",
+      "file_type": "code",
+      "source_file": "src/lib/tradeops-api.ts",
+      "source_location": "L4",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_lib_tradeops_api_demorole",
+      "community": 118,
+      "community_name": "settings.tsx",
+      "norm_label": "demorole"
+    },
+    {
       "label": "ApplyResolutionInput",
       "file_type": "code",
       "source_file": "backend/src/tradeops/orchestration/tools.py",
@@ -329,32 +368,6 @@
       "norm_label": "toolconflicterror"
     },
     {
-      "label": "StatusBarProps",
-      "file_type": "code",
-      "source_file": "src/components/shell/StatusBar.tsx",
-      "source_location": "L7",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_components_shell_statusbar_statusbarprops",
-      "community": 121,
-      "community_name": "exceptions_.$exceptionId.tsx",
-      "norm_label": "statusbarprops"
-    },
-    {
-      "label": "DemoRoleContextValue",
-      "file_type": "code",
-      "source_file": "src/lib/demo-role.tsx",
-      "source_location": "L12",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_lib_demo_role_demorolecontextvalue",
-      "community": 121,
-      "community_name": "exceptions_.$exceptionId.tsx",
-      "norm_label": "demorolecontextvalue"
-    },
-    {
       "label": "ApiError",
       "file_type": "code",
       "source_file": "src/lib/tradeops-api.ts",
@@ -379,19 +392,6 @@
       "community": 121,
       "community_name": "exceptions_.$exceptionId.tsx",
       "norm_label": "auditevent"
-    },
-    {
-      "label": "DemoRole",
-      "file_type": "code",
-      "source_file": "src/lib/tradeops-api.ts",
-      "source_location": "L4",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_lib_tradeops_api_demorole",
-      "community": 121,
-      "community_name": "exceptions_.$exceptionId.tsx",
-      "norm_label": "demorole"
     },
     {
       "label": "ReviewDecision",
@@ -468,8 +468,21 @@
       "_origin": "ast",
       "id": "src_components_placeholdersection_placeholdersectionprops",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "placeholdersectionprops"
+    },
+    {
+      "label": "MetricTileProps",
+      "file_type": "code",
+      "source_file": "src/components/primitives/MetricTile.tsx",
+      "source_location": "L4",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_components_primitives_metrictile_metrictileprops",
+      "community": 123,
+      "community_name": "exceptions.tsx",
+      "norm_label": "metrictileprops"
     },
     {
       "label": "PageHeaderProps",
@@ -481,7 +494,7 @@
       "_origin": "ast",
       "id": "src_components_primitives_pageheader_pageheaderprops",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "pageheaderprops"
     },
     {
@@ -494,8 +507,21 @@
       "_origin": "ast",
       "id": "src_components_primitives_panel_panelprops",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "panelprops"
+    },
+    {
+      "label": "StatusBadgeProps",
+      "file_type": "code",
+      "source_file": "src/components/primitives/StatusBadge.tsx",
+      "source_location": "L20",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_components_primitives_statusbadge_statusbadgeprops",
+      "community": 123,
+      "community_name": "exceptions.tsx",
+      "norm_label": "statusbadgeprops"
     },
     {
       "label": "ExceptionFinding",
@@ -676,7 +702,7 @@
       "_origin": "ast",
       "id": "src_components_primitives_stateblocks_frameprops",
       "community": 129,
-      "community_name": "exceptions.tsx",
+      "community_name": "audit.tsx",
       "norm_label": "frameprops"
     },
     {
@@ -704,71 +730,6 @@
       "community": 130,
       "community_name": "build_golden_dataset",
       "norm_label": "goldencase"
-    },
-    {
-      "label": "MetricTileProps",
-      "file_type": "code",
-      "source_file": "src/components/primitives/MetricTile.tsx",
-      "source_location": "L4",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_components_primitives_metrictile_metrictileprops",
-      "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "metrictileprops"
-    },
-    {
-      "label": "StatusBadgeProps",
-      "file_type": "code",
-      "source_file": "src/components/primitives/StatusBadge.tsx",
-      "source_location": "L20",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_components_primitives_statusbadge_statusbadgeprops",
-      "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "statusbadgeprops"
-    },
-    {
-      "label": "ExceptionRow",
-      "file_type": "code",
-      "source_file": "src/data/overview.ts",
-      "source_location": "L44",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_data_overview_exceptionrow",
-      "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "exceptionrow"
-    },
-    {
-      "label": "ReviewState",
-      "file_type": "code",
-      "source_file": "src/data/overview.ts",
-      "source_location": "L7",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_data_overview_reviewstate",
-      "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "reviewstate"
-    },
-    {
-      "label": "Severity",
-      "file_type": "code",
-      "source_file": "src/data/overview.ts",
-      "source_location": "L6",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "src_data_overview_severity",
-      "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "severity"
     },
     {
       "label": "HealthResponse",
@@ -1850,6 +1811,19 @@
       "norm_label": "categorybreakdown"
     },
     {
+      "label": "ExceptionRow",
+      "file_type": "code",
+      "source_file": "src/data/overview.ts",
+      "source_location": "L44",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_data_overview_exceptionrow",
+      "community": 5,
+      "community_name": "index.tsx",
+      "norm_label": "exceptionrow"
+    },
+    {
       "label": "QueueLane",
       "file_type": "code",
       "source_file": "src/data/overview.ts",
@@ -1861,6 +1835,32 @@
       "community": 5,
       "community_name": "index.tsx",
       "norm_label": "queuelane"
+    },
+    {
+      "label": "ReviewState",
+      "file_type": "code",
+      "source_file": "src/data/overview.ts",
+      "source_location": "L7",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_data_overview_reviewstate",
+      "community": 5,
+      "community_name": "index.tsx",
+      "norm_label": "reviewstate"
+    },
+    {
+      "label": "Severity",
+      "file_type": "code",
+      "source_file": "src/data/overview.ts",
+      "source_location": "L6",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "src_data_overview_severity",
+      "community": 5,
+      "community_name": "index.tsx",
+      "norm_label": "severity"
     },
     {
       "label": "SummaryMetric",
@@ -2450,6 +2450,66 @@
       "norm_label": "upgrade()"
     },
     {
+      "label": "StatusBar()",
+      "file_type": "code",
+      "source_file": "src/components/shell/StatusBar.tsx",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_shell_statusbar_statusbar",
+      "community": 118,
+      "community_name": "settings.tsx",
+      "norm_label": "statusbar()"
+    },
+    {
+      "label": "useDemoRole()",
+      "file_type": "code",
+      "source_file": "src/lib/demo-role.tsx",
+      "source_location": "L36",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_demo_role_usedemorole",
+      "community": 118,
+      "community_name": "settings.tsx",
+      "norm_label": "usedemorole()"
+    },
+    {
+      "label": "AuditPage()",
+      "file_type": "code",
+      "source_file": "src/routes/audit.tsx",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_routes_audit_auditpage",
+      "community": 118,
+      "community_name": "settings.tsx",
+      "norm_label": "auditpage()"
+    },
+    {
+      "label": "ExceptionsPage()",
+      "file_type": "code",
+      "source_file": "src/routes/exceptions.tsx",
+      "source_location": "L36",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_routes_exceptions_exceptionspage",
+      "community": 118,
+      "community_name": "settings.tsx",
+      "norm_label": "exceptionspage()"
+    },
+    {
+      "label": "SettingsPage()",
+      "file_type": "code",
+      "source_file": "src/routes/settings.tsx",
+      "source_location": "L17",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_routes_settings_settingspage",
+      "community": 118,
+      "community_name": "settings.tsx",
+      "norm_label": "settingspage()"
+    },
+    {
       "label": "CommandDialog()",
       "file_type": "code",
       "source_file": "src/components/ui/command.tsx",
@@ -2630,6 +2690,18 @@
       "norm_label": "getexception()"
     },
     {
+      "label": "getExceptions()",
+      "file_type": "code",
+      "source_file": "src/lib/tradeops-api.ts",
+      "source_location": "L82",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_lib_tradeops_api_getexceptions",
+      "community": 121,
+      "community_name": "exceptions_.$exceptionId.tsx",
+      "norm_label": "getexceptions()"
+    },
+    {
       "label": "request()",
       "file_type": "code",
       "source_file": "src/lib/tradeops-api.ts",
@@ -2806,8 +2878,20 @@
       "_origin": "ast",
       "id": "src_components_placeholdersection_placeholdersection",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "placeholdersection()"
+    },
+    {
+      "label": "MetricTile()",
+      "file_type": "code",
+      "source_file": "src/components/primitives/MetricTile.tsx",
+      "source_location": "L15",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_primitives_metrictile_metrictile",
+      "community": 123,
+      "community_name": "exceptions.tsx",
+      "norm_label": "metrictile()"
     },
     {
       "label": "PageHeader()",
@@ -2818,7 +2902,7 @@
       "_origin": "ast",
       "id": "src_components_primitives_pageheader_pageheader",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "pageheader()"
     },
     {
@@ -2830,8 +2914,20 @@
       "_origin": "ast",
       "id": "src_components_primitives_panel_panel",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "panel()"
+    },
+    {
+      "label": "StatusBadge()",
+      "file_type": "code",
+      "source_file": "src/components/primitives/StatusBadge.tsx",
+      "source_location": "L23",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_components_primitives_statusbadge_statusbadge",
+      "community": 123,
+      "community_name": "exceptions.tsx",
+      "norm_label": "statusbadge()"
     },
     {
       "label": "AboutPage()",
@@ -2842,8 +2938,20 @@
       "_origin": "ast",
       "id": "src_routes_about_aboutpage",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "aboutpage()"
+    },
+    {
+      "label": "EvaluationsPage()",
+      "file_type": "code",
+      "source_file": "src/routes/evaluations.tsx",
+      "source_location": "L19",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "src_routes_evaluations_evaluationspage",
+      "community": 123,
+      "community_name": "exceptions.tsx",
+      "norm_label": "evaluationspage()"
     },
     {
       "label": "KnowledgePage()",
@@ -2854,7 +2962,7 @@
       "_origin": "ast",
       "id": "src_routes_knowledge_knowledgepage",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "knowledgepage()"
     },
     {
@@ -2866,7 +2974,7 @@
       "_origin": "ast",
       "id": "src_routes_observability_observabilitypage",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "observabilitypage()"
     },
     {
@@ -3190,7 +3298,7 @@
       "_origin": "ast",
       "id": "src_components_primitives_stateblocks_emptystate",
       "community": 129,
-      "community_name": "exceptions.tsx",
+      "community_name": "audit.tsx",
       "norm_label": "emptystate()"
     },
     {
@@ -3202,7 +3310,7 @@
       "_origin": "ast",
       "id": "src_components_primitives_stateblocks_loadingstate",
       "community": 129,
-      "community_name": "exceptions.tsx",
+      "community_name": "audit.tsx",
       "norm_label": "loadingstate()"
     },
     {
@@ -3214,7 +3322,7 @@
       "_origin": "ast",
       "id": "src_components_primitives_stateblocks_permissiondeniedstate",
       "community": 129,
-      "community_name": "exceptions.tsx",
+      "community_name": "audit.tsx",
       "norm_label": "permissiondeniedstate()"
     },
     {
@@ -3226,7 +3334,7 @@
       "_origin": "ast",
       "id": "src_components_primitives_stateblocks_skeletonrows",
       "community": 129,
-      "community_name": "exceptions.tsx",
+      "community_name": "audit.tsx",
       "norm_label": "skeletonrows()"
     },
     {
@@ -3238,68 +3346,8 @@
       "_origin": "ast",
       "id": "src_components_primitives_stateblocks_stateframe",
       "community": 129,
-      "community_name": "exceptions.tsx",
+      "community_name": "audit.tsx",
       "norm_label": "stateframe()"
-    },
-    {
-      "label": "useDemoRole()",
-      "file_type": "code",
-      "source_file": "src/lib/demo-role.tsx",
-      "source_location": "L36",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_lib_demo_role_usedemorole",
-      "community": 129,
-      "community_name": "exceptions.tsx",
-      "norm_label": "usedemorole()"
-    },
-    {
-      "label": "getExceptions()",
-      "file_type": "code",
-      "source_file": "src/lib/tradeops-api.ts",
-      "source_location": "L82",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_lib_tradeops_api_getexceptions",
-      "community": 129,
-      "community_name": "exceptions.tsx",
-      "norm_label": "getexceptions()"
-    },
-    {
-      "label": "AuditPage()",
-      "file_type": "code",
-      "source_file": "src/routes/audit.tsx",
-      "source_location": "L17",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_routes_audit_auditpage",
-      "community": 129,
-      "community_name": "exceptions.tsx",
-      "norm_label": "auditpage()"
-    },
-    {
-      "label": "ExceptionsPage()",
-      "file_type": "code",
-      "source_file": "src/routes/exceptions.tsx",
-      "source_location": "L36",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_routes_exceptions_exceptionspage",
-      "community": 129,
-      "community_name": "exceptions.tsx",
-      "norm_label": "exceptionspage()"
-    },
-    {
-      "label": "SettingsPage()",
-      "file_type": "code",
-      "source_file": "src/routes/settings.tsx",
-      "source_location": "L17",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_routes_settings_settingspage",
-      "community": 129,
-      "community_name": "exceptions.tsx",
-      "norm_label": "settingspage()"
     },
     {
       "label": "MenubarGroup()",
@@ -3420,42 +3468,6 @@
       "community": 130,
       "community_name": "build_golden_dataset",
       "norm_label": "test_mock_baseline_is_replayable()"
-    },
-    {
-      "label": "MetricTile()",
-      "file_type": "code",
-      "source_file": "src/components/primitives/MetricTile.tsx",
-      "source_location": "L15",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_primitives_metrictile_metrictile",
-      "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "metrictile()"
-    },
-    {
-      "label": "StatusBadge()",
-      "file_type": "code",
-      "source_file": "src/components/primitives/StatusBadge.tsx",
-      "source_location": "L23",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_primitives_statusbadge_statusbadge",
-      "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "statusbadge()"
-    },
-    {
-      "label": "EvaluationsPage()",
-      "file_type": "code",
-      "source_file": "src/routes/evaluations.tsx",
-      "source_location": "L19",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_routes_evaluations_evaluationspage",
-      "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "evaluationspage()"
     },
     {
       "label": "liveness()",
@@ -5030,18 +5042,6 @@
       "norm_label": "sidenav()"
     },
     {
-      "label": "StatusBar()",
-      "file_type": "code",
-      "source_file": "src/components/shell/StatusBar.tsx",
-      "source_location": "L12",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "src_components_shell_statusbar_statusbar",
-      "community": 8,
-      "community_name": "__root.tsx",
-      "norm_label": "statusbar()"
-    },
-    {
       "label": "DemoRoleProvider()",
       "file_type": "code",
       "source_file": "src/lib/demo-role.tsx",
@@ -5439,10 +5439,10 @@
     {
       "label": "Route",
       "file_type": "code",
-      "source_file": "src/routes/audit.tsx",
-      "source_location": "L15",
+      "source_file": "src/routes/about.tsx",
+      "source_location": "L10",
       "_origin": "ast",
-      "id": "src_routes_audit_route",
+      "id": "src_routes_about_route",
       "community": 0,
       "community_name": "routeTree.gen.ts",
       "norm_label": "route"
@@ -5450,10 +5450,10 @@
     {
       "label": "Route",
       "file_type": "code",
-      "source_file": "src/routes/evaluations.tsx",
-      "source_location": "L8",
+      "source_file": "src/routes/audit.tsx",
+      "source_location": "L15",
       "_origin": "ast",
-      "id": "src_routes_evaluations_route",
+      "id": "src_routes_audit_route",
       "community": 0,
       "community_name": "routeTree.gen.ts",
       "norm_label": "route"
@@ -5498,17 +5498,6 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "src_routes_root_route",
-      "community": 0,
-      "community_name": "routeTree.gen.ts",
-      "norm_label": "route"
-    },
-    {
-      "label": "Route",
-      "file_type": "code",
-      "source_file": "src/routes/settings.tsx",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "src_routes_settings_route",
       "community": 0,
       "community_name": "routeTree.gen.ts",
       "norm_label": "route"
@@ -6161,94 +6150,6 @@
       "community": 1,
       "community_name": "cn",
       "norm_label": "scrollbar"
-    },
-    {
-      "label": "select.tsx",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_ui_select",
-      "community": 1,
-      "community_name": "cn",
-      "norm_label": "select.tsx"
-    },
-    {
-      "label": "SelectContent",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L63",
-      "_origin": "ast",
-      "id": "src_components_ui_select_selectcontent",
-      "community": 1,
-      "community_name": "cn",
-      "norm_label": "selectcontent"
-    },
-    {
-      "label": "SelectItem",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L107",
-      "_origin": "ast",
-      "id": "src_components_ui_select_selectitem",
-      "community": 1,
-      "community_name": "cn",
-      "norm_label": "selectitem"
-    },
-    {
-      "label": "SelectLabel",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L95",
-      "_origin": "ast",
-      "id": "src_components_ui_select_selectlabel",
-      "community": 1,
-      "community_name": "cn",
-      "norm_label": "selectlabel"
-    },
-    {
-      "label": "SelectScrollDownButton",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L49",
-      "_origin": "ast",
-      "id": "src_components_ui_select_selectscrolldownbutton",
-      "community": 1,
-      "community_name": "cn",
-      "norm_label": "selectscrolldownbutton"
-    },
-    {
-      "label": "SelectScrollUpButton",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L35",
-      "_origin": "ast",
-      "id": "src_components_ui_select_selectscrollupbutton",
-      "community": 1,
-      "community_name": "cn",
-      "norm_label": "selectscrollupbutton"
-    },
-    {
-      "label": "SelectSeparator",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L129",
-      "_origin": "ast",
-      "id": "src_components_ui_select_selectseparator",
-      "community": 1,
-      "community_name": "cn",
-      "norm_label": "selectseparator"
-    },
-    {
-      "label": "SelectTrigger",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "src_components_ui_select_selecttrigger",
-      "community": 1,
-      "community_name": "cn",
-      "norm_label": "selecttrigger"
     },
     {
       "label": "tabs.tsx",
@@ -8157,26 +8058,81 @@
       "norm_label": "decision"
     },
     {
-      "label": "cmdk",
+      "label": "StatusBar.tsx",
       "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L72",
+      "source_file": "src/components/shell/StatusBar.tsx",
+      "source_location": "L1",
       "_origin": "ast",
-      "id": "package_dependencies_cmdk",
+      "id": "src_components_shell_statusbar",
       "community": 118,
-      "community_name": "cmdk",
-      "norm_label": "cmdk"
+      "community_name": "settings.tsx",
+      "norm_label": "statusbar.tsx"
     },
     {
-      "label": "cmdk",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L72",
+      "label": "demo-role.tsx",
+      "file_type": "code",
+      "source_file": "src/lib/demo-role.tsx",
+      "source_location": "L1",
       "_origin": "ast",
-      "id": "cmdk",
+      "id": "src_lib_demo_role",
       "community": 118,
-      "community_name": "cmdk",
-      "norm_label": "cmdk"
+      "community_name": "settings.tsx",
+      "norm_label": "demo-role.tsx"
+    },
+    {
+      "label": "DemoRoleContext",
+      "file_type": "code",
+      "source_file": "src/lib/demo-role.tsx",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "src_lib_demo_role_demorolecontext",
+      "community": 118,
+      "community_name": "settings.tsx",
+      "norm_label": "demorolecontext"
+    },
+    {
+      "label": "demoRoles",
+      "file_type": "code",
+      "source_file": "src/lib/tradeops-api.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "src_lib_tradeops_api_demoroles",
+      "community": 118,
+      "community_name": "settings.tsx",
+      "norm_label": "demoroles"
+    },
+    {
+      "label": "settings.tsx",
+      "file_type": "code",
+      "source_file": "src/routes/settings.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_routes_settings",
+      "community": 118,
+      "community_name": "settings.tsx",
+      "norm_label": "settings.tsx"
+    },
+    {
+      "label": "Route",
+      "file_type": "code",
+      "source_file": "src/routes/settings.tsx",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "src_routes_settings_route",
+      "community": 118,
+      "community_name": "settings.tsx",
+      "norm_label": "route"
+    },
+    {
+      "label": "sources",
+      "file_type": "code",
+      "source_file": "src/routes/settings.tsx",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "src_routes_settings_sources",
+      "community": 118,
+      "community_name": "settings.tsx",
+      "norm_label": "sources"
     },
     {
       "label": "exception-triage.md",
@@ -8476,39 +8432,6 @@
       "norm_label": "typed tool schema, authorization, conflict, and deterministic behavior tests."
     },
     {
-      "label": "StatusBar.tsx",
-      "file_type": "code",
-      "source_file": "src/components/shell/StatusBar.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_shell_statusbar",
-      "community": 121,
-      "community_name": "exceptions_.$exceptionId.tsx",
-      "norm_label": "statusbar.tsx"
-    },
-    {
-      "label": "demo-role.tsx",
-      "file_type": "code",
-      "source_file": "src/lib/demo-role.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_lib_demo_role",
-      "community": 121,
-      "community_name": "exceptions_.$exceptionId.tsx",
-      "norm_label": "demo-role.tsx"
-    },
-    {
-      "label": "DemoRoleContext",
-      "file_type": "code",
-      "source_file": "src/lib/demo-role.tsx",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "src_lib_demo_role_demorolecontext",
-      "community": 121,
-      "community_name": "exceptions_.$exceptionId.tsx",
-      "norm_label": "demorolecontext"
-    },
-    {
       "label": "tradeops-api.ts",
       "file_type": "code",
       "source_file": "src/lib/tradeops-api.ts",
@@ -8529,17 +8452,6 @@
       "community": 121,
       "community_name": "exceptions_.$exceptionId.tsx",
       "norm_label": "auditschema"
-    },
-    {
-      "label": "demoRoles",
-      "file_type": "code",
-      "source_file": "src/lib/tradeops-api.ts",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "src_lib_tradeops_api_demoroles",
-      "community": 121,
-      "community_name": "exceptions_.$exceptionId.tsx",
-      "norm_label": "demoroles"
     },
     {
       "label": "exceptionListSchema",
@@ -8758,8 +8670,19 @@
       "_origin": "ast",
       "id": "src_components_placeholdersection",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "placeholdersection.tsx"
+    },
+    {
+      "label": "MetricTile.tsx",
+      "file_type": "code",
+      "source_file": "src/components/primitives/MetricTile.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_primitives_metrictile",
+      "community": 123,
+      "community_name": "exceptions.tsx",
+      "norm_label": "metrictile.tsx"
     },
     {
       "label": "PageHeader.tsx",
@@ -8769,7 +8692,7 @@
       "_origin": "ast",
       "id": "src_components_primitives_pageheader",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "pageheader.tsx"
     },
     {
@@ -8780,7 +8703,7 @@
       "_origin": "ast",
       "id": "src_components_primitives_panel",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "panel.tsx"
     },
     {
@@ -8791,8 +8714,30 @@
       "_origin": "ast",
       "id": "src_components_primitives_presentationprimitives_test",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "presentationprimitives.test.tsx"
+    },
+    {
+      "label": "StatusBadge.tsx",
+      "file_type": "code",
+      "source_file": "src/components/primitives/StatusBadge.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_primitives_statusbadge",
+      "community": 123,
+      "community_name": "exceptions.tsx",
+      "norm_label": "statusbadge.tsx"
+    },
+    {
+      "label": "badgeVariants",
+      "file_type": "code",
+      "source_file": "src/components/primitives/StatusBadge.tsx",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "src_components_primitives_statusbadge_badgevariants",
+      "community": 123,
+      "community_name": "exceptions.tsx",
+      "norm_label": "badgevariants"
     },
     {
       "label": "about.tsx",
@@ -8802,19 +8747,8 @@
       "_origin": "ast",
       "id": "src_routes_about",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "about.tsx"
-    },
-    {
-      "label": "Route",
-      "file_type": "code",
-      "source_file": "src/routes/about.tsx",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "src_routes_about_route",
-      "community": 123,
-      "community_name": "Panel.tsx",
-      "norm_label": "route"
     },
     {
       "label": "scopeExcluded",
@@ -8824,7 +8758,7 @@
       "_origin": "ast",
       "id": "src_routes_about_scopeexcluded",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "scopeexcluded"
     },
     {
@@ -8835,8 +8769,63 @@
       "_origin": "ast",
       "id": "src_routes_about_scopeincluded",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "scopeincluded"
+    },
+    {
+      "label": "evaluations.tsx",
+      "file_type": "code",
+      "source_file": "src/routes/evaluations.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_routes_evaluations",
+      "community": 123,
+      "community_name": "exceptions.tsx",
+      "norm_label": "evaluations.tsx"
+    },
+    {
+      "label": "cases",
+      "file_type": "code",
+      "source_file": "src/routes/evaluations.tsx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_routes_evaluations_cases",
+      "community": 123,
+      "community_name": "exceptions.tsx",
+      "norm_label": "cases"
+    },
+    {
+      "label": "Route",
+      "file_type": "code",
+      "source_file": "src/routes/evaluations.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_routes_evaluations_route",
+      "community": 123,
+      "community_name": "exceptions.tsx",
+      "norm_label": "route"
+    },
+    {
+      "label": "exceptions.tsx",
+      "file_type": "code",
+      "source_file": "src/routes/exceptions.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_routes_exceptions",
+      "community": 123,
+      "community_name": "exceptions.tsx",
+      "norm_label": "exceptions.tsx"
+    },
+    {
+      "label": "severityTone",
+      "file_type": "code",
+      "source_file": "src/routes/exceptions.tsx",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "src_routes_exceptions_severitytone",
+      "community": 123,
+      "community_name": "exceptions.tsx",
+      "norm_label": "severitytone"
     },
     {
       "label": "knowledge.tsx",
@@ -8846,7 +8835,7 @@
       "_origin": "ast",
       "id": "src_routes_knowledge",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "knowledge.tsx"
     },
     {
@@ -8857,7 +8846,7 @@
       "_origin": "ast",
       "id": "src_routes_knowledge_route",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "route"
     },
     {
@@ -8868,7 +8857,7 @@
       "_origin": "ast",
       "id": "src_routes_knowledge_sources",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "sources"
     },
     {
@@ -8879,7 +8868,7 @@
       "_origin": "ast",
       "id": "src_routes_knowledge_stages",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "stages"
     },
     {
@@ -8890,7 +8879,7 @@
       "_origin": "ast",
       "id": "src_routes_observability",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "observability.tsx"
     },
     {
@@ -8901,7 +8890,7 @@
       "_origin": "ast",
       "id": "src_routes_observability_route",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "route"
     },
     {
@@ -8912,7 +8901,7 @@
       "_origin": "ast",
       "id": "src_routes_observability_services",
       "community": 123,
-      "community_name": "Panel.tsx",
+      "community_name": "exceptions.tsx",
       "norm_label": "services"
     },
     {
@@ -9583,7 +9572,7 @@
       "_origin": "ast",
       "id": "src_components_primitives_stateblocks",
       "community": 129,
-      "community_name": "exceptions.tsx",
+      "community_name": "audit.tsx",
       "norm_label": "stateblocks.tsx"
     },
     {
@@ -9594,7 +9583,7 @@
       "_origin": "ast",
       "id": "src_components_primitives_stateblocks_test",
       "community": 129,
-      "community_name": "exceptions.tsx",
+      "community_name": "audit.tsx",
       "norm_label": "stateblocks.test.tsx"
     },
     {
@@ -9605,52 +9594,8 @@
       "_origin": "ast",
       "id": "src_routes_audit",
       "community": 129,
-      "community_name": "exceptions.tsx",
+      "community_name": "audit.tsx",
       "norm_label": "audit.tsx"
-    },
-    {
-      "label": "exceptions.tsx",
-      "file_type": "code",
-      "source_file": "src/routes/exceptions.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_routes_exceptions",
-      "community": 129,
-      "community_name": "exceptions.tsx",
-      "norm_label": "exceptions.tsx"
-    },
-    {
-      "label": "severityTone",
-      "file_type": "code",
-      "source_file": "src/routes/exceptions.tsx",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "src_routes_exceptions_severitytone",
-      "community": 129,
-      "community_name": "exceptions.tsx",
-      "norm_label": "severitytone"
-    },
-    {
-      "label": "settings.tsx",
-      "file_type": "code",
-      "source_file": "src/routes/settings.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_routes_settings",
-      "community": 129,
-      "community_name": "exceptions.tsx",
-      "norm_label": "settings.tsx"
-    },
-    {
-      "label": "sources",
-      "file_type": "code",
-      "source_file": "src/routes/settings.tsx",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "src_routes_settings_sources",
-      "community": 129,
-      "community_name": "exceptions.tsx",
-      "norm_label": "sources"
     },
     {
       "label": "menubar.tsx",
@@ -9884,92 +9829,92 @@
       "norm_label": "run the replayable, zero-cost mock evaluation baseline."
     },
     {
-      "label": "ExceptionTable.tsx",
+      "label": "select.tsx",
       "file_type": "code",
-      "source_file": "src/components/overview/ExceptionTable.tsx",
+      "source_file": "src/components/ui/select.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_overview_exceptiontable",
+      "id": "src_components_ui_select",
       "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "exceptiontable.tsx"
+      "community_name": "select.tsx",
+      "norm_label": "select.tsx"
     },
     {
-      "label": "severityTone",
+      "label": "SelectContent",
       "file_type": "code",
-      "source_file": "src/components/overview/ExceptionTable.tsx",
-      "source_location": "L4",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L63",
       "_origin": "ast",
-      "id": "src_components_overview_exceptiontable_severitytone",
+      "id": "src_components_ui_select_selectcontent",
       "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "severitytone"
+      "community_name": "select.tsx",
+      "norm_label": "selectcontent"
     },
     {
-      "label": "stateTone",
+      "label": "SelectItem",
       "file_type": "code",
-      "source_file": "src/components/overview/ExceptionTable.tsx",
-      "source_location": "L10",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L107",
       "_origin": "ast",
-      "id": "src_components_overview_exceptiontable_statetone",
+      "id": "src_components_ui_select_selectitem",
       "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "statetone"
+      "community_name": "select.tsx",
+      "norm_label": "selectitem"
     },
     {
-      "label": "MetricTile.tsx",
+      "label": "SelectLabel",
       "file_type": "code",
-      "source_file": "src/components/primitives/MetricTile.tsx",
-      "source_location": "L1",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L95",
       "_origin": "ast",
-      "id": "src_components_primitives_metrictile",
+      "id": "src_components_ui_select_selectlabel",
       "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "metrictile.tsx"
+      "community_name": "select.tsx",
+      "norm_label": "selectlabel"
     },
     {
-      "label": "StatusBadge.tsx",
+      "label": "SelectScrollDownButton",
       "file_type": "code",
-      "source_file": "src/components/primitives/StatusBadge.tsx",
-      "source_location": "L1",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L49",
       "_origin": "ast",
-      "id": "src_components_primitives_statusbadge",
+      "id": "src_components_ui_select_selectscrolldownbutton",
       "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "statusbadge.tsx"
+      "community_name": "select.tsx",
+      "norm_label": "selectscrolldownbutton"
     },
     {
-      "label": "badgeVariants",
+      "label": "SelectScrollUpButton",
       "file_type": "code",
-      "source_file": "src/components/primitives/StatusBadge.tsx",
-      "source_location": "L4",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L35",
       "_origin": "ast",
-      "id": "src_components_primitives_statusbadge_badgevariants",
+      "id": "src_components_ui_select_selectscrollupbutton",
       "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "badgevariants"
+      "community_name": "select.tsx",
+      "norm_label": "selectscrollupbutton"
     },
     {
-      "label": "evaluations.tsx",
+      "label": "SelectSeparator",
       "file_type": "code",
-      "source_file": "src/routes/evaluations.tsx",
-      "source_location": "L1",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L129",
       "_origin": "ast",
-      "id": "src_routes_evaluations",
+      "id": "src_components_ui_select_selectseparator",
       "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "evaluations.tsx"
+      "community_name": "select.tsx",
+      "norm_label": "selectseparator"
     },
     {
-      "label": "cases",
+      "label": "SelectTrigger",
       "file_type": "code",
-      "source_file": "src/routes/evaluations.tsx",
-      "source_location": "L10",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L15",
       "_origin": "ast",
-      "id": "src_routes_evaluations_cases",
+      "id": "src_components_ui_select_selecttrigger",
       "community": 131,
-      "community_name": "StatusBadge.tsx",
-      "norm_label": "cases"
+      "community_name": "select.tsx",
+      "norm_label": "selecttrigger"
     },
     {
       "label": "health.py",
@@ -11204,15 +11149,15 @@
       "norm_label": "dependencies"
     },
     {
-      "label": "class-variance-authority",
+      "label": "cmdk",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L70",
+      "source_location": "L72",
       "_origin": "ast",
-      "id": "package_dependencies_class_variance_authority",
+      "id": "package_dependencies_cmdk",
       "community": 16,
       "community_name": "dependencies",
-      "norm_label": "class-variance-authority"
+      "norm_label": "cmdk"
     },
     {
       "label": "lucide-react",
@@ -11270,15 +11215,15 @@
       "norm_label": "sonner"
     },
     {
-      "label": "class-variance-authority",
+      "label": "cmdk",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L70",
+      "source_location": "L72",
       "_origin": "ast",
-      "id": "class_variance_authority",
+      "id": "cmdk",
       "community": 16,
       "community_name": "dependencies",
-      "norm_label": "class-variance-authority"
+      "norm_label": "cmdk"
     },
     {
       "label": "lucide-react",
@@ -11468,26 +11413,59 @@
       "norm_label": "@testing-library/jest-dom"
     },
     {
-      "label": "@testing-library/react",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L97",
+      "label": "query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th.md",
+      "source_location": "L1",
       "_origin": "ast",
-      "id": "package_devdependencies_testing_library_react",
+      "id": "graphify_out_memory_query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th",
       "community": 166,
-      "community_name": "@testing-library/react",
-      "norm_label": "@testing-library/react"
+      "community_name": "Q: Okay i am back you can start again and complete the project just tell me how much time will it take now and how much is already complete",
+      "norm_label": "query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th.md"
     },
     {
-      "label": "@testing-library/react",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L97",
+      "label": "Answer",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th.md",
+      "source_location": "L12",
       "_origin": "ast",
-      "id": "testing_library_react",
+      "id": "graphify_out_memory_query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th_answer",
       "community": 166,
-      "community_name": "@testing-library/react",
-      "norm_label": "@testing-library/react"
+      "community_name": "Q: Okay i am back you can start again and complete the project just tell me how much time will it take now and how much is already complete",
+      "norm_label": "answer"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th_outcome",
+      "community": 166,
+      "community_name": "Q: Okay i am back you can start again and complete the project just tell me how much time will it take now and how much is already complete",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Q: Okay i am back you can start again and complete the project just tell me how much time will it take now and how much is already complete",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th_q_okay_i_am_back_you_can_start_again_and_complete_the_project_just_tell_me_how_much_time_will_it_take_now_and_how_much_is_already_complete",
+      "community": 166,
+      "community_name": "Q: Okay i am back you can start again and complete the project just tell me how much time will it take now and how much is already complete",
+      "norm_label": "q: okay i am back you can start again and complete the project just tell me how much time will it take now and how much is already complete"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th_source_nodes",
+      "community": 166,
+      "community_name": "Q: Okay i am back you can start again and complete the project just tell me how much time will it take now and how much is already complete",
+      "norm_label": "source nodes"
     },
     {
       "label": "@testing-library/user-event",
@@ -12137,6 +12115,105 @@
       "community": 183,
       "community_name": "operations.spec.ts",
       "norm_label": "operations.spec.ts"
+    },
+    {
+      "label": "input-otp.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/input-otp.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_ui_input_otp",
+      "community": 184,
+      "community_name": "input-otp.tsx",
+      "norm_label": "input-otp.tsx"
+    },
+    {
+      "label": "InputOTP",
+      "file_type": "code",
+      "source_file": "src/components/ui/input-otp.tsx",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "src_components_ui_input_otp_inputotp",
+      "community": 184,
+      "community_name": "input-otp.tsx",
+      "norm_label": "inputotp"
+    },
+    {
+      "label": "InputOTPGroup",
+      "file_type": "code",
+      "source_file": "src/components/ui/input-otp.tsx",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "src_components_ui_input_otp_inputotpgroup",
+      "community": 184,
+      "community_name": "input-otp.tsx",
+      "norm_label": "inputotpgroup"
+    },
+    {
+      "label": "InputOTPSeparator",
+      "file_type": "code",
+      "source_file": "src/components/ui/input-otp.tsx",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "src_components_ui_input_otp_inputotpseparator",
+      "community": 184,
+      "community_name": "input-otp.tsx",
+      "norm_label": "inputotpseparator"
+    },
+    {
+      "label": "InputOTPSlot",
+      "file_type": "code",
+      "source_file": "src/components/ui/input-otp.tsx",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "src_components_ui_input_otp_inputotpslot",
+      "community": 184,
+      "community_name": "input-otp.tsx",
+      "norm_label": "inputotpslot"
+    },
+    {
+      "label": "@axe-core/playwright",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "package_devdependencies_axe_core_playwright",
+      "community": 185,
+      "community_name": "@axe-core/playwright",
+      "norm_label": "@axe-core/playwright"
+    },
+    {
+      "label": "@axe-core/playwright",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "axe_core_playwright",
+      "community": 185,
+      "community_name": "@axe-core/playwright",
+      "norm_label": "@axe-core/playwright"
+    },
+    {
+      "label": "class-variance-authority",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "package_dependencies_class_variance_authority",
+      "community": 186,
+      "community_name": "class-variance-authority",
+      "norm_label": "class-variance-authority"
+    },
+    {
+      "label": "class-variance-authority",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "class_variance_authority",
+      "community": 186,
+      "community_name": "class-variance-authority",
+      "norm_label": "class-variance-authority"
     },
     {
       "label": "domain-glossary.md",
@@ -14317,17 +14394,6 @@
       "norm_label": "devdependencies"
     },
     {
-      "label": "@axe-core/playwright",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L92",
-      "_origin": "ast",
-      "id": "package_devdependencies_axe_core_playwright",
-      "community": 3,
-      "community_name": "devDependencies",
-      "norm_label": "@axe-core/playwright"
-    },
-    {
       "label": "eslint-plugin-react-refresh",
       "file_type": "code",
       "source_file": "package.json",
@@ -14350,15 +14416,15 @@
       "norm_label": "jsdom"
     },
     {
-      "label": "@axe-core/playwright",
-      "file_type": "concept",
+      "label": "@testing-library/react",
+      "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L92",
+      "source_location": "L97",
       "_origin": "ast",
-      "id": "axe_core_playwright",
+      "id": "package_devdependencies_testing_library_react",
       "community": 3,
       "community_name": "devDependencies",
-      "norm_label": "@axe-core/playwright"
+      "norm_label": "@testing-library/react"
     },
     {
       "label": "eslint-plugin-react-refresh",
@@ -14381,6 +14447,17 @@
       "community": 3,
       "community_name": "devDependencies",
       "norm_label": "jsdom"
+    },
+    {
+      "label": "@testing-library/react",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "testing_library_react",
+      "community": 3,
+      "community_name": "devDependencies",
+      "norm_label": "@testing-library/react"
     },
     {
       "label": "table.tsx",
@@ -15307,6 +15384,39 @@
       "norm_label": "categorybars.tsx"
     },
     {
+      "label": "ExceptionTable.tsx",
+      "file_type": "code",
+      "source_file": "src/components/overview/ExceptionTable.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_overview_exceptiontable",
+      "community": 5,
+      "community_name": "index.tsx",
+      "norm_label": "exceptiontable.tsx"
+    },
+    {
+      "label": "severityTone",
+      "file_type": "code",
+      "source_file": "src/components/overview/ExceptionTable.tsx",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "src_components_overview_exceptiontable_severitytone",
+      "community": 5,
+      "community_name": "index.tsx",
+      "norm_label": "severitytone"
+    },
+    {
+      "label": "stateTone",
+      "file_type": "code",
+      "source_file": "src/components/overview/ExceptionTable.tsx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_components_overview_exceptiontable_statetone",
+      "community": 5,
+      "community_name": "index.tsx",
+      "norm_label": "statetone"
+    },
+    {
       "label": "OverviewComponents.test.tsx",
       "file_type": "code",
       "source_file": "src/components/overview/OverviewComponents.test.tsx",
@@ -16097,61 +16207,6 @@
       "community": 7,
       "community_name": "utils.ts",
       "norm_label": "hovercardcontent"
-    },
-    {
-      "label": "input-otp.tsx",
-      "file_type": "code",
-      "source_file": "src/components/ui/input-otp.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_ui_input_otp",
-      "community": 7,
-      "community_name": "utils.ts",
-      "norm_label": "input-otp.tsx"
-    },
-    {
-      "label": "InputOTP",
-      "file_type": "code",
-      "source_file": "src/components/ui/input-otp.tsx",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "src_components_ui_input_otp_inputotp",
-      "community": 7,
-      "community_name": "utils.ts",
-      "norm_label": "inputotp"
-    },
-    {
-      "label": "InputOTPGroup",
-      "file_type": "code",
-      "source_file": "src/components/ui/input-otp.tsx",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "src_components_ui_input_otp_inputotpgroup",
-      "community": 7,
-      "community_name": "utils.ts",
-      "norm_label": "inputotpgroup"
-    },
-    {
-      "label": "InputOTPSeparator",
-      "file_type": "code",
-      "source_file": "src/components/ui/input-otp.tsx",
-      "source_location": "L63",
-      "_origin": "ast",
-      "id": "src_components_ui_input_otp_inputotpseparator",
-      "community": 7,
-      "community_name": "utils.ts",
-      "norm_label": "inputotpseparator"
-    },
-    {
-      "label": "InputOTPSlot",
-      "file_type": "code",
-      "source_file": "src/components/ui/input-otp.tsx",
-      "source_location": "L31",
-      "_origin": "ast",
-      "id": "src_components_ui_input_otp_inputotpslot",
-      "community": 7,
-      "community_name": "utils.ts",
-      "norm_label": "inputotpslot"
     },
     {
       "label": "popover.tsx",
@@ -38891,6 +38946,50 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th",
+      "target": "graphify_out_memory_query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th_q_okay_i_am_back_you_can_start_again_and_complete_the_project_just_tell_me_how_much_time_will_it_take_now_and_how_much_is_already_complete",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th_q_okay_i_am_back_you_can_start_again_and_complete_the_project_just_tell_me_how_much_time_will_it_take_now_and_how_much_is_already_complete",
+      "target": "graphify_out_memory_query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th_q_okay_i_am_back_you_can_start_again_and_complete_the_project_just_tell_me_how_much_time_will_it_take_now_and_how_much_is_already_complete",
+      "target": "graphify_out_memory_query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th_q_okay_i_am_back_you_can_start_again_and_complete_the_project_just_tell_me_how_much_time_will_it_take_now_and_how_much_is_already_complete",
+      "target": "graphify_out_memory_query_20260825_132956_okay_i_am_back_you_can_start_again_and_complete_th_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "infra/terraform/aws/README.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -50399,5 +50498,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1c94de90559c015453945a8e0b5a748dc6e6eec0"
+  "built_at_commit": "664729241a647f75311255ca598955a3d693f044"
 }
