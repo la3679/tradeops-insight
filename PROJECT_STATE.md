@@ -4,7 +4,7 @@ Last updated: 2026-08-24 (America/Phoenix)
 
 ## Resume checkpoint
 
-- Current phase: Phase 2 relational schema and complete deterministic rule catalogue pass locally; repository/API behavior is in progress.
+- Current phase: Phase 3 offline retrieval and interruptible agent orchestration pass; API/security integration is in progress.
 - Branch: `main`
 - Last pushed commit before this checkpoint: `84f6180` (`feat(domain): detect settlement-date mismatches`)
 - GitHub: `la3679/tradeops-insight`, private, default branch `main`.
@@ -14,7 +14,8 @@ Last updated: 2026-08-24 (America/Phoenix)
 - Runtime implemented: immutable synthetic trade facts and the versioned settlement-date mismatch rule with weekend/explicit-holiday handling and review/escalation routes.
 - Runtime implemented: Compose-managed PostgreSQL, Redis, Keycloak, OpenTelemetry Collector, API, worker, and web services plus pinned GitHub CI jobs.
 - Runtime implemented: first Alembic schema for the full documented relational entity set and a deterministic 2,400-trade generator with 300 exception-bearing records across all twelve required categories.
-- Runtime not implemented: repository behavior, authentication, model providers, public-data adapters, and observability integrations.
+- Runtime implemented: idempotent PostgreSQL seed/query repository, validated public-source provenance fixtures, FAISS retrieval with adversarial-content gating, provider abstraction/fallback, and the explicit thirteen-node LangGraph workflow with five human resume paths.
+- Runtime not implemented: versioned operations API, OIDC enforcement, frontend API integration, and observability instrumentation.
 
 ## Safety boundaries
 
@@ -35,7 +36,7 @@ Last updated: 2026-08-24 (America/Phoenix)
 | Lint                          | Passed with warnings | `npm run lint`; zero errors and six inherited Fast Refresh export warnings         |
 | Frontend unit/component tests | Passed               | `npm run test`; 11 tests across four files                                         |
 | Automated accessibility smoke | Passed               | `npm run test:a11y`; axe reported zero violations in the rendered overview fixture |
-| Backend/domain tests          | Passed               | 30 tests; strict mypy and Ruff passed; 100% measured branch coverage               |
+| Backend/domain tests          | Passed               | 46 tests; strict mypy and Ruff passed; 97% measured branch coverage                |
 | Compose configuration         | Passed               | `docker compose config --quiet`                                                    |
 | Local stack startup           | Passed               | Seven services started; API, web, Keycloak, and collector probes succeeded         |
 | Integration/E2E tests         | Not run              | Database/queue integration and Playwright harness have not been added yet          |

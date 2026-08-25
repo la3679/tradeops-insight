@@ -1,0 +1,13 @@
+{
+  "source": "U.S. Treasury Fiscal Data API",
+  "records": [
+    {
+      "security_type": "Note",
+      "security_term": "5-Year",
+      "record_date": "2026-08-31",
+      "auction_date": "2026-08-26",
+      "issue_date": "2026-08-31",
+      "maturity_date": "2031-08-31"
+    }
+  ]
+}

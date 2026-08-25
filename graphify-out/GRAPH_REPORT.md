@@ -1,16 +1,16 @@
 # Graph Report - tradeops-insight  (2026-08-24)
 
 ## Corpus Check
-- 149 files · ~38,636 words
+- 167 files · ~42,752 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 978 nodes · 1601 edges · 116 communities (54 shown, 62 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 50 edges (avg confidence: 0.57)
+- 1115 nodes · 1865 edges · 120 communities (57 shown, 63 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 74 edges (avg confidence: 0.54)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e9551ea6`
+- Built from commit: `678c24d8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -37,16 +37,16 @@
 - Domain glossary
 - Architecture Baseline
 - Settlement-date mismatch runbook
-- drawer.tsx
+- pipeline.py
 - What You Must Do When Invoked
 - toggle-group.tsx
 - graphify reference: extra exports and benchmark
-- accordion.tsx
+- validate_manifest
 - carousel.tsx
 - navigation-menu.tsx
 - sonner.tsx
-- class-variance-authority
-- avatar.tsx
+- table.tsx
+- breadcrumb.tsx
 - date-fns
 - embla-carousel-react
 - @hookform/resolvers
@@ -94,7 +94,7 @@
 - graphify reference: add a URL and watch a folder
 - graphify reference: commit hook and native CLAUDE.md integration
 - graphify reference: incremental update and cluster-only
-- dropdown-menu.tsx
+- input-otp.tsx
 - ADR 0002: Python runtime and durable task queue boundary
 - graphify reference: GitHub clone and cross-repo merge
 - graphify reference: transcribe video and audio
@@ -109,7 +109,7 @@
 - application/__init__.py
 - SettlementDatePolicy
 - observability/__init__.py
-- orchestration/__init__.py
+- build_workflow
 - ports/__init__.py
 - worker/__init__.py
 - tradeops-copilot-backend
@@ -118,9 +118,13 @@
 - TradeOps Copilot — agent guidelines
 - ADR 0001: Modular Monolith with a Background Worker
 - TradeOps Copilot
-- badge.tsx
+- manifest.json
 - @radix-ui/react-dropdown-menu
 - clsx
+- ADR 0003: Relational persistence and idempotency
+- ADR 0004: Offline retrieval and explicit agent graph
+- cmdk
+- exception-triage.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 231 edges
@@ -129,27 +133,27 @@
 4. `scripts` - 25 edges
 5. `IdentityMixin` - 23 edges
 6. `compilerOptions` - 22 edges
-7. `Settings` - 19 edges
-8. `TimestampMixin` - 17 edges
-9. `ReconciliationPolicy` - 15 edges
-10. `generate_synthetic_dataset()` - 13 edges
+7. `ReconciliationPolicy` - 20 edges
+8. `Settings` - 19 edges
+9. `TimestampMixin` - 17 edges
+10. `TradeOpsRepository` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `StateFrame()` --calls--> `cn()`  [EXTRACTED]
-  src/components/primitives/StateBlocks.tsx → src/lib/utils.ts
-- `AccordionItem` --calls--> `cn()`  [EXTRACTED]
-  src/components/ui/accordion.tsx → src/lib/utils.ts
-- `AccordionTrigger` --calls--> `cn()`  [EXTRACTED]
-  src/components/ui/accordion.tsx → src/lib/utils.ts
-- `AccordionContent` --calls--> `cn()`  [EXTRACTED]
-  src/components/ui/accordion.tsx → src/lib/utils.ts
-- `AlertDialogOverlay` --calls--> `cn()`  [EXTRACTED]
-  src/components/ui/alert-dialog.tsx → src/lib/utils.ts
+- `test_seed_is_idempotent_and_queue_evidence_is_detached()` --calls--> `create_engine()`  [INFERRED]
+  backend/tests/adapters/persistence/test_repository.py → backend/src/tradeops/adapters/persistence/session.py
+- `ReconciliationPolicy` --uses--> `ExceptionType`  [INFERRED]
+  backend/src/tradeops/domain/reconciliation.py → backend/src/tradeops/domain/exceptions.py
+- `SyntheticDataset` --uses--> `ExceptionType`  [INFERRED]
+  backend/src/tradeops/domain/synthetic.py → backend/src/tradeops/domain/exceptions.py
+- `ReconciliationPolicy` --uses--> `ExceptionSeverity`  [INFERRED]
+  backend/src/tradeops/domain/reconciliation.py → backend/src/tradeops/domain/exceptions.py
+- `ReconciliationPolicy` --uses--> `ReviewRoute`  [INFERRED]
+  backend/src/tradeops/domain/reconciliation.py → backend/src/tradeops/domain/exceptions.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (116 total, 62 thin omitted)
+## Communities (120 total, 63 thin omitted)
 
 ### Community 0 - "routeTree.gen.ts"
 Cohesion: 0.06
@@ -157,7 +161,7 @@ Nodes (41): PlaceholderSection(), PlaceholderSectionProps, PageHeader(), PageHea
 
 ### Community 1 - "cn"
 Cohesion: 0.07
-Nodes (43): Breadcrumb, BreadcrumbEllipsis(), BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator(), Card (+35 more)
+Nodes (47): AccordionContent, AccordionItem, AccordionTrigger, Avatar, AvatarFallback, AvatarImage, Card, CardContent (+39 more)
 
 ### Community 2 - "sidebar.tsx"
 Cohesion: 0.06
@@ -180,8 +184,8 @@ Cohesion: 0.12
 Nodes (21): AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter(), AlertDialogHeader(), AlertDialogOverlay, AlertDialogTitle (+13 more)
 
 ### Community 7 - "utils.ts"
-Cohesion: 0.08
-Nodes (15): Checkbox, HoverCardContent, InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot, PopoverContent, Progress (+7 more)
+Cohesion: 0.07
+Nodes (16): Badge(), BadgeProps, badgeVariants, Checkbox, HoverCardContent, PopoverContent, Progress, RadioGroup (+8 more)
 
 ### Community 8 - "__root.tsx"
 Cohesion: 0.13
@@ -212,36 +216,36 @@ Cohesion: 0.19
 Nodes (12): FormControl, FormDescription, FormFieldContext, FormFieldContextValue, FormItem, FormItemContext, FormItemContextValue, FormLabel (+4 more)
 
 ### Community 15 - "Settings"
-Cohesion: 0.07
-Nodes (42): create_engine(), create_session_factory(), Explicit SQLAlchemy engine and session construction., create_app(), FastAPI application factory., Create an API process without opening external connections., HealthResponse, liveness() (+34 more)
+Cohesion: 0.06
+Nodes (42): create_engine(), create_session_factory(), Session, Explicit SQLAlchemy engine and session construction., create_app(), FastAPI application factory., Create an API process without opening external connections., HealthResponse (+34 more)
 
 ### Community 16 - "dependencies"
 Cohesion: 0.15
-Nodes (13): cmdk, lucide-react, dependencies, cmdk, lucide-react, @radix-ui/react-checkbox, @radix-ui/react-progress, react (+5 more)
+Nodes (13): class-variance-authority, lucide-react, dependencies, class-variance-authority, lucide-react, @radix-ui/react-checkbox, @radix-ui/react-progress, react (+5 more)
 
 ### Community 17 - "chart.tsx"
 Cohesion: 0.25
 Nodes (9): ChartConfig, ChartContainer, ChartContext, ChartContextProps, ChartLegendContent, ChartTooltipContent, getPayloadConfigFromPayload(), THEMES (+1 more)
 
 ### Community 18 - "models.py"
-Cohesion: 0.16
-Nodes (30): SQLAlchemy persistence adapter., ApprovalRecord, AuditEventRecord, Base, CounterpartyRecord, DataSourceSyncRunRecord, DocumentChunkRecord, DocumentRecord (+22 more)
+Cohesion: 0.08
+Nodes (61): SQLAlchemy persistence adapter., ApprovalRecord, AuditEventRecord, Base, CounterpartyRecord, DataSourceSyncRunRecord, DocumentChunkRecord, DocumentRecord (+53 more)
 
 ### Community 19 - "Domain glossary"
 Cohesion: 0.29
-Nodes (6): Domain glossary, Escalation, Exception finding, Review correction, Settlement-date mismatch, Synthetic trade
+Nodes (7): Domain glossary, Escalation, Exception catalogue, Exception finding, Review correction, Settlement-date mismatch, Synthetic trade
 
 ### Community 20 - "Architecture Baseline"
-Cohesion: 0.29
-Nodes (7): Architecture Baseline, Dependency direction, Evolution criteria, Initial module boundaries, Ownership boundaries, System shape, Workflow safety model
+Cohesion: 0.25
+Nodes (8): Architecture Baseline, Dependency direction, Evolution criteria, Initial module boundaries, Investigation workflow, Ownership boundaries, System shape, Workflow safety model
 
 ### Community 21 - "Settlement-date mismatch runbook"
 Cohesion: 0.29
 Nodes (6): Current limitations, Detection, Escalation, Review correction, Settlement-date mismatch runbook, Severity and routing
 
-### Community 22 - "drawer.tsx"
-Cohesion: 0.25
-Nodes (6): DrawerContent, DrawerDescription, DrawerFooter(), DrawerHeader(), DrawerOverlay, DrawerTitle
+### Community 22 - "pipeline.py"
+Cohesion: 0.10
+Nodes (26): Safe, offline-capable retrieval primitives., chunk_document(), Citation, FaissKnowledgeIndex, generate_synthetic_policy_documents(), HashEmbeddingProvider, KnowledgeChunk, KnowledgeDocument (+18 more)
 
 ### Community 23 - "What You Must Do When Invoked"
 Cohesion: 0.08
@@ -255,9 +259,9 @@ Nodes (5): ToggleGroup, ToggleGroupContext, ToggleGroupItem, Toggle, toggleVaria
 Cohesion: 0.22
 Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only if --wiki flag), Step 7 - Neo4j export (only if --neo4j or --neo4j-push flag), Step 7a - FalkorDB export (only if --falkordb or --falkordb-push flag), Step 7b - SVG export (only if --svg flag), Step 7c - GraphML export (only if --graphml flag), Step 7d - MCP server (only if --mcp flag), Step 8 - Token reduction benchmark (only if total_words > 5000)
 
-### Community 26 - "accordion.tsx"
-Cohesion: 0.50
-Nodes (3): AccordionContent, AccordionItem, AccordionTrigger
+### Community 26 - "validate_manifest"
+Cohesion: 0.19
+Nodes (15): _entry(), ProvenanceEntry, ProvenanceError, Path, ValueError, Offline provenance-manifest validation for committed public-data fixtures., Raised when a manifest is malformed or a fixture hash no longer matches., Validate required metadata, repository-contained paths, and SHA-256 hashes. (+7 more)
 
 ### Community 27 - "carousel.tsx"
 Cohesion: 0.19
@@ -267,9 +271,13 @@ Nodes (13): Carousel, CarouselApi, CarouselContent, CarouselContext, CarouselCon
 Cohesion: 0.29
 Nodes (7): NavigationMenu, NavigationMenuContent, NavigationMenuIndicator, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle, NavigationMenuViewport
 
-### Community 31 - "avatar.tsx"
-Cohesion: 0.50
-Nodes (3): Avatar, AvatarFallback, AvatarImage
+### Community 30 - "table.tsx"
+Cohesion: 0.22
+Nodes (8): Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow
+
+### Community 31 - "breadcrumb.tsx"
+Cohesion: 0.25
+Nodes (7): Breadcrumb, BreadcrumbEllipsis(), BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator()
 
 ### Community 80 - "graphify reference: query, path, explain"
 Cohesion: 0.33
@@ -287,9 +295,9 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
-### Community 84 - "dropdown-menu.tsx"
-Cohesion: 0.20
-Nodes (9): DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuShortcut(), DropdownMenuSubContent (+1 more)
+### Community 84 - "input-otp.tsx"
+Cohesion: 0.40
+Nodes (4): InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot
 
 ### Community 85 - "ADR 0002: Python runtime and durable task queue boundary"
 Cohesion: 0.40
@@ -300,15 +308,19 @@ Cohesion: 0.50
 Nodes (4): Alert, AlertDescription, AlertTitle, alertVariants
 
 ### Community 99 - "SettlementDatePolicy"
+Cohesion: 0.09
+Nodes (45): Return detached evidence payloads for a single finding., ExceptionFinding, ExceptionSeverity, ExceptionType, Structured outputs from deterministic exception rules., An explainable, deterministic rule finding; never an automatic state change., ReviewRoute, Dependency-free domain layer for deterministic facts and rules. (+37 more)
+
+### Community 101 - "build_workflow"
 Cohesion: 0.07
-Nodes (61): ExceptionFinding, ExceptionSeverity, ExceptionType, Structured outputs from deterministic exception rules., An explainable, deterministic rule finding; never an automatic state change., ReviewRoute, Dependency-free domain layer for deterministic facts and rules., evaluate_reconciliation() (+53 more)
+Nodes (34): build_workflow(), Explicit typed LangGraph workflow with mandatory human review before mutation., Versioned workflow state; steps use an append reducer across checkpoints., Compile the reviewed thirteen-node graph with replayable defaults., _step(), WorkflowState, Typed workflow and provider composition., Classification (+26 more)
 
 ### Community 106 - "TradeOps Copilot Product Brief"
 Cohesion: 0.29
 Nodes (7): Data policy, First release journey, Non-goals, Purpose, Release principle, TradeOps Copilot Product Brief, Users and outcomes
 
 ### Community 107 - "Project State"
-Cohesion: 0.29
+Cohesion: 0.25
 Nodes (7): Environment notes, Known limitations, Next three actions, Project State, Resume checkpoint, Safety boundaries, Verification status
 
 ### Community 108 - "TradeOps Copilot — agent guidelines"
@@ -323,29 +335,33 @@ Nodes (5): ADR 0001: Modular Monolith with a Background Worker, Consequences, Co
 Cohesion: 0.33
 Nodes (6): Architecture and safety, Current scope, Local development, Lovable, TradeOps Copilot, Verification
 
-### Community 112 - "badge.tsx"
-Cohesion: 0.67
-Nodes (3): Badge(), BadgeProps, badgeVariants
+### Community 112 - "manifest.json"
+Cohesion: 0.50
+Nodes (3): manifest_version, notice, sources
+
+### Community 116 - "ADR 0003: Relational persistence and idempotency"
+Cohesion: 0.50
+Nodes (3): ADR 0003: Relational persistence and idempotency, Consequences, Decision
 
 ## Knowledge Gaps
-- **298 isolated node(s):** `tradeops-copilot-backend`, `$schema`, `style`, `rsc`, `tsx` (+293 more)
+- **307 isolated node(s):** `tradeops-copilot-backend`, `$schema`, `style`, `rsc`, `tsx` (+302 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **62 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **63 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `cn()` connect `cn` to `routeTree.gen.ts`, `sidebar.tsx`, `index.tsx`, `pagination.tsx`, `utils.ts`, `__root.tsx`, `command.tsx`, `menubar.tsx`, `form.tsx`, `chart.tsx`, `drawer.tsx`, `toggle-group.tsx`, `accordion.tsx`, `carousel.tsx`, `navigation-menu.tsx`, `avatar.tsx`, `dropdown-menu.tsx`, `alert.tsx`, `badge.tsx`?**
-  _High betweenness centrality (0.141) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `dependencies` to `scripts`, `class-variance-authority`, `date-fns`, `embla-carousel-react`, `@hookform/resolvers`, `input-otp`, `@radix-ui/react-accordion`, `@radix-ui/react-alert-dialog`, `@radix-ui/react-aspect-ratio`, `@radix-ui/react-avatar`, `@radix-ui/react-collapsible`, `@radix-ui/react-context-menu`, `@radix-ui/react-dialog`, `@radix-ui/react-hover-card`, `@radix-ui/react-label`, `@radix-ui/react-menubar`, `@radix-ui/react-navigation-menu`, `@radix-ui/react-popover`, `@radix-ui/react-radio-group`, `@radix-ui/react-scroll-area`, `@radix-ui/react-select`, `@radix-ui/react-separator`, `@radix-ui/react-slider`, `@radix-ui/react-slot`, `@radix-ui/react-switch`, `@radix-ui/react-tabs`, `@radix-ui/react-toggle`, `@radix-ui/react-toggle-group`, `@radix-ui/react-tooltip`, `react-day-picker`, `react-dom`, `react-hook-form`, `react-resizable-panels`, `recharts`, `tailwind-merge`, `tailwindcss`, `@tailwindcss/vite`, `@tanstack/react-query`, `@tanstack/react-router`, `@tanstack/react-start`, `@tanstack/router-plugin`, `tw-animate-css`, `vaul`, `vite-tsconfig-paths`, `zod`, `@radix-ui/react-dropdown-menu`, `clsx`?**
-  _High betweenness centrality (0.029) - this node is a cross-community bridge._
+- **Why does `cn()` connect `cn` to `routeTree.gen.ts`, `sidebar.tsx`, `index.tsx`, `pagination.tsx`, `utils.ts`, `__root.tsx`, `command.tsx`, `menubar.tsx`, `form.tsx`, `navigation-menu.tsx`, `chart.tsx`, `input-otp.tsx`, `toggle-group.tsx`, `carousel.tsx`, `alert.tsx`, `table.tsx`, `breadcrumb.tsx`?**
+  _High betweenness centrality (0.101) - this node is a cross-community bridge._
+- **Why does `dependencies` connect `dependencies` to `scripts`, `date-fns`, `embla-carousel-react`, `@hookform/resolvers`, `input-otp`, `@radix-ui/react-accordion`, `@radix-ui/react-alert-dialog`, `@radix-ui/react-aspect-ratio`, `@radix-ui/react-avatar`, `@radix-ui/react-collapsible`, `@radix-ui/react-context-menu`, `@radix-ui/react-dialog`, `@radix-ui/react-hover-card`, `@radix-ui/react-label`, `@radix-ui/react-menubar`, `@radix-ui/react-navigation-menu`, `@radix-ui/react-popover`, `@radix-ui/react-radio-group`, `@radix-ui/react-scroll-area`, `@radix-ui/react-select`, `@radix-ui/react-separator`, `@radix-ui/react-slider`, `@radix-ui/react-slot`, `@radix-ui/react-switch`, `@radix-ui/react-tabs`, `@radix-ui/react-toggle`, `@radix-ui/react-toggle-group`, `@radix-ui/react-tooltip`, `react-day-picker`, `react-dom`, `react-hook-form`, `react-resizable-panels`, `recharts`, `tailwind-merge`, `tailwindcss`, `@tailwindcss/vite`, `@tanstack/react-query`, `@tanstack/react-router`, `@tanstack/react-start`, `@tanstack/router-plugin`, `tw-animate-css`, `vaul`, `vite-tsconfig-paths`, `zod`, `@radix-ui/react-dropdown-menu`, `clsx`, `cmdk`?**
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `scripts`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Are the 9 inferred relationships involving `SettlementDatePolicy` (e.g. with `ReconciliationFinding` and `ReconciliationInput`) actually correct?**
   _`SettlementDatePolicy` has 9 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `tradeops-copilot-backend`, `$schema`, `style` to the rest of the system?**
-  _298 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _307 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `routeTree.gen.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.05573770491803279 - nodes in this community are weakly interconnected._
 - **Should `cn` be split into smaller, more focused modules?**
-  _Cohesion score 0.07346938775510205 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06558441558441558 - nodes in this community are weakly interconnected._

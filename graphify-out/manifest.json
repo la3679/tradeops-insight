@@ -500,8 +500,8 @@
     "semantic_hash": ""
   },
   "PROJECT_STATE.md": {
-    "mtime": 1787625392.806071,
-    "ast_hash": "9ae42e92154f297743c9bd1e1f6f28c9",
+    "mtime": 1787626690.8944066,
+    "ast_hash": "c11942ba1bdae445da3c8cdc102a0e7e",
     "semantic_hash": ""
   },
   "README.md": {
@@ -515,8 +515,8 @@
     "semantic_hash": ""
   },
   "docs/architecture.md": {
-    "mtime": 1787621610.8672197,
-    "ast_hash": "0d15797bfbe5dd278a6d662cef635203",
+    "mtime": 1787626690.892401,
+    "ast_hash": "14a03f30d3a268ca70388cbc3846f3e4",
     "semantic_hash": ""
   },
   "docs/product-brief.md": {
@@ -535,8 +535,8 @@
     "semantic_hash": ""
   },
   "backend/pyproject.toml": {
-    "mtime": 1787625660.2881768,
-    "ast_hash": "3a76f32c9a714dd07328cc487017fab7",
+    "mtime": 1787626473.7589471,
+    "ast_hash": "3964af7e0191450ee2aa71cfad783630",
     "semantic_hash": ""
   },
   "backend/src/tradeops/__init__.py": {
@@ -595,8 +595,8 @@
     "semantic_hash": ""
   },
   "backend/src/tradeops/orchestration/__init__.py": {
-    "mtime": 1787623068.2693348,
-    "ast_hash": "f37ace893a8b32cff37d7130192238a5",
+    "mtime": 1787626604.1338532,
+    "ast_hash": "d691cc6bbd428d74fd91b171f67fefcb",
     "semantic_hash": ""
   },
   "backend/src/tradeops/ports/__init__.py": {
@@ -685,8 +685,8 @@
     "semantic_hash": ""
   },
   "docs/domain-glossary.md": {
-    "mtime": 1787624268.8389566,
-    "ast_hash": "2ecbfda8b0385faab9e6180e803ec48d",
+    "mtime": 1787626018.5703835,
+    "ast_hash": "0806077ab551abf1bf92fb73b0a79cf0",
     "semantic_hash": ""
   },
   "docs/runbooks/settlement-date-mismatch.md": {
@@ -725,8 +725,8 @@
     "semantic_hash": ""
   },
   "backend/src/tradeops/adapters/persistence/__init__.py": {
-    "mtime": 1787625582.3265772,
-    "ast_hash": "d998d042523f68b7fe5dc8a79ae29fde",
+    "mtime": 1787626128.271688,
+    "ast_hash": "032bdcf3f2612d7d40ae42c0649b2470",
     "semantic_hash": ""
   },
   "backend/src/tradeops/adapters/persistence/models.py": {
@@ -757,6 +757,81 @@
   "backend/tests/domain/test_reconciliation.py": {
     "mtime": 1787625920.457936,
     "ast_hash": "865d672fdb92d78ee9af9e3ce020d08d",
+    "semantic_hash": ""
+  },
+  "backend/src/tradeops/adapters/persistence/repository.py": {
+    "mtime": 1787626133.215996,
+    "ast_hash": "0116f80d86bdeb8a848b842644510498",
+    "semantic_hash": ""
+  },
+  "backend/src/tradeops/adapters/provenance.py": {
+    "mtime": 1787626415.8035305,
+    "ast_hash": "2db712c1219e20355b80931ba2cfea45",
+    "semantic_hash": ""
+  },
+  "backend/src/tradeops/orchestration/graph.py": {
+    "mtime": 1787626610.7874186,
+    "ast_hash": "433f4e16cfde9bb0fa31018c68323953",
+    "semantic_hash": ""
+  },
+  "backend/src/tradeops/orchestration/providers.py": {
+    "mtime": 1787626589.4808042,
+    "ast_hash": "0619b881e1dc9da2a728f0a9fd641772",
+    "semantic_hash": ""
+  },
+  "backend/src/tradeops/rag/__init__.py": {
+    "mtime": 1787626369.2868166,
+    "ast_hash": "e8a65150b081536c7daecdd0412fafea",
+    "semantic_hash": ""
+  },
+  "backend/src/tradeops/rag/pipeline.py": {
+    "mtime": 1787626448.3603673,
+    "ast_hash": "d65e9634acc0d4d89eec462635d50484",
+    "semantic_hash": ""
+  },
+  "backend/tests/adapters/persistence/test_repository.py": {
+    "mtime": 1787626146.9435022,
+    "ast_hash": "062f3a765f92433c6d6ccb4823533c3f",
+    "semantic_hash": ""
+  },
+  "backend/tests/adapters/test_provenance.py": {
+    "mtime": 1787626415.8075376,
+    "ast_hash": "74e643f2a33ac181056a8208b6f3d5f2",
+    "semantic_hash": ""
+  },
+  "backend/tests/orchestration/test_graph.py": {
+    "mtime": 1787626645.537863,
+    "ast_hash": "89349206ce43eeaeebbb141a603a5a58",
+    "semantic_hash": ""
+  },
+  "backend/tests/orchestration/test_providers.py": {
+    "mtime": 1787626581.8441734,
+    "ast_hash": "18bc71d667df2c14b6fc27387d7984a9",
+    "semantic_hash": ""
+  },
+  "backend/tests/rag/test_pipeline.py": {
+    "mtime": 1787626407.2273421,
+    "ast_hash": "80b34526e5bd3eb7c6325845ebbc3c59",
+    "semantic_hash": ""
+  },
+  "data/provenance/manifest.json": {
+    "mtime": 1787626369.2788074,
+    "ast_hash": "08f55de5a702d92486da80f58d2948e9",
+    "semantic_hash": ""
+  },
+  "docs/adr/0003-relational-persistence-and-idempotency.md": {
+    "mtime": 1787625990.7839415,
+    "ast_hash": "22986c089f5b77a14e4ec44c7026a7f0",
+    "semantic_hash": ""
+  },
+  "docs/adr/0004-offline-retrieval-and-explicit-agent-graph.md": {
+    "mtime": 1787626690.8899803,
+    "ast_hash": "c8add71993d0cdffee8b0dc203f8fe34",
+    "semantic_hash": ""
+  },
+  "docs/runbooks/exception-triage.md": {
+    "mtime": 1787625990.7872815,
+    "ast_hash": "00bda2de0fcf2a5a949def7767a2311f",
     "semantic_hash": ""
   }
 }

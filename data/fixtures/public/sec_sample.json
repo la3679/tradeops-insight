@@ -1,0 +1,11 @@
+{
+  "source": "SEC EDGAR Submissions API",
+  "records": [
+    {
+      "cik": "0000320193",
+      "name": "Apple Inc.",
+      "sic": "3571",
+      "state_of_incorporation": "CA"
+    }
+  ]
+}

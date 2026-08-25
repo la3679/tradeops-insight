@@ -39,3 +39,25 @@ Model output is advisory data. Structured schemas, deterministic validation, cit
 ## Evolution criteria
 
 Keep these modules in one backend codebase until independent scaling, deployment ownership, data ownership, or reliability requirements justify a service boundary. Network separation is not a substitute for clear module ownership.
+## Investigation workflow
+
+```mermaid
+flowchart LR
+  A[Intake validation] --> B[Deterministic reconciliation]
+  B --> C[Memo NLP analysis]
+  C --> D[Triage classifier]
+  D --> E[Reference enrichment]
+  E --> F[Evidence retrieval]
+  F -->|safe evidence| G[Resolution planner]
+  F -->|missing or malicious| M[Failure and escalation]
+  G --> H[Policy and risk validator]
+  H --> I[Confidence and citation gate]
+  I -->|passes| J[Human review interrupt]
+  I -->|fails| M
+  J -->|approve or edit| K[Safe resolution executor]
+  J -->|reject, more evidence, escalate| L[Audit and finalize]
+  K --> L
+  M --> L
+```
+
+The graph captures stable workflow, prompt, provider, and model versions. In-memory checkpoints are only the unit-test/default composition; normal local composition uses the PostgreSQL checkpoint adapter. No model node performs monetary/date calculations or writes state directly.

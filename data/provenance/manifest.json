@@ -1,0 +1,39 @@
+{
+  "manifest_version": "1.0",
+  "notice": "These public reference fixtures did not supply and do not represent synthetic trades.",
+  "sources": [
+    {
+      "name": "GLEIF API sample",
+      "dataset": "Global LEI Index Level 1 reference data",
+      "source_url": "https://api.gleif.org/api/v1/lei-records",
+      "terms_url": "https://www.gleif.org/en/meta/lei-data-terms-of-use",
+      "retrieved_at": "2026-08-24T14:00:00Z",
+      "transformation": "Selected one public record and retained LEI, legal name, entity status, and update timestamp.",
+      "row_count": 1,
+      "path": "data/fixtures/public/gleif_sample.json",
+      "sha256": "07fc1e489a9d163d99d4b7c314cfa6f9374f6aa69cf27300c16c930f9a5e154a"
+    },
+    {
+      "name": "SEC EDGAR sample",
+      "dataset": "EDGAR Submissions API",
+      "source_url": "https://data.sec.gov/submissions/CIK0000320193.json",
+      "terms_url": "https://www.sec.gov/about/developer-resources",
+      "retrieved_at": "2026-08-24T14:00:00Z",
+      "transformation": "Selected public filer identity fields; excluded filing content and all synthetic trade data.",
+      "row_count": 1,
+      "path": "data/fixtures/public/sec_sample.json",
+      "sha256": "67e0d15be6480e14a087e32aeb23b953591d8a31675febe5c6713500d1d937dc"
+    },
+    {
+      "name": "U.S. Treasury auction sample",
+      "dataset": "Treasury Securities Auctions Data",
+      "source_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/auctions_query",
+      "terms_url": "https://fiscaldata.treasury.gov/api-documentation/",
+      "retrieved_at": "2026-08-24T14:00:00Z",
+      "transformation": "Selected schedule and security-type fields; deliberately omitted the public CUSIP from application fixtures.",
+      "row_count": 1,
+      "path": "data/fixtures/public/treasury_sample.json",
+      "sha256": "67a7e0b0e773499bdb201ae1ebdfbb4603c8710cfccbad2e337bdea49b958018"
+    }
+  ]
+}
