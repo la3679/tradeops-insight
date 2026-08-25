@@ -4,7 +4,7 @@ WORKDIR /app
 COPY --chown=bun:bun package.json bun.lock ./
 RUN bun install --frozen-lockfile --ignore-scripts
 COPY --chown=bun:bun . .
-RUN chown bun:bun /app
+RUN chown bun:bun /app /app/node_modules
 USER bun
 
 EXPOSE 3000
