@@ -9,7 +9,11 @@ from langchain_core.runnables import RunnableConfig
 from langgraph.graph.state import CompiledStateGraph
 from langgraph.types import Command
 
-from tradeops.domain.reconciliation import ReconciliationPolicy, evaluate_reconciliation
+from tradeops.domain.reconciliation import (
+    ReconciliationInput,
+    ReconciliationPolicy,
+    evaluate_reconciliation,
+)
 from tradeops.domain.synthetic import generate_synthetic_dataset
 from tradeops.orchestration.graph import Decision, WorkflowState, build_workflow
 
@@ -74,6 +78,7 @@ class DemoOperationsService:
 
     def __init__(self, *, dataset_size: int = 120) -> None:
         dataset = generate_synthetic_dataset(size=dataset_size)
+        self._trades = dataset.trades
         policy = ReconciliationPolicy()
         items: list[QueueItem] = []
         for trade in dataset.trades:
@@ -99,6 +104,20 @@ class DemoOperationsService:
         self._workflow_keys: dict[str, UUID] = {}
         self._approval_keys: dict[str, WorkflowView] = {}
         self._audit: list[AuditView] = []
+        self._import_keys: set[str] = set()
+
+    def trades(self) -> tuple[ReconciliationInput, ...]:
+        """Return the immutable synthetic trade fixture."""
+
+        return self._trades
+
+    def register_import(self, idempotency_key: str) -> bool:
+        """Register a synthetic import, returning false for an exact replay."""
+
+        if idempotency_key in self._import_keys:
+            return False
+        self._import_keys.add(idempotency_key)
+        return True
 
     def list_exceptions(
         self,

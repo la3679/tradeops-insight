@@ -12,6 +12,7 @@ from starlette.middleware.cors import CORSMiddleware
 from tradeops import __version__
 from tradeops.api.routes.health import router as health_router
 from tradeops.api.routes.operations import router as operations_router
+from tradeops.api.routes.platform import router as platform_router
 from tradeops.api.security import OidcTokenDecoder
 from tradeops.application.demo_operations import (
     DemoConflictError,
@@ -46,6 +47,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         )
     app.include_router(health_router, prefix=resolved.api_prefix)
     app.include_router(operations_router, prefix=resolved.api_prefix)
+    app.include_router(platform_router, prefix=resolved.api_prefix)
     app.state.tracer_provider = configure_observability(app, resolved)
 
     @app.middleware("http")
