@@ -30,7 +30,7 @@
   "28": "navigation-menu.tsx",
   "29": "sonner.tsx",
   "30": "class-variance-authority",
-  "31": "clsx",
+  "31": "sheet.tsx",
   "32": "date-fns",
   "33": "embla-carousel-react",
   "34": "@hookform/resolvers",
@@ -104,5 +104,14 @@
   "102": "ports/__init__.py",
   "103": "worker/__init__.py",
   "104": "test_architecture.py",
-  "105": "tradeops-copilot-backend"
+  "105": "tradeops-copilot-backend",
+  "106": "TradeOps Copilot Product Brief",
+  "107": "Project State",
+  "108": "TradeOps Copilot — agent guidelines",
+  "109": "ADR 0001: Modular Monolith with a Background Worker",
+  "110": "TradeOps Copilot",
+  "111": "README.md",
+  "112": "badge.tsx",
+  "113": "tabs.tsx",
+  "114": "@radix-ui/react-dropdown-menu"
 }

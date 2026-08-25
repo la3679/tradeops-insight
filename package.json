@@ -22,7 +22,12 @@
     "backend:format:check": "uv run --directory backend --locked ruff format --check .",
     "backend:typecheck": "uv run --directory backend --locked mypy src tests",
     "verify:backend": "npm run backend:format:check && npm run backend:lint && npm run backend:typecheck && npm run backend:test",
-    "verify": "npm run verify:web && npm run verify:backend"
+    "verify": "npm run verify:web && npm run verify:backend",
+    "stack:config": "docker compose config --quiet",
+    "stack:up": "docker compose up --build -d",
+    "stack:down": "docker compose down",
+    "stack:logs": "docker compose logs --tail=200",
+    "hooks:install": "uv run --directory backend --locked pre-commit install"
   },
   "overrides": {
     "rolldown": "1.2.1"

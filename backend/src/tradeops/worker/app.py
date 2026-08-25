@@ -10,7 +10,9 @@ def create_worker(settings: Settings | None = None) -> Celery:
 
     resolved = settings or get_settings()
     worker = Celery(
-        "tradeops", broker=resolved.worker_broker_url, backend=resolved.worker_result_backend_url
+        "tradeops",
+        broker=resolved.worker_broker_url.get_secret_value(),
+        backend=resolved.worker_result_backend_url.get_secret_value(),
     )
     worker.conf.update(
         accept_content=["json"],

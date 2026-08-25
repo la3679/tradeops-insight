@@ -4,14 +4,15 @@ Last updated: 2026-08-24 (America/Phoenix)
 
 ## Resume checkpoint
 
-- Current phase: Phase 1 developer platform remains open; the first Phase 2 domain slice is now implemented.
+- Current phase: Phase 1 developer-platform gate passes locally; Phase 2 domain/data implementation is in progress.
 - Branch: `main`
-- Last pushed commit before this checkpoint: `ecec401` (`Scaffold Phase 1 backend foundation`)
+- Last pushed commit before this checkpoint: `84f6180` (`feat(domain): detect settlement-date mismatches`)
 - GitHub: `la3679/tradeops-insight`, private, default branch `main`.
 - Lovable: `TradeOps Insight` (`d5b87042-8fcf-41cf-aa66-075bf21f45ba`), private and not published.
 - Runtime implemented: TanStack Start/React frontend shell with deterministic synthetic overview data, placeholder routes, and component/accessibility tests.
 - Runtime implemented: dependency-free FastAPI health contracts, validated process settings, and an inert Celery worker composition root.
 - Runtime implemented: immutable synthetic trade facts and the versioned settlement-date mismatch rule with weekend/explicit-holiday handling and review/escalation routes.
+- Runtime implemented: Compose-managed PostgreSQL, Redis, Keycloak, OpenTelemetry Collector, API, worker, and web services plus pinned GitHub CI jobs.
 - Runtime not implemented: persistence behavior, authentication, model providers, remaining exception-rule families, public-data adapters, and observability integrations.
 
 ## Safety boundaries
@@ -34,26 +35,29 @@ Last updated: 2026-08-24 (America/Phoenix)
 | Frontend unit/component tests | Passed               | `npm run test`; 11 tests across four files                                         |
 | Automated accessibility smoke | Passed               | `npm run test:a11y`; axe reported zero violations in the rendered overview fixture |
 | Backend/domain tests          | Passed               | 23 tests; strict mypy and Ruff passed; 100% measured branch coverage               |
+| Compose configuration         | Passed               | `docker compose config --quiet`                                                    |
+| Local stack startup           | Passed               | Seven services started; API, web, Keycloak, and collector probes succeeded         |
 | Integration/E2E tests         | Not run              | Database/queue integration and Playwright harness have not been added yet          |
 | Dependency audit              | Passed               | `bun audit`; zero known vulnerabilities after in-range transitive fixes            |
 | Secret and source scans       | Not run              | Scheduled for the security foundation and release gates                            |
-| Clean-clone startup           | Not run              | Bun is not installed on this Windows host; npm fallback works                      |
+| Clean-clone startup           | Partially passed     | Pinned container builds and full local stack startup passed; fresh clone pending   |
 
 ## Environment notes
 
 - Node.js: `v22.19.0`
 - npm: `11.6.0`
 - Python: `3.14.7` managed by `uv`
-- Backend lock/tooling: `uv 0.12.2`; 57 resolved packages in `backend/uv.lock`
-- Bun: unavailable on this host even though `bun.lock` is committed
+- Backend lock/tooling: `uv 0.12.2`; 67 resolved packages in `backend/uv.lock`
+- Bun: `1.4.0` in the pinned web container; unavailable directly on this Windows host
+- Docker: Engine `29.5.3`; Compose `v5.1.4`
 - Graphify CLI: `0.9.41`; project-scoped Codex skill registered under `.codex/skills/graphify`
-- Graphify code graph: 894 nodes, 1,374 edges, and 106 generated communities from code-only AST extraction; no model/API credits used
+- Graphify code graph: 899 nodes, 1,381 edges, and 115 generated communities from code-only AST extraction; no model/API credits used
 
 ## Next three actions
 
-1. Add CI jobs for frontend and backend formatting, lint, strict type checking, tests, and builds.
-2. Add the next deterministic exception-rule family without database coupling.
-3. Review persistence contracts before creating the first Alembic migration or database adapter.
+1. Implement reviewed persistence contracts, the first Alembic schema, and repositories.
+2. Complete the deterministic synthetic generator and remaining exception-rule families.
+3. Add typed API contracts and integration tests over the local PostgreSQL/Redis stack.
 
 ## Known limitations
 

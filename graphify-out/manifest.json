@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1787623167.162599,
-    "ast_hash": "07a80b489424b3cff72a5e9b71032afd",
+    "mtime": 1787624696.555772,
+    "ast_hash": "55c0efebe49bedda132bce05b37a6aa5",
     "semantic_hash": ""
   },
   "src/components/PlaceholderSection.tsx": {
@@ -500,13 +500,13 @@
     "semantic_hash": ""
   },
   "PROJECT_STATE.md": {
-    "mtime": 1787624317.4888494,
-    "ast_hash": "75b6b048387b8e57d23b3b1e44fb2602",
+    "mtime": 1787625320.6779022,
+    "ast_hash": "8ee4a17c2899c77a5b7c8bca229b6add",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787622407.3459797,
-    "ast_hash": "44990520152a8c4cbd212d2432f306d2",
+    "mtime": 1787625312.7406003,
+    "ast_hash": "3e3d04a60bb9fedfd2e4af7bfbf9291b",
     "semantic_hash": ""
   },
   "docs/adr/0001-modular-monolith-and-worker.md": {
@@ -535,8 +535,8 @@
     "semantic_hash": ""
   },
   "backend/pyproject.toml": {
-    "mtime": 1787623220.571401,
-    "ast_hash": "08c521cd3217cee9a80d3244fb24a3b7",
+    "mtime": 1787624696.5579424,
+    "ast_hash": "4f5ece2fed39bf57b936b38043a4a2e2",
     "semantic_hash": ""
   },
   "backend/src/tradeops/__init__.py": {
@@ -580,8 +580,8 @@
     "semantic_hash": ""
   },
   "backend/src/tradeops/config.py": {
-    "mtime": 1787623068.2392821,
-    "ast_hash": "4ebf7cba904400fac1c09b75f80f535c",
+    "mtime": 1787624712.733168,
+    "ast_hash": "dad77a9d5168b9ce43e18b544168f7fc",
     "semantic_hash": ""
   },
   "backend/src/tradeops/domain/__init__.py": {
@@ -610,13 +610,13 @@
     "semantic_hash": ""
   },
   "backend/src/tradeops/worker/__main__.py": {
-    "mtime": 1787623068.254817,
-    "ast_hash": "65d4ad3b9857427500255353c1b0612b",
+    "mtime": 1787625216.7816193,
+    "ast_hash": "922c80c3268b874eb23e1e2eac01cb87",
     "semantic_hash": ""
   },
   "backend/src/tradeops/worker/app.py": {
-    "mtime": 1787623154.705009,
-    "ast_hash": "1634846ab05ced4c756a8e1533603461",
+    "mtime": 1787624712.7341678,
+    "ast_hash": "92ca35b38f9d5baee8253429d06350ed",
     "semantic_hash": ""
   },
   "backend/tests/test_api_health.py": {
@@ -692,6 +692,26 @@
   "docs/runbooks/settlement-date-mismatch.md": {
     "mtime": 1787624268.8435068,
     "ast_hash": "95d2fa7f0d2a24cbed9c8c5471e25c68",
+    "semantic_hash": ""
+  },
+  ".github/workflows/ci.yml": {
+    "mtime": 1787625051.1495526,
+    "ast_hash": "c3e8b0867c54e6ea746d6dea45f67dee",
+    "semantic_hash": ""
+  },
+  ".pre-commit-config.yaml": {
+    "mtime": 1787624696.5635593,
+    "ast_hash": "ff06446099504cc406c4512e61628d3a",
+    "semantic_hash": ""
+  },
+  "compose.yaml": {
+    "mtime": 1787625227.7704039,
+    "ast_hash": "d49348d684e6b20ed5a7a553434bcad5",
+    "semantic_hash": ""
+  },
+  "infra/otel-collector.yaml": {
+    "mtime": 1787624696.5744588,
+    "ast_hash": "a2de6e4040e44303b2c64905143a7db8",
     "semantic_hash": ""
   }
 }

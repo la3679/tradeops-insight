@@ -1,0 +1,11 @@
+.git
+.github
+.codex
+.venv
+backend/.venv
+node_modules
+.output
+.wrangler
+graphify-out
+logs
+*.log

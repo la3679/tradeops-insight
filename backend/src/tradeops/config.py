@@ -3,7 +3,7 @@
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import Field
+from pydantic import Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -15,8 +15,13 @@ class Settings(BaseSettings):
     app_name: str = "TradeOps Copilot API"
     environment: Literal["local", "test", "production"] = "local"
     api_prefix: str = Field(default="/api/v1", pattern=r"^/[a-z0-9/-]+$")
-    worker_broker_url: str = "redis://127.0.0.1:6379/0"
-    worker_result_backend_url: str = "redis://127.0.0.1:6379/1"
+    database_url: SecretStr = SecretStr(
+        "postgresql+psycopg://tradeops:tradeops-local-only@127.0.0.1:5432/tradeops"
+    )
+    worker_broker_url: SecretStr = SecretStr("redis://127.0.0.1:6379/0")
+    worker_result_backend_url: SecretStr = SecretStr("redis://127.0.0.1:6379/1")
+    otel_exporter_endpoint: str = "http://127.0.0.1:4317"
+    oidc_issuer: str = "http://127.0.0.1:8080/realms/tradeops"
 
 
 @lru_cache
