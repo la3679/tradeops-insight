@@ -1,0 +1,12 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Deterministic synthetic idempotency fixtures and parameter names"
+regexTarget = "line"
+regexes = [
+  '''(?:operation|resolution)-key-[0-9]+''',
+  '''idempotency_key=idempotency_key''',
+  '''idempotency_key\s*=\s*(?:idempotency_key|"resolution-key-[0-9]+")''',
+  '''actor=principal\.subject''',
+]

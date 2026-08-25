@@ -3,6 +3,10 @@ FROM ghcr.io/astral-sh/uv:0.12.2-python3.14-trixie-slim
 ENV UV_COMPILE_BYTECODE=1 UV_LINK_MODE=copy
 WORKDIR /app
 
+RUN DEBIAN_FRONTEND=noninteractive apt-get update \
+    && apt-get upgrade --yes \
+    && rm -rf /var/lib/apt/lists/*
+
 COPY pyproject.toml uv.lock README.md ./
 RUN uv sync --locked --no-dev --no-install-project
 COPY src ./src

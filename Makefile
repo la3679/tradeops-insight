@@ -41,7 +41,7 @@ eval:
 
 security:
 	bun audit --production
-	uv export --directory backend --locked --no-dev --format requirements-txt --output-file backend/requirements-audit.txt
+	uv export --directory backend --locked --no-dev --no-emit-project --format requirements-txt --output-file backend/requirements-audit.txt
 	uvx pip-audit -r backend/requirements-audit.txt
 
 docs-check:
