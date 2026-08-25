@@ -35,6 +35,15 @@ def collect_route_paths(routes: list[object]) -> set[str]:
         children = getattr(route, "routes", None)
         if isinstance(children, list):
             collected.update(collect_route_paths(children))
+        original_router = getattr(route, "original_router", None)
+        original_routes = getattr(original_router, "routes", None)
+        include_context = getattr(route, "include_context", None)
+        prefix = getattr(include_context, "prefix", "")
+        if isinstance(original_routes, list) and isinstance(prefix, str):
+            for original_route in original_routes:
+                original_path = getattr(original_route, "path", "")
+                if isinstance(original_path, str) and original_path:
+                    collected.add(f"{prefix}{original_path}")
     return collected
 
 
