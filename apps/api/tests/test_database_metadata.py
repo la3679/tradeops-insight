@@ -9,7 +9,7 @@ from tradeops_api.infrastructure.database import Base
 
 
 def test_core_tables_are_registered() -> None:
-    assert set(Base.metadata.tables) == {
+    assert {
         "audit_events",
         "counterparties",
         "exception_evidence",
@@ -24,7 +24,32 @@ def test_core_tables_are_registered() -> None:
         "trades",
         "user_roles",
         "users",
-    }
+    } <= set(Base.metadata.tables)
+
+
+def test_workflow_and_evaluation_tables_are_registered() -> None:
+    assert {
+        "approvals",
+        "data_source_sync_runs",
+        "document_chunks",
+        "documents",
+        "evaluation_cases",
+        "evaluation_results",
+        "evaluation_runs",
+        "resolution_actions",
+        "tool_calls",
+        "workflow_runs",
+        "workflow_steps",
+    } <= set(Base.metadata.tables)
+
+
+def test_approval_is_bound_to_versions_and_idempotency() -> None:
+    approvals = Base.metadata.tables["approvals"]
+
+    assert {"proposal_version", "exception_version", "idempotency_key", "expires_at"} <= set(
+        approvals.c.keys()
+    )
+    assert approvals.c.idempotency_key.unique is True
 
 
 def test_trade_versions_enforce_precision_and_version_invariants() -> None:
