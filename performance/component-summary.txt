@@ -1,0 +1,9 @@
+TradeOps Copilot deterministic component benchmark
+Date: 2026-08-24 America/Phoenix
+Environment: Intel Core i9-13900H, 20 logical processors, 47.6 GiB RAM, Python 3.14.7
+
+rag_retrieval: mean_ms=0.020 median_ms=0.019 p95_ms=0.023 iterations=1000
+worker_delivery: mean_ms=0.002 median_ms=0.002 p95_ms=0.003 iterations=10000
+mock_workflow: mean_ms=10.257 median_ms=9.871 p95_ms=12.345 iterations=100
+
+This is a local demo baseline, not a production capacity claim.
