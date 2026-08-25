@@ -242,6 +242,22 @@ class AuditEventRecord(IdentityMixin, Base):
     payload: Mapped[dict[str, object]] = mapped_column(JSON)
 
 
+class OutboxEventRecord(IdentityMixin, Base):
+    """Application event committed in the same transaction as domain state."""
+
+    __tablename__ = "outbox_events"
+    __table_args__ = (Index("ix_outbox_delivery", "published_at", "occurred_at"),)
+
+    event_type: Mapped[str] = mapped_column(String(100), index=True)
+    schema_version: Mapped[int] = mapped_column(Integer, default=1)
+    aggregate_type: Mapped[str] = mapped_column(String(80))
+    aggregate_id: Mapped[UUID] = mapped_column(index=True)
+    payload: Mapped[dict[str, object]] = mapped_column(JSON)
+    occurred_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), index=True)
+    published_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    attempts: Mapped[int] = mapped_column(Integer, default=0)
+
+
 class EvaluationCaseRecord(IdentityMixin, TimestampMixin, Base):
     __tablename__ = "evaluation_cases"
 
