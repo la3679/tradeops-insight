@@ -41,8 +41,11 @@ describe("overview presentation components", () => {
     render(<QueueLaneList lanes={queueLanes} />);
 
     for (const lane of queueLanes) {
-      expect(screen.getByText(lane.name)).toBeVisible();
-      expect(screen.getByText(`${lane.open} open items`)).toBeVisible();
+      const laneName = screen.getByText(lane.name);
+      const laneRow = laneName.closest("li");
+      expect(laneName).toBeVisible();
+      expect(laneRow).not.toBeNull();
+      expect(within(laneRow as HTMLElement).getByText(`${lane.open} open items`)).toBeVisible();
     }
   });
 });

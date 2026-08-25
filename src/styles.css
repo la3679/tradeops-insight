@@ -18,7 +18,8 @@
   --font-sans: ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
   --text-2xs: 0.6875rem;
-  --spacing: 0.5rem;
+  /* Tailwind's utility scale is quarter-rem based; use even steps for the 8px grid. */
+  --spacing: 0.25rem;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

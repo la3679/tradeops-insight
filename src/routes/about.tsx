@@ -20,17 +20,17 @@ export const Route = createFileRoute("/about")({
 });
 
 const scopeIncluded = [
-  "Application shell, navigation, and route structure",
-  "Design tokens and reusable presentation components",
-  "An Overview screen built from a fixed synthetic fixture",
-  "Loading, empty, and permission-denied state primitives",
+  "Twelve deterministic synthetic exception categories",
+  "Typed interruptible investigation workflow with human approval",
+  "Offline retrieval, citations, provenance, and adversarial-evidence gating",
+  "Versioned API, role-scoped UI, audit events, and local observability",
 ] as const;
 
 const scopeExcluded = [
-  "Backend services, database, or persistence",
-  "Authentication and authorization enforcement",
-  "Financial, settlement, or break-classification rules",
-  "Model calls, external APIs, and secret handling",
+  "Real trades, accounts, positions, or institution data",
+  "Trade execution, routing, confirmation, or settlement connectivity",
+  "Production entitlement, compliance, or operational decision making",
+  "Unreviewed model actions or browser-visible API secrets",
 ] as const;
 
 function AboutPage() {
@@ -78,7 +78,10 @@ function AboutPage() {
       </section>
 
       <div className="grid gap-4 md:grid-cols-2">
-        <Panel title="In scope for this build" description="Frontend foundation only.">
+        <Panel
+          title="Implemented in this build"
+          description="Complete local synthetic demonstration."
+        >
           <ul className="space-y-2">
             {scopeIncluded.map((item) => (
               <li key={item} className="flex gap-2 text-xs text-muted-foreground">
@@ -94,7 +97,7 @@ function AboutPage() {
 
         <Panel
           title="Deliberately out of scope"
-          description="Owned and reviewed outside this frontend."
+          description="Safety boundaries that remain absolute."
         >
           <ul className="space-y-2">
             {scopeExcluded.map((item) => (

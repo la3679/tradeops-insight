@@ -17,6 +17,7 @@ import { Route as ExceptionsRouteImport } from './routes/exceptions'
 import { Route as KnowledgeRouteImport } from './routes/knowledge'
 import { Route as ObservabilityRouteImport } from './routes/observability'
 import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as ExceptionsExceptionIdRouteImport } from './routes/exceptions.$exceptionId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -58,26 +59,33 @@ const SettingsRoute = SettingsRouteImport.update({
   path: '/settings',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ExceptionsExceptionIdRoute = ExceptionsExceptionIdRouteImport.update({
+  id: '/$exceptionId',
+  path: '/$exceptionId',
+  getParentRoute: () => ExceptionsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/audit': typeof AuditRoute
   '/evaluations': typeof EvaluationsRoute
-  '/exceptions': typeof ExceptionsRoute
+  '/exceptions': typeof ExceptionsRouteWithChildren
   '/knowledge': typeof KnowledgeRoute
   '/observability': typeof ObservabilityRoute
   '/settings': typeof SettingsRoute
+  '/exceptions/$exceptionId': typeof ExceptionsExceptionIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/audit': typeof AuditRoute
   '/evaluations': typeof EvaluationsRoute
-  '/exceptions': typeof ExceptionsRoute
+  '/exceptions': typeof ExceptionsRouteWithChildren
   '/knowledge': typeof KnowledgeRoute
   '/observability': typeof ObservabilityRoute
   '/settings': typeof SettingsRoute
+  '/exceptions/$exceptionId': typeof ExceptionsExceptionIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -85,10 +93,11 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/audit': typeof AuditRoute
   '/evaluations': typeof EvaluationsRoute
-  '/exceptions': typeof ExceptionsRoute
+  '/exceptions': typeof ExceptionsRouteWithChildren
   '/knowledge': typeof KnowledgeRoute
   '/observability': typeof ObservabilityRoute
   '/settings': typeof SettingsRoute
+  '/exceptions/$exceptionId': typeof ExceptionsExceptionIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/knowledge'
     | '/observability'
     | '/settings'
+    | '/exceptions/$exceptionId'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/knowledge'
     | '/observability'
     | '/settings'
+    | '/exceptions/$exceptionId'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/knowledge'
     | '/observability'
     | '/settings'
+    | '/exceptions/$exceptionId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -128,7 +140,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AuditRoute: typeof AuditRoute
   EvaluationsRoute: typeof EvaluationsRoute
-  ExceptionsRoute: typeof ExceptionsRoute
+  ExceptionsRoute: typeof ExceptionsRouteWithChildren
   KnowledgeRoute: typeof KnowledgeRoute
   ObservabilityRoute: typeof ObservabilityRoute
   SettingsRoute: typeof SettingsRoute
@@ -192,15 +204,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SettingsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/exceptions/$exceptionId': {
+      id: '/exceptions/$exceptionId'
+      path: '/$exceptionId'
+      fullPath: '/exceptions/$exceptionId'
+      preLoaderRoute: typeof ExceptionsExceptionIdRouteImport
+      parentRoute: typeof ExceptionsRoute
+    }
   }
 }
+
+interface ExceptionsRouteChildren {
+  ExceptionsExceptionIdRoute: typeof ExceptionsExceptionIdRoute
+}
+
+const ExceptionsRouteChildren: ExceptionsRouteChildren = {
+  ExceptionsExceptionIdRoute: ExceptionsExceptionIdRoute,
+}
+
+const ExceptionsRouteWithChildren = ExceptionsRoute._addFileChildren(
+  ExceptionsRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AuditRoute: AuditRoute,
   EvaluationsRoute: EvaluationsRoute,
-  ExceptionsRoute: ExceptionsRoute,
+  ExceptionsRoute: ExceptionsRouteWithChildren,
   KnowledgeRoute: KnowledgeRoute,
   ObservabilityRoute: ObservabilityRoute,
   SettingsRoute: SettingsRoute,

@@ -76,9 +76,9 @@ function OverviewPage() {
 
       <Panel
         title="Recent exceptions"
-        description="Five most recent items in the sample fixture. Row order is fixed."
+        description="Five representative items in the deterministic fast fixture. Row order is fixed."
         flush
-        actions={<StatusBadge tone="neutral">Sample · 5 of 42</StatusBadge>}
+        actions={<StatusBadge tone="neutral">Sample · 5 of 30</StatusBadge>}
       >
         <ExceptionTable rows={recentExceptions} />
       </Panel>
@@ -86,7 +86,7 @@ function OverviewPage() {
       <div className="grid gap-4 lg:grid-cols-2">
         <Panel
           title="Exception categories"
-          description="Share of the 42-item sample by break category."
+          description="Share of the 30-finding fast sample by break family."
         >
           <CategoryBars items={categoryBreakdown} />
         </Panel>

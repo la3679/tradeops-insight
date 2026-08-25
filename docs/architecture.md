@@ -39,6 +39,7 @@ Model output is advisory data. Structured schemas, deterministic validation, cit
 ## Evolution criteria
 
 Keep these modules in one backend codebase until independent scaling, deployment ownership, data ownership, or reliability requirements justify a service boundary. Network separation is not a substitute for clear module ownership.
+
 ## Investigation workflow
 
 ```mermaid

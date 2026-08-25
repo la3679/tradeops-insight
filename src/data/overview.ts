@@ -18,25 +18,25 @@ export const summaryMetrics: readonly SummaryMetric[] = [
   {
     id: "open",
     label: "Open exceptions",
-    value: "42",
-    note: "Synthetic queue snapshot, fixed sample set",
+    value: "30",
+    note: "Fast synthetic seed, deterministic findings",
   },
   {
     id: "pending",
     label: "Awaiting review",
-    value: "11",
+    value: "12",
     note: "Items with an unconfirmed proposed resolution",
   },
   {
     id: "verified",
     label: "Reviewer-verified",
-    value: "27",
-    note: "Closed after a human confirmed the sample outcome",
+    value: "0",
+    note: "Fresh seed; review actions begin at zero",
   },
   {
     id: "high",
     label: "High severity",
-    value: "4",
+    value: "15",
     note: "Sample items tagged high severity in the fixture",
   },
 ] as const;
@@ -53,8 +53,8 @@ export type ExceptionRow = {
 
 export const recentExceptions: readonly ExceptionRow[] = [
   {
-    id: "EXC-10412",
-    instrument: "SYN 4.25% 2031 Corp",
+    id: "EXC-DEMO-0001",
+    instrument: "SYN Corporate Bond 0031",
     category: "Settlement date mismatch",
     severity: "high",
     state: "escalated",
@@ -62,38 +62,38 @@ export const recentExceptions: readonly ExceptionRow[] = [
     owner: "Desk Ops A",
   },
   {
-    id: "EXC-10408",
-    instrument: "SYN 2.75% 2028 Govt",
-    category: "Accrued interest variance",
+    id: "EXC-DEMO-0002",
+    instrument: "SYN Government Bond 0028",
+    category: "Counterparty name mismatch",
     severity: "medium",
     state: "pending",
     ageHours: 7,
     owner: "Desk Ops A",
   },
   {
-    id: "EXC-10399",
-    instrument: "SYN 5.10% 2034 Corp",
-    category: "Counterparty SSI missing",
+    id: "EXC-DEMO-0003",
+    instrument: "SYN Corporate Bond 0034",
+    category: "Missing confirmation",
     severity: "medium",
     state: "pending",
     ageHours: 12,
     owner: "Desk Ops B",
   },
   {
-    id: "EXC-10387",
-    instrument: "SYN 3.00% 2027 Muni",
+    id: "EXC-DEMO-0004",
+    instrument: "SYN Government Bond 0027",
     category: "Price tolerance break",
     severity: "low",
-    state: "verified",
+    state: "pending",
     ageHours: 21,
     owner: "Desk Ops B",
   },
   {
-    id: "EXC-10376",
-    instrument: "SYN 1.95% 2026 Govt",
-    category: "Duplicate allocation",
+    id: "EXC-DEMO-0005",
+    instrument: "SYN Government Bond 0026",
+    category: "Duplicate trade or event",
     severity: "low",
-    state: "verified",
+    state: "pending",
     ageHours: 30,
     owner: "Desk Ops C",
   },
@@ -106,11 +106,11 @@ export type CategoryBreakdown = {
 };
 
 export const categoryBreakdown: readonly CategoryBreakdown[] = [
-  { category: "Settlement date mismatch", count: 14, share: 33 },
-  { category: "Accrued interest variance", count: 11, share: 26 },
-  { category: "Counterparty SSI missing", count: 8, share: 19 },
-  { category: "Price tolerance break", count: 6, share: 14 },
-  { category: "Duplicate allocation", count: 3, share: 8 },
+  { category: "Settlement date mismatch", count: 8, share: 27 },
+  { category: "Counterparty identity", count: 7, share: 23 },
+  { category: "Missing or contradictory evidence", count: 6, share: 20 },
+  { category: "Price or notional mismatch", count: 5, share: 17 },
+  { category: "Duplicate or malformed payload", count: 4, share: 13 },
 ] as const;
 
 export type QueueLane = {
@@ -122,9 +122,9 @@ export type QueueLane = {
 };
 
 export const queueLanes: readonly QueueLane[] = [
-  { id: "lane-a", name: "Desk Ops A", open: 18, pending: 5, verified: 11 },
-  { id: "lane-b", name: "Desk Ops B", open: 15, pending: 4, verified: 9 },
-  { id: "lane-c", name: "Desk Ops C", open: 9, pending: 2, verified: 7 },
+  { id: "lane-a", name: "Identity review", open: 10, pending: 4, verified: 0 },
+  { id: "lane-b", name: "Economic terms", open: 10, pending: 4, verified: 0 },
+  { id: "lane-c", name: "Evidence and dates", open: 10, pending: 4, verified: 0 },
 ] as const;
 
-export const dataAsOf = "2026-03-02 09:00 UTC (fixed fixture)";
+export const dataAsOf = "2026-08-24 14:00 UTC (fixed fixture)";
