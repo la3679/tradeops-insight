@@ -505,8 +505,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787666730.1179254,
-    "ast_hash": "b9bb8c3cc5c2a6b0893faf47b414225b",
+    "mtime": 1787667030.2622187,
+    "ast_hash": "f1907a7b3a6ec3b12fab09f4461ebcb5",
     "semantic_hash": ""
   },
   "docs/adr/0001-modular-monolith-and-worker.md": {

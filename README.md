@@ -169,14 +169,14 @@ The system deliberately begins as a modular monolith plus independently runnable
 sequenceDiagram
   actor A as Analyst
   actor R as Reviewer
-  participant UI as Web console
-  participant API as FastAPI
+  participant UI as Web
+  participant API as API
   participant G as LangGraph
-  participant DB as State and audit
-  A->>UI: Open synthetic exception
+  participant DB as State/Audit
+  A->>UI: Open exception
   UI->>API: POST workflow + idempotency key
   API->>G: Invoke typed graph state
-  G->>G: Validate, reconcile, enrich, retrieve, propose
+  G->>G: Validate, reconcile, retrieve, propose
   G-->>API: Interrupt for human review
   API->>DB: Record trace and audit evidence
   R->>API: Decision + expected exception version
