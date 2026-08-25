@@ -58,7 +58,9 @@
       "lastName": "Administrator",
       "enabled": true,
       "realmRoles": ["administrator"],
-      "credentials": [{ "type": "password", "value": "administrator-local-only", "temporary": false }]
+      "credentials": [
+        { "type": "password", "value": "administrator-local-only", "temporary": false }
+      ]
     }
   ]
 }
