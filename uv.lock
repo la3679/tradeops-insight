@@ -542,11 +542,15 @@ name = "tradeops-data"
 version = "0.1.0"
 source = { editable = "packages/data_connectors" }
 dependencies = [
+    { name = "httpx" },
     { name = "tradeops-domain" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "tradeops-domain", editable = "packages/domain" }]
+requires-dist = [
+    { name = "httpx", specifier = ">=0.28,<1" },
+    { name = "tradeops-domain", editable = "packages/domain" },
+]
 
 [[package]]
 name = "tradeops-domain"

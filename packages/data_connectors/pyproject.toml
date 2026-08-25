@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Synthetic data generation, provenance, and allowlisted public-source adapters."
 requires-python = ">=3.12,<3.14"
 license = "Apache-2.0"
-dependencies = ["tradeops-domain>=0.1.0"]
+dependencies = ["httpx>=0.28,<1", "tradeops-domain>=0.1.0"]
 
 [tool.uv.sources]
 tradeops-domain = { workspace = true }
