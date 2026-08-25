@@ -70,12 +70,15 @@ class CounterpartyReference:
     status: EntityStatus
     retrieved_at: datetime
     source_version: str
+    aliases: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         _require_pattern(field="lei", value=self.lei, pattern=_LEI_SHAPE)
         _require_bounded_text(field="legal_name", value=self.legal_name, maximum=200)
         _require_utc(field="retrieved_at", value=self.retrieved_at)
         _require_bounded_text(field="source_version", value=self.source_version, maximum=100)
+        for alias in self.aliases:
+            _require_bounded_text(field="aliases", value=alias, maximum=200)
 
 
 @dataclass(frozen=True, slots=True, kw_only=True)

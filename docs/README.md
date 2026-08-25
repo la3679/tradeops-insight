@@ -11,6 +11,7 @@ TradeOps Copilot documentation is organized by the decision or audience it suppo
 - [Changelog](../CHANGELOG.md) — user-visible changes by release.
 - [Developer setup](operations/development.md) — supported runtimes, bootstrap, checks, and local API use.
 - [API conventions](api/conventions.md) — versioning, correlation, errors, concurrency, and idempotency.
+- [Domain glossary](product/domain-glossary.md) — synthetic trade, exception, evidence, and review language.
 
 ## Documentation map
 
