@@ -12,6 +12,7 @@ from starlette.middleware.cors import CORSMiddleware
 from tradeops import __version__
 from tradeops.api.routes.health import router as health_router
 from tradeops.api.routes.operations import router as operations_router
+from tradeops.api.security import OidcTokenDecoder
 from tradeops.application.demo_operations import (
     DemoConflictError,
     DemoNotFoundError,
@@ -32,6 +33,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         redoc_url=None,
     )
     app.state.settings = resolved
+    app.state.token_decoder = OidcTokenDecoder(
+        issuer=resolved.oidc_issuer, audience=resolved.oidc_audience
+    )
     app.state.operations = DemoOperationsService(dataset_size=resolved.demo_dataset_size)
     if resolved.environment != "production":
         app.add_middleware(

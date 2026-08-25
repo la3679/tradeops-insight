@@ -1,0 +1,64 @@
+{
+  "realm": "tradeops",
+  "enabled": true,
+  "displayName": "TradeOps Copilot local demo",
+  "registrationAllowed": false,
+  "resetPasswordAllowed": false,
+  "rememberMe": false,
+  "roles": {
+    "realm": [
+      { "name": "analyst" },
+      { "name": "reviewer" },
+      { "name": "auditor" },
+      { "name": "administrator" }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "tradeops-api",
+      "name": "TradeOps API",
+      "enabled": true,
+      "publicClient": true,
+      "directAccessGrantsEnabled": true,
+      "standardFlowEnabled": true,
+      "redirectUris": ["http://localhost:3000/*"],
+      "webOrigins": ["http://localhost:3000"],
+      "protocol": "openid-connect",
+      "defaultClientScopes": ["web-origins", "acr", "roles", "profile", "email"]
+    }
+  ],
+  "users": [
+    {
+      "username": "analyst",
+      "firstName": "Synthetic",
+      "lastName": "Analyst",
+      "enabled": true,
+      "realmRoles": ["analyst"],
+      "credentials": [{ "type": "password", "value": "analyst-local-only", "temporary": false }]
+    },
+    {
+      "username": "supervisor",
+      "firstName": "Synthetic",
+      "lastName": "Supervisor",
+      "enabled": true,
+      "realmRoles": ["reviewer"],
+      "credentials": [{ "type": "password", "value": "supervisor-local-only", "temporary": false }]
+    },
+    {
+      "username": "auditor",
+      "firstName": "Synthetic",
+      "lastName": "Auditor",
+      "enabled": true,
+      "realmRoles": ["auditor"],
+      "credentials": [{ "type": "password", "value": "auditor-local-only", "temporary": false }]
+    },
+    {
+      "username": "administrator",
+      "firstName": "Synthetic",
+      "lastName": "Administrator",
+      "enabled": true,
+      "realmRoles": ["administrator"],
+      "credentials": [{ "type": "password", "value": "administrator-local-only", "temporary": false }]
+    }
+  ]
+}

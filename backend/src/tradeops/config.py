@@ -22,6 +22,7 @@ class Settings(BaseSettings):
     worker_result_backend_url: SecretStr = SecretStr("redis://127.0.0.1:6379/1")
     otel_exporter_endpoint: str = "http://127.0.0.1:4317"
     oidc_issuer: str = "http://127.0.0.1:8080/realms/tradeops"
+    oidc_audience: str = "tradeops-api"
     demo_dataset_size: int = Field(default=120, ge=24, le=5000)
 
 

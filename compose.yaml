@@ -42,6 +42,7 @@ services:
       TRADEOPS_WORKER_RESULT_BACKEND_URL: ${TRADEOPS_WORKER_RESULT_BACKEND_URL:-redis://redis:6379/1}
       TRADEOPS_OTEL_EXPORTER_ENDPOINT: ${TRADEOPS_OTEL_EXPORTER_ENDPOINT:-http://otel-collector:4317}
       TRADEOPS_OIDC_ISSUER: ${TRADEOPS_OIDC_ISSUER:-http://keycloak:8080/realms/tradeops}
+      TRADEOPS_OIDC_AUDIENCE: ${TRADEOPS_OIDC_AUDIENCE:-tradeops-api}
     ports:
       - "127.0.0.1:8000:8000"
     depends_on:
@@ -81,7 +82,7 @@ services:
 
   keycloak:
     image: quay.io/keycloak/keycloak:26.6.3
-    command: ["start-dev", "--health-enabled=true"]
+    command: ["start-dev", "--health-enabled=true", "--import-realm"]
     environment:
       KC_BOOTSTRAP_ADMIN_USERNAME: ${KEYCLOAK_ADMIN:-tradeops-admin}
       KC_BOOTSTRAP_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD:-tradeops-admin-local-only}
@@ -90,6 +91,7 @@ services:
       - "127.0.0.1:9000:9000"
     volumes:
       - keycloak-data:/opt/keycloak/data
+      - ./infra/keycloak/tradeops-realm.json:/opt/keycloak/data/import/tradeops-realm.json:ro
     restart: unless-stopped
 
   otel-collector:
