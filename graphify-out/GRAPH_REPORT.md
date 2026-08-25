@@ -1,16 +1,16 @@
 # Graph Report - tradeops-insight  (2026-08-24)
 
 ## Corpus Check
-- 131 files · ~32,898 words
+- 140 files · ~34,245 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 835 nodes · 1258 edges · 106 communities (43 shown, 63 thin omitted)
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.5)
+- 894 nodes · 1374 edges · 106 communities (44 shown, 62 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 27 edges (avg confidence: 0.59)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `93a8d459`
+- Built from commit: `ecec401f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -21,7 +21,7 @@
 - devDependencies
 - compilerOptions
 - index.tsx
-- carousel.tsx
+- pagination.tsx
 - utils.ts
 - __root.tsx
 - server.ts
@@ -33,16 +33,16 @@
 - Settings
 - dependencies
 - chart.tsx
-- sheet.tsx
-- table.tsx
+- breadcrumb.tsx
+- Domain glossary
 - Architecture Baseline
-- drawer.tsx
+- Settlement-date mismatch runbook
 - select.tsx
 - What You Must Do When Invoked
 - toggle-group.tsx
 - graphify reference: extra exports and benchmark
-- input-otp.tsx
-- badge.tsx
+- cmdk
+- carousel.tsx
 - navigation-menu.tsx
 - sonner.tsx
 - class-variance-authority
@@ -58,7 +58,6 @@
 - @radix-ui/react-collapsible
 - @radix-ui/react-context-menu
 - @radix-ui/react-dialog
-- @radix-ui/react-dropdown-menu
 - @radix-ui/react-hover-card
 - @radix-ui/react-label
 - @radix-ui/react-menubar
@@ -108,7 +107,7 @@
 - api/__init__.py
 - routes/__init__.py
 - application/__init__.py
-- domain/__init__.py
+- SettlementDatePolicy
 - observability/__init__.py
 - orchestration/__init__.py
 - ports/__init__.py
@@ -118,14 +117,14 @@
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 231 edges
 2. `compilerOptions` - 22 edges
-3. `scripts` - 20 edges
-4. `Settings` - 15 edges
-5. `What You Must Do When Invoked` - 12 edges
-6. `FileRoutesByPath` - 10 edges
-7. `/graphify` - 10 edges
-8. `StatusBadge()` - 9 edges
-9. `buttonVariants` - 9 edges
-10. `graphify reference: extra exports and benchmark` - 8 edges
+3. `SettlementDatePolicy` - 21 edges
+4. `scripts` - 20 edges
+5. `Settings` - 15 edges
+6. `What You Must Do When Invoked` - 12 edges
+7. `evaluate_settlement_date()` - 11 edges
+8. `synthetic_trade()` - 11 edges
+9. `FileRoutesByPath` - 10 edges
+10. `/graphify` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `StateFrame()` --calls--> `cn()`  [EXTRACTED]
@@ -142,19 +141,19 @@
 ## Import Cycles
 - None detected.
 
-## Communities (106 total, 63 thin omitted)
+## Communities (106 total, 62 thin omitted)
 
 ### Community 0 - "routeTree.gen.ts"
 Cohesion: 0.06
 Nodes (41): PlaceholderSection(), PlaceholderSectionProps, PageHeader(), PageHeaderProps, EmptyState(), FrameProps, LoadingState(), PermissionDeniedState() (+33 more)
 
 ### Community 1 - "cn"
-Cohesion: 0.09
-Nodes (34): AccordionContent, AccordionItem, AccordionTrigger, Avatar, AvatarFallback, AvatarImage, Breadcrumb, BreadcrumbEllipsis() (+26 more)
+Cohesion: 0.07
+Nodes (41): AccordionContent, AccordionItem, AccordionTrigger, Avatar, AvatarFallback, AvatarImage, Card, CardContent (+33 more)
 
 ### Community 2 - "sidebar.tsx"
-Cohesion: 0.07
-Nodes (33): Button, Input, Separator, Sidebar, SidebarContent, SidebarContext, SidebarContextProps, SidebarFooter (+25 more)
+Cohesion: 0.06
+Nodes (40): Input, Separator, SheetContent, SheetContentProps, SheetDescription, SheetFooter(), SheetHeader(), SheetOverlay (+32 more)
 
 ### Community 3 - "devDependencies"
 Cohesion: 0.04
@@ -165,20 +164,20 @@ Cohesion: 0.06
 Nodes (32): DOM, DOM.Iterable, ES2022, eslint.config.js, src/**/*.ts, src/**/*.tsx, vite/client, vite.config.ts (+24 more)
 
 ### Community 5 - "index.tsx"
-Cohesion: 0.12
-Nodes (26): CategoryBars(), ExceptionTable(), severityTone, stateTone, QueueLaneList(), MetricTile(), MetricTileProps, Panel() (+18 more)
+Cohesion: 0.13
+Nodes (25): CategoryBars(), ExceptionTable(), severityTone, stateTone, QueueLaneList(), MetricTile(), MetricTileProps, Panel() (+17 more)
 
-### Community 6 - "carousel.tsx"
-Cohesion: 0.07
-Nodes (33): AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter(), AlertDialogHeader(), AlertDialogOverlay, AlertDialogTitle (+25 more)
+### Community 6 - "pagination.tsx"
+Cohesion: 0.12
+Nodes (21): AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter(), AlertDialogHeader(), AlertDialogOverlay, AlertDialogTitle (+13 more)
 
 ### Community 7 - "utils.ts"
-Cohesion: 0.10
-Nodes (11): Checkbox, HoverCardContent, PopoverContent, Progress, RadioGroup, RadioGroupItem, ResizableHandle(), ResizablePanelGroup() (+3 more)
+Cohesion: 0.08
+Nodes (15): Checkbox, HoverCardContent, InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot, PopoverContent, Progress (+7 more)
 
 ### Community 8 - "__root.tsx"
-Cohesion: 0.13
-Nodes (11): AppFooter(), AppShell(), SideNav(), SideNavProps, LovableErrorOptions, LovableEvents, reportLovableError(), Window (+3 more)
+Cohesion: 0.12
+Nodes (12): AppFooter(), AppShell(), SideNav(), SideNavProps, StatusBar(), LovableErrorOptions, LovableEvents, reportLovableError() (+4 more)
 
 ### Community 9 - "server.ts"
 Cohesion: 0.16
@@ -210,27 +209,27 @@ Nodes (33): create_app(), FastAPI application factory., Create an API process wi
 
 ### Community 16 - "dependencies"
 Cohesion: 0.15
-Nodes (13): cmdk, lucide-react, dependencies, cmdk, lucide-react, @radix-ui/react-checkbox, @radix-ui/react-progress, react (+5 more)
+Nodes (13): lucide-react, dependencies, lucide-react, @radix-ui/react-checkbox, @radix-ui/react-dropdown-menu, @radix-ui/react-progress, react, sonner (+5 more)
 
 ### Community 17 - "chart.tsx"
 Cohesion: 0.25
 Nodes (9): ChartConfig, ChartContainer, ChartContext, ChartContextProps, ChartLegendContent, ChartTooltipContent, getPayloadConfigFromPayload(), THEMES (+1 more)
 
-### Community 18 - "sheet.tsx"
+### Community 18 - "breadcrumb.tsx"
 Cohesion: 0.25
-Nodes (8): SheetContent, SheetContentProps, SheetDescription, SheetFooter(), SheetHeader(), SheetOverlay, SheetTitle, sheetVariants
+Nodes (7): Breadcrumb, BreadcrumbEllipsis(), BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator()
 
-### Community 19 - "table.tsx"
-Cohesion: 0.22
-Nodes (8): Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow
+### Community 19 - "Domain glossary"
+Cohesion: 0.29
+Nodes (6): Domain glossary, Escalation, Exception finding, Review correction, Settlement-date mismatch, Synthetic trade
 
 ### Community 20 - "Architecture Baseline"
 Cohesion: 0.05
 Nodes (37): Coding rules, graphify, Ownership boundaries, Review requirements, TradeOps Copilot — agent guidelines, ADR 0001: Modular Monolith with a Background Worker, Consequences, Context (+29 more)
 
-### Community 21 - "drawer.tsx"
-Cohesion: 0.25
-Nodes (6): DrawerContent, DrawerDescription, DrawerFooter(), DrawerHeader(), DrawerOverlay, DrawerTitle
+### Community 21 - "Settlement-date mismatch runbook"
+Cohesion: 0.29
+Nodes (6): Current limitations, Detection, Escalation, Review correction, Settlement-date mismatch runbook, Severity and routing
 
 ### Community 22 - "select.tsx"
 Cohesion: 0.25
@@ -248,13 +247,9 @@ Nodes (5): ToggleGroup, ToggleGroupContext, ToggleGroupItem, Toggle, toggleVaria
 Cohesion: 0.22
 Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only if --wiki flag), Step 7 - Neo4j export (only if --neo4j or --neo4j-push flag), Step 7a - FalkorDB export (only if --falkordb or --falkordb-push flag), Step 7b - SVG export (only if --svg flag), Step 7c - GraphML export (only if --graphml flag), Step 7d - MCP server (only if --mcp flag), Step 8 - Token reduction benchmark (only if total_words > 5000)
 
-### Community 26 - "input-otp.tsx"
-Cohesion: 0.40
-Nodes (4): InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot
-
-### Community 27 - "badge.tsx"
-Cohesion: 0.67
-Nodes (3): Badge(), BadgeProps, badgeVariants
+### Community 27 - "carousel.tsx"
+Cohesion: 0.14
+Nodes (16): Badge(), BadgeProps, badgeVariants, Carousel, CarouselApi, CarouselContent, CarouselContext, CarouselContextProps (+8 more)
 
 ### Community 28 - "navigation-menu.tsx"
 Cohesion: 0.29
@@ -288,25 +283,29 @@ Nodes (4): ADR 0002: Python runtime and durable task queue boundary, Consequence
 Cohesion: 0.50
 Nodes (4): Alert, AlertDescription, AlertTitle, alertVariants
 
+### Community 99 - "SettlementDatePolicy"
+Cohesion: 0.10
+Nodes (35): ExceptionFinding, ExceptionSeverity, ExceptionType, Structured outputs from deterministic exception rules., An explainable, deterministic rule finding; never an automatic state change., ReviewRoute, Dependency-free domain layer for deterministic facts and rules., Independently testable deterministic rule families. (+27 more)
+
 ## Knowledge Gaps
-- **283 isolated node(s):** `tradeops-copilot-backend`, `$schema`, `style`, `rsc`, `tsx` (+278 more)
+- **293 isolated node(s):** `tradeops-copilot-backend`, `$schema`, `style`, `rsc`, `tsx` (+288 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **63 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **62 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `cn()` connect `cn` to `routeTree.gen.ts`, `sidebar.tsx`, `index.tsx`, `carousel.tsx`, `utils.ts`, `__root.tsx`, `command.tsx`, `menubar.tsx`, `form.tsx`, `chart.tsx`, `sheet.tsx`, `table.tsx`, `drawer.tsx`, `select.tsx`, `toggle-group.tsx`, `input-otp.tsx`, `badge.tsx`, `navigation-menu.tsx`, `dropdown-menu.tsx`, `alert.tsx`?**
-  _High betweenness centrality (0.194) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `dependencies` to `scripts`, `class-variance-authority`, `clsx`, `date-fns`, `embla-carousel-react`, `@hookform/resolvers`, `input-otp`, `@radix-ui/react-accordion`, `@radix-ui/react-alert-dialog`, `@radix-ui/react-aspect-ratio`, `@radix-ui/react-avatar`, `@radix-ui/react-collapsible`, `@radix-ui/react-context-menu`, `@radix-ui/react-dialog`, `@radix-ui/react-dropdown-menu`, `@radix-ui/react-hover-card`, `@radix-ui/react-label`, `@radix-ui/react-menubar`, `@radix-ui/react-navigation-menu`, `@radix-ui/react-popover`, `@radix-ui/react-radio-group`, `@radix-ui/react-scroll-area`, `@radix-ui/react-select`, `@radix-ui/react-separator`, `@radix-ui/react-slider`, `@radix-ui/react-slot`, `@radix-ui/react-switch`, `@radix-ui/react-tabs`, `@radix-ui/react-toggle`, `@radix-ui/react-toggle-group`, `@radix-ui/react-tooltip`, `react-day-picker`, `react-dom`, `react-hook-form`, `react-resizable-panels`, `recharts`, `tailwind-merge`, `tailwindcss`, `@tailwindcss/vite`, `@tanstack/react-query`, `@tanstack/react-router`, `@tanstack/react-start`, `@tanstack/router-plugin`, `tw-animate-css`, `vaul`, `vite-tsconfig-paths`, `zod`?**
-  _High betweenness centrality (0.038) - this node is a cross-community bridge._
+- **Why does `cn()` connect `cn` to `routeTree.gen.ts`, `sidebar.tsx`, `index.tsx`, `pagination.tsx`, `utils.ts`, `__root.tsx`, `command.tsx`, `menubar.tsx`, `form.tsx`, `navigation-menu.tsx`, `chart.tsx`, `breadcrumb.tsx`, `dropdown-menu.tsx`, `select.tsx`, `toggle-group.tsx`, `carousel.tsx`, `alert.tsx`?**
+  _High betweenness centrality (0.169) - this node is a cross-community bridge._
+- **Why does `dependencies` connect `dependencies` to `scripts`, `cmdk`, `class-variance-authority`, `clsx`, `date-fns`, `embla-carousel-react`, `@hookform/resolvers`, `input-otp`, `@radix-ui/react-accordion`, `@radix-ui/react-alert-dialog`, `@radix-ui/react-aspect-ratio`, `@radix-ui/react-avatar`, `@radix-ui/react-collapsible`, `@radix-ui/react-context-menu`, `@radix-ui/react-dialog`, `@radix-ui/react-hover-card`, `@radix-ui/react-label`, `@radix-ui/react-menubar`, `@radix-ui/react-navigation-menu`, `@radix-ui/react-popover`, `@radix-ui/react-radio-group`, `@radix-ui/react-scroll-area`, `@radix-ui/react-select`, `@radix-ui/react-separator`, `@radix-ui/react-slider`, `@radix-ui/react-slot`, `@radix-ui/react-switch`, `@radix-ui/react-tabs`, `@radix-ui/react-toggle`, `@radix-ui/react-toggle-group`, `@radix-ui/react-tooltip`, `react-day-picker`, `react-dom`, `react-hook-form`, `react-resizable-panels`, `recharts`, `tailwind-merge`, `tailwindcss`, `@tailwindcss/vite`, `@tanstack/react-query`, `@tanstack/react-router`, `@tanstack/react-start`, `@tanstack/router-plugin`, `tw-animate-css`, `vaul`, `vite-tsconfig-paths`, `zod`?**
+  _High betweenness centrality (0.033) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `devDependencies` to `scripts`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Are the 5 inferred relationships involving `SettlementDatePolicy` (e.g. with `ExceptionFinding` and `ExceptionSeverity`) actually correct?**
+  _`SettlementDatePolicy` has 5 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `tradeops-copilot-backend`, `$schema`, `style` to the rest of the system?**
-  _283 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _293 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `routeTree.gen.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.05573770491803279 - nodes in this community are weakly interconnected._
 - **Should `cn` be split into smaller, more focused modules?**
-  _Cohesion score 0.08780487804878048 - nodes in this community are weakly interconnected._
-- **Should `sidebar.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.06612685560053981 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07265306122448979 - nodes in this community are weakly interconnected._

@@ -500,8 +500,8 @@
     "semantic_hash": ""
   },
   "PROJECT_STATE.md": {
-    "mtime": 1787623327.4558413,
-    "ast_hash": "ba63c2db7115093dbb7bec1fc0c85c20",
+    "mtime": 1787624317.4888494,
+    "ast_hash": "75b6b048387b8e57d23b3b1e44fb2602",
     "semantic_hash": ""
   },
   "README.md": {
@@ -585,8 +585,8 @@
     "semantic_hash": ""
   },
   "backend/src/tradeops/domain/__init__.py": {
-    "mtime": 1787623068.2568169,
-    "ast_hash": "0c5a47c2cdbdbec12e4310965d99591d",
+    "mtime": 1787624218.3283787,
+    "ast_hash": "7482f3a97deaa6b054e6e4d871678a5d",
     "semantic_hash": ""
   },
   "backend/src/tradeops/observability/__init__.py": {
@@ -647,6 +647,51 @@
   "docs/adr/0002-python-runtime-and-task-queue.md": {
     "mtime": 1787623100.0953095,
     "ast_hash": "28c93d2984a0763304244d1a98d61400",
+    "semantic_hash": ""
+  },
+  "backend/src/tradeops/domain/exceptions.py": {
+    "mtime": 1787624218.3329256,
+    "ast_hash": "d9c7d9b9689db1f47fad496c4a0cb38f",
+    "semantic_hash": ""
+  },
+  "backend/src/tradeops/domain/rules/__init__.py": {
+    "mtime": 1787624218.3389125,
+    "ast_hash": "3f42a5663abb599e26708e380cfe442b",
+    "semantic_hash": ""
+  },
+  "backend/src/tradeops/domain/rules/settlement_date.py": {
+    "mtime": 1787624275.477221,
+    "ast_hash": "a5ff512b2efae21ccdf25e017dc4f86c",
+    "semantic_hash": ""
+  },
+  "backend/src/tradeops/domain/trades.py": {
+    "mtime": 1787624218.3319266,
+    "ast_hash": "3ead7054f273381da25746599a88f393",
+    "semantic_hash": ""
+  },
+  "backend/tests/domain/__init__.py": {
+    "mtime": 1787624268.8339558,
+    "ast_hash": "2081df77e77f816ca325b82bbc6ed187",
+    "semantic_hash": ""
+  },
+  "backend/tests/domain/test_settlement_date_rule.py": {
+    "mtime": 1787624268.8329632,
+    "ast_hash": "7bfe06d4f8a9f5a14cbe0af27b057e66",
+    "semantic_hash": ""
+  },
+  "backend/tests/domain/test_trades.py": {
+    "mtime": 1787624268.8309443,
+    "ast_hash": "3a638189a84a8c57fc10164a06bfde6a",
+    "semantic_hash": ""
+  },
+  "docs/domain-glossary.md": {
+    "mtime": 1787624268.8389566,
+    "ast_hash": "2ecbfda8b0385faab9e6180e803ec48d",
+    "semantic_hash": ""
+  },
+  "docs/runbooks/settlement-date-mismatch.md": {
+    "mtime": 1787624268.8435068,
+    "ast_hash": "95d2fa7f0d2a24cbed9c8c5471e25c68",
     "semantic_hash": ""
   }
 }
