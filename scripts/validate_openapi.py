@@ -25,6 +25,8 @@ paths = set(schema.get("paths", {}))
 missing = required_paths - paths
 if missing:
     raise SystemExit(f"OpenAPI paths missing: {sorted(missing)}")
+
+
 def collect_route_paths(routes: list[object]) -> set[str]:
     """Walk FastAPI's nested included routers, including WebSocket routes."""
     collected: set[str] = set()

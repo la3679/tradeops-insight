@@ -61,6 +61,31 @@ jobs:
           ignore-unfixed: true
           exit-code: "1"
 
+  python-audit:
+    name: Python dependency audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: astral-sh/setup-uv@94527f2e458b27549849d47d273a16bec83a01e9 # v7
+        with:
+          version: 0.12.2
+          python-version: 3.14.7
+      - run: uv export --directory backend --locked --no-dev --format requirements-txt --output-file backend/requirements-audit.txt
+      - run: uvx pip-audit -r backend/requirements-audit.txt
+
+  container-scan:
+    name: API container scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - run: docker build -t tradeops-api:scan backend
+      - uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          image-ref: tradeops-api:scan
+          severity: CRITICAL,HIGH
+          ignore-unfixed: true
+          exit-code: "1"
+
   sbom:
     name: Generate release SBOM
     runs-on: ubuntu-latest

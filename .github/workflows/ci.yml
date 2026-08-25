@@ -106,9 +106,24 @@ jobs:
         run: uv sync --directory backend --all-groups --locked
       - name: Validate generated OpenAPI contract
         run: uv run --directory backend --locked python ../scripts/validate_openapi.py
+      - name: Validate documentation links
+        run: uv run --directory backend --locked python ../scripts/check_docs.py
       - name: Run deterministic mock evaluation
         run: uv run --directory backend --locked python ../scripts/run_eval.py
       - name: Validate and build containers
         run: |
           docker compose config --quiet
           docker compose build api worker web
+
+  terraform:
+    name: Terraform reference
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3
+        with:
+          terraform_version: 1.15.8
+      - run: terraform -chdir=infra/terraform/aws fmt -check -recursive
+      - run: terraform -chdir=infra/terraform/aws init -backend=false -input=false
+      - run: terraform -chdir=infra/terraform/aws validate

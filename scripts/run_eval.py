@@ -1,7 +1,7 @@
 """Run the replayable, zero-cost mock evaluation baseline."""
 
-from dataclasses import asdict
 import json
+from dataclasses import asdict
 
 from tradeops.evaluation import run_mock_baseline
 
