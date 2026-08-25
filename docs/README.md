@@ -18,6 +18,7 @@ TradeOps Copilot documentation is organized by the decision or audience it suppo
 - [Public source adapters](data/public-sources.md) — implemented GLEIF boundary and excluded sources.
 - [Data dictionary](data/data-dictionary.md) — authoritative tables, ownership, and invariants.
 - [AI system card](evaluations/ai-system-card.md) — intended model behavior, authority boundary, and limitations.
+- [RAG design](architecture/rag-design.md) — document ingestion, retrieval, citations, and evaluation.
 
 ## Documentation map
 
