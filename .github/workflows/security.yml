@@ -16,6 +16,7 @@ jobs:
     name: CodeQL (${{ matrix.language }})
     runs-on: ubuntu-latest
     permissions:
+      actions: read
       contents: read
       security-events: write
     strategy:
@@ -73,7 +74,7 @@ jobs:
         with:
           version: 0.12.2
           python-version: 3.14.7
-      - run: uv export --directory backend --locked --no-dev --no-emit-project --format requirements-txt --output-file backend/requirements-audit.txt
+      - run: uv export --directory backend --locked --no-dev --no-emit-project --format requirements-txt --output-file requirements-audit.txt
       - run: uvx pip-audit -r backend/requirements-audit.txt
 
   container-scan:
