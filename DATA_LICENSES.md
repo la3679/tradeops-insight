@@ -14,7 +14,7 @@ TradeOps Copilot uses synthetic trades, synthetic policies, and small public ref
 
 ## Required provenance
 
-Before a public record or derived fixture is committed, `data/provenance/manifest.json` must record:
+`data/provenance/sources.json` is the machine-checked source registry. Before a public record or derived fixture is committed, its snapshot manifest must record:
 
 - provider and dataset name;
 - source and terms URLs;
@@ -22,7 +22,7 @@ Before a public record or derived fixture is committed, `data/provenance/manifes
 - transformation and sanitization notes;
 - committed row/document count;
 - SHA-256 hash of the committed artifact;
-- reviewer and license decision.
+- source-registry ID and transformation version.
 
 Do not commit large upstream datasets. Source synchronization must be explicit, cached, rate-limited, retry-bounded, and optional. CI uses recorded sanitized fixtures and never requires public-network access.
 

@@ -1,0 +1,33 @@
+[
+  {
+    "source_id": "project-synthetic",
+    "name": "TradeOps Copilot synthetic generator",
+    "owner": "TradeOps Copilot contributors",
+    "source_url": "https://github.com/la3679/tradeops-insight",
+    "terms_url": "https://github.com/la3679/tradeops-insight/blob/main/LICENSE",
+    "license_id": "Apache-2.0",
+    "decision": "approved",
+    "intended_fields": [
+      "synthetic counterparties",
+      "synthetic instruments",
+      "synthetic trades",
+      "exception labels"
+    ],
+    "allowed_hosts": ["github.com"],
+    "reviewed_on": "2026-08-24",
+    "reviewer": "Project maintainer"
+  },
+  {
+    "source_id": "gleif-lei",
+    "name": "GLEIF Global LEI Index",
+    "owner": "Global Legal Entity Identifier Foundation",
+    "source_url": "https://api.gleif.org/api/v1/lei-records",
+    "terms_url": "https://www.gleif.org/en/meta/lei-data-terms-of-use",
+    "license_id": "CC0-1.0",
+    "decision": "approved",
+    "intended_fields": ["LEI", "legal name", "entity status", "record metadata"],
+    "allowed_hosts": ["api.gleif.org"],
+    "reviewed_on": "2026-08-24",
+    "reviewer": "Project maintainer"
+  }
+]

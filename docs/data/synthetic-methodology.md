@@ -9,6 +9,8 @@ Every trade, event, memo, confirmation state, exception label, and outcome is in
 
 Public adapters may later supply versioned reference context. They do not supply, endorse, or validate synthetic trades.
 
+Every generator or public-source artifact carries a lowercase SHA-256 digest and a source ID registered in `data/provenance/sources.json`. The registry records reviewed terms, intended fields, and allowed hosts separately from the derived snapshot.
+
 ## Reproducibility
 
 Generation receives an explicit integer seed and UTC generation time. It uses an isolated pseudo-random generator; it never reads the global random state or system clock. The same configuration and package version produce byte-equivalent value objects.
