@@ -10,6 +10,7 @@ TradeOps Copilot documentation is organized by the decision or audience it suppo
 - [Roadmap](../ROADMAP.md) — release phases and acceptance signals.
 - [Changelog](../CHANGELOG.md) — user-visible changes by release.
 - [Developer setup](operations/development.md) — supported runtimes, bootstrap, checks, and local API use.
+- [API conventions](api/conventions.md) — versioning, correlation, errors, concurrency, and idempotency.
 
 ## Documentation map
 
@@ -17,7 +18,7 @@ TradeOps Copilot documentation is organized by the decision or audience it suppo
 | --------------- | ----------------------------------------------------------------- | ----------- |
 | `product/`      | Product scope, personas, workflows, and non-goals                 | In progress |
 | `architecture/` | System views, trust boundaries, and architecture decisions        | In progress |
-| `api/`          | API conventions, examples, and generated schema guidance          | Planned     |
+| `api/`          | API conventions, examples, and generated schema guidance          | In progress |
 | `operations/`   | Local development, deployment, observability, and runbooks        | In progress |
 | `security/`     | Threat model, authentication, authorization, and secure defaults  | Planned     |
 | `data/`         | Synthetic-data contracts, lineage, and source licensing           | Planned     |
