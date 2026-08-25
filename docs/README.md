@@ -17,6 +17,7 @@ TradeOps Copilot documentation is organized by the decision or audience it suppo
 - [Synthetic data methodology](data/synthetic-methodology.md) — reserved identifiers, seed control, and scenario balance.
 - [Public source adapters](data/public-sources.md) — implemented GLEIF boundary and excluded sources.
 - [Data dictionary](data/data-dictionary.md) — authoritative tables, ownership, and invariants.
+- [AI system card](evaluations/ai-system-card.md) — intended model behavior, authority boundary, and limitations.
 
 ## Documentation map
 
@@ -28,7 +29,7 @@ TradeOps Copilot documentation is organized by the decision or audience it suppo
 | `operations/`   | Local development, deployment, observability, and runbooks        | In progress |
 | `security/`     | Threat model, authentication, authorization, and secure defaults  | Planned     |
 | `data/`         | Synthetic-data contracts, lineage, and source licensing           | In progress |
-| `evaluations/`  | Quality dimensions, fixtures, and reproducible evaluation reports | Planned     |
+| `evaluations/`  | Quality dimensions, fixtures, and reproducible evaluation reports | In progress |
 
 ## Documentation rules
 

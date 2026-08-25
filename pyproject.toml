@@ -19,15 +19,15 @@ dev = [
 package = false
 
 [tool.uv.workspace]
-members = ["apps/api", "packages/data_connectors", "packages/domain"]
+members = ["apps/api", "packages/ai_orchestration", "packages/data_connectors", "packages/domain"]
 
 [tool.pytest.ini_options]
 addopts = "--strict-config --strict-markers -ra"
-testpaths = ["apps/api/tests", "packages/data_connectors/tests", "packages/domain/tests"]
+testpaths = ["apps/api/tests", "packages/ai_orchestration/tests", "packages/data_connectors/tests", "packages/domain/tests"]
 
 [tool.coverage.run]
 branch = true
-source = ["tradeops_api", "tradeops_data", "tradeops_domain"]
+source = ["tradeops_ai", "tradeops_api", "tradeops_data", "tradeops_domain"]
 
 [tool.coverage.report]
 fail_under = 90
@@ -42,7 +42,7 @@ target-version = "py312"
 select = ["E", "F", "I", "N", "UP", "B", "A", "C4", "DTZ", "PTH", "RUF"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["tradeops_api", "tradeops_data", "tradeops_domain"]
+known-first-party = ["tradeops_ai", "tradeops_api", "tradeops_data", "tradeops_domain"]
 
 [tool.ruff.lint.per-file-ignores]
 "apps/api/tests/**/*.py" = ["S101"]
@@ -52,7 +52,7 @@ python_version = "3.12"
 strict = true
 warn_unreachable = true
 plugins = ["pydantic.mypy"]
-mypy_path = ["apps/api/src", "packages/data_connectors/src", "packages/domain/src"]
+mypy_path = ["apps/api/src", "packages/ai_orchestration/src", "packages/data_connectors/src", "packages/domain/src"]
 
 [[tool.mypy.overrides]]
 module = ["uvicorn.*"]
