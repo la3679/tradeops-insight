@@ -23,7 +23,7 @@ from tradeops.application.demo_operations import (
     DemoOperationsService,
 )
 from tradeops.config import Settings, get_settings
-from tradeops.observability import configure_observability
+from tradeops.observability import ApiMetrics, configure_observability
 
 
 def create_app(settings: Settings | None = None) -> FastAPI:
@@ -42,6 +42,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     )
     app.state.operations = DemoOperationsService(dataset_size=resolved.demo_dataset_size)
     app.state.rate_limiter = FixedWindowRateLimiter(resolved.rate_limit_per_minute)
+    app.state.metrics = ApiMetrics()
     if resolved.environment != "production":
         app.add_middleware(
             CORSMiddleware,
@@ -77,6 +78,12 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             response.headers["Retry-After"] = "60"
         else:
             response = await call_next(request)
+        duration_seconds = perf_counter() - started
+        app.state.metrics.observe(
+            method=request.method,
+            status_code=response.status_code,
+            duration_seconds=duration_seconds,
+        )
         response.headers["X-Request-ID"] = request_id
         response.headers["X-Content-Type-Options"] = "nosniff"
         response.headers["X-Frame-Options"] = "DENY"
@@ -89,7 +96,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             method=request.method,
             route=request.url.path,
             status_code=response.status_code,
-            duration_ms=round((perf_counter() - started) * 1000, 2),
+            duration_ms=round(duration_seconds * 1000, 2),
         )
         return response
 
@@ -122,6 +129,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             "Request fields did not satisfy the API contract.",
             "validation_error",
         )
+
+    @app.get("/metrics", include_in_schema=False)
+    def metrics() -> Response:
+        return Response(app.state.metrics.render(), media_type="text/plain; version=0.0.4")
 
     return app
 

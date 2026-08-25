@@ -1,0 +1,11 @@
+groups:
+  - name: tradeops-demo
+    rules:
+      - alert: TradeOpsApiUnavailable
+        expr: up{job="tradeops-api"} == 0
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: TradeOps demo API is unavailable
+          description: Design example only; tune before any deployment.
