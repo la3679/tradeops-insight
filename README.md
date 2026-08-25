@@ -13,6 +13,8 @@ Implemented:
 - Route foundations for exceptions, knowledge, evaluations, observability, audit, settings, and About
 - Shared design tokens and focused UI primitives
 - Loading, empty, and permission-denied presentation states
+- Vitest and React Testing Library coverage for fixtures, state primitives, and overview components
+- Automated axe accessibility smoke coverage for the overview content
 - Project-scoped Graphify code graph for lower-context repository navigation
 
 Not yet implemented:
@@ -52,10 +54,12 @@ Individual checks are also available:
 npm run format:check
 npm run lint
 npm run typecheck
+npm run test
+npm run test:a11y
 npm run build
 ```
 
-The test harness is the next frontend-platform milestone and is not yet represented by a passing test command.
+Tests use deterministic local fixtures and do not require an API key or network access.
 
 ## Architecture and safety
 
