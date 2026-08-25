@@ -1,7 +1,7 @@
 # Graph Report - tradeops-insight  (2026-08-25)
 
 ## Corpus Check
-- 259 files · ~65,867 words
+- 259 files · ~65,922 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `66472924`
+- Built from commit: `c3196de0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -188,8 +188,8 @@
 - k6-websocket.js
 - check_docs.py
 - input-otp.tsx
-- @axe-core/playwright
-- class-variance-authority
+- cmdk
+- @testing-library/react
 
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 231 edges
@@ -234,7 +234,7 @@ Nodes (40): Input, Separator, SheetContent, SheetContentProps, SheetDescription,
 
 ### Community 3 - "devDependencies"
 Cohesion: 0.29
-Nodes (7): eslint-plugin-react-refresh, jsdom, devDependencies, eslint-plugin-react-refresh, jsdom, @testing-library/react, @testing-library/react
+Nodes (7): @axe-core/playwright, eslint-plugin-react-refresh, jsdom, devDependencies, @axe-core/playwright, eslint-plugin-react-refresh, jsdom
 
 ### Community 4 - "compilerOptions"
 Cohesion: 0.06
@@ -286,7 +286,7 @@ Nodes (10): get_settings(), Validated process configuration with safe local defa
 
 ### Community 16 - "dependencies"
 Cohesion: 0.15
-Nodes (13): cmdk, lucide-react, dependencies, cmdk, lucide-react, @radix-ui/react-checkbox, @radix-ui/react-progress, react (+5 more)
+Nodes (13): class-variance-authority, lucide-react, dependencies, class-variance-authority, lucide-react, @radix-ui/react-checkbox, @radix-ui/react-progress, react (+5 more)
 
 ### Community 17 - "chart.tsx"
 Cohesion: 0.25
@@ -390,7 +390,7 @@ Nodes (7): Data policy, First release journey, Non-goals, Purpose, Release princ
 
 ### Community 107 - "Project state"
 Cohesion: 0.33
-Nodes (5): Final actions, Project state, Release checkpoint, Safety boundaries and limitations, Verification evidence
+Nodes (5): Completed handoff, Project state, Release checkpoint, Safety boundaries and limitations, Verification evidence
 
 ### Community 108 - "CONTRIBUTING.md"
 Cohesion: 0.20

@@ -1,10 +1,10 @@
 # Project state
 
-Last updated: 2026-08-24 (America/Phoenix)
+Last updated: 2026-08-25 (America/Phoenix)
 
 ## Release checkpoint
 
-- Phase: release hardening and final verification for `v0.1.0`
+- Phase: completed handoff for `v0.1.0`
 - Branch: `main`; GitHub/Lovable-connected repository `la3679/tradeops-insight`
 - Scope: complete educational synthetic-data implementation described in the master specification
 - Runtime: React/TanStack web, FastAPI modular monolith, Celery worker, PostgreSQL, Redis, Keycloak, OpenTelemetry Collector, Prometheus, and Grafana
@@ -27,8 +27,12 @@ Last updated: 2026-08-24 (America/Phoenix)
 | performance                          | API, import, five-client WebSocket, RAG, worker policy, and mock workflow baselines recorded under `docs/performance` |
 | dependencies                         | Bun production audit and pip-audit report no known vulnerabilities                                                    |
 | secrets                              | Gitleaks scanned reachable history; no leaks after exact fixture-only false-positive allowlisting                     |
-| container/config                     | fixed Debian util-linux advisories; Terraform unrestricted-egress finding removed; CI scan rerun pending current push |
+| container/config                     | Trivy image/filesystem/configuration scans passed with no high or critical findings                                   |
 | docs                                 | local links verified; indexed release handbook and screenshot present                                                 |
+
+Hosted GitHub CI and Security workflows are green for the reviewed release
+candidate, including both CodeQL languages, dependency review, secret history
+scanning, container scanning, browser journeys, contracts, and Terraform.
 
 ## Safety boundaries and limitations
 
@@ -38,8 +42,13 @@ Last updated: 2026-08-24 (America/Phoenix)
 - Settlement calendar policy is a versioned demonstration, not a universal market calendar.
 - Terraform is a validated reference configuration, not an applied or production-certified environment.
 
-## Final actions
+## Completed handoff
 
-1. Commit and push release hardening, then require green CI/security runs.
-2. Verify a clean clone and full Compose health.
-3. Configure GitHub metadata/protections/public visibility, tag/release `v0.1.0`, and verify public links/badges.
+- Public repository: <https://github.com/la3679/tradeops-insight>
+- Reviewed release PR: <https://github.com/la3679/tradeops-insight/pull/12>
+- Release: <https://github.com/la3679/tradeops-insight/releases/tag/v0.1.0>
+- `main` is the Lovable-connected release branch; published history is preserved.
+- Release evidence includes a generated SPDX JSON SBOM and the reproducible
+  commands documented in `README.md` and `docs/runbooks/release.md`.
+- No hidden implementation phase remains. The limitations above are transparent
+  roadmap items rather than incomplete release requirements.

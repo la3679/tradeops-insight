@@ -6925,15 +6925,15 @@
       "norm_label": "project_state.md"
     },
     {
-      "label": "Final actions",
+      "label": "Completed handoff",
       "file_type": "document",
       "source_file": "PROJECT_STATE.md",
-      "source_location": "L41",
+      "source_location": "L45",
       "_origin": "ast",
-      "id": "project_state_final_actions",
+      "id": "project_state_completed_handoff",
       "community": 107,
       "community_name": "Project state",
-      "norm_label": "final actions"
+      "norm_label": "completed handoff"
     },
     {
       "label": "Project state",
@@ -6961,7 +6961,7 @@
       "label": "Safety boundaries and limitations",
       "file_type": "document",
       "source_file": "PROJECT_STATE.md",
-      "source_location": "L33",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "project_state_safety_boundaries_and_limitations",
       "community": 107,
@@ -11149,15 +11149,15 @@
       "norm_label": "dependencies"
     },
     {
-      "label": "cmdk",
+      "label": "class-variance-authority",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L72",
+      "source_location": "L70",
       "_origin": "ast",
-      "id": "package_dependencies_cmdk",
+      "id": "package_dependencies_class_variance_authority",
       "community": 16,
       "community_name": "dependencies",
-      "norm_label": "cmdk"
+      "norm_label": "class-variance-authority"
     },
     {
       "label": "lucide-react",
@@ -11215,15 +11215,15 @@
       "norm_label": "sonner"
     },
     {
-      "label": "cmdk",
+      "label": "class-variance-authority",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L72",
+      "source_location": "L70",
       "_origin": "ast",
-      "id": "cmdk",
+      "id": "class_variance_authority",
       "community": 16,
       "community_name": "dependencies",
-      "norm_label": "cmdk"
+      "norm_label": "class-variance-authority"
     },
     {
       "label": "lucide-react",
@@ -12172,48 +12172,48 @@
       "norm_label": "inputotpslot"
     },
     {
-      "label": "@axe-core/playwright",
+      "label": "cmdk",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L92",
+      "source_location": "L72",
       "_origin": "ast",
-      "id": "package_devdependencies_axe_core_playwright",
+      "id": "package_dependencies_cmdk",
       "community": 185,
-      "community_name": "@axe-core/playwright",
-      "norm_label": "@axe-core/playwright"
+      "community_name": "cmdk",
+      "norm_label": "cmdk"
     },
     {
-      "label": "@axe-core/playwright",
+      "label": "cmdk",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L92",
+      "source_location": "L72",
       "_origin": "ast",
-      "id": "axe_core_playwright",
+      "id": "cmdk",
       "community": 185,
-      "community_name": "@axe-core/playwright",
-      "norm_label": "@axe-core/playwright"
+      "community_name": "cmdk",
+      "norm_label": "cmdk"
     },
     {
-      "label": "class-variance-authority",
+      "label": "@testing-library/react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L70",
+      "source_location": "L97",
       "_origin": "ast",
-      "id": "package_dependencies_class_variance_authority",
+      "id": "package_devdependencies_testing_library_react",
       "community": 186,
-      "community_name": "class-variance-authority",
-      "norm_label": "class-variance-authority"
+      "community_name": "@testing-library/react",
+      "norm_label": "@testing-library/react"
     },
     {
-      "label": "class-variance-authority",
+      "label": "@testing-library/react",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L70",
+      "source_location": "L97",
       "_origin": "ast",
-      "id": "class_variance_authority",
+      "id": "testing_library_react",
       "community": 186,
-      "community_name": "class-variance-authority",
-      "norm_label": "class-variance-authority"
+      "community_name": "@testing-library/react",
+      "norm_label": "@testing-library/react"
     },
     {
       "label": "domain-glossary.md",
@@ -14394,6 +14394,17 @@
       "norm_label": "devdependencies"
     },
     {
+      "label": "@axe-core/playwright",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "package_devdependencies_axe_core_playwright",
+      "community": 3,
+      "community_name": "devDependencies",
+      "norm_label": "@axe-core/playwright"
+    },
+    {
       "label": "eslint-plugin-react-refresh",
       "file_type": "code",
       "source_file": "package.json",
@@ -14416,15 +14427,15 @@
       "norm_label": "jsdom"
     },
     {
-      "label": "@testing-library/react",
-      "file_type": "code",
+      "label": "@axe-core/playwright",
+      "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L97",
+      "source_location": "L92",
       "_origin": "ast",
-      "id": "package_devdependencies_testing_library_react",
+      "id": "axe_core_playwright",
       "community": 3,
       "community_name": "devDependencies",
-      "norm_label": "@testing-library/react"
+      "norm_label": "@axe-core/playwright"
     },
     {
       "label": "eslint-plugin-react-refresh",
@@ -14447,17 +14458,6 @@
       "community": 3,
       "community_name": "devDependencies",
       "norm_label": "jsdom"
-    },
-    {
-      "label": "@testing-library/react",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L97",
-      "_origin": "ast",
-      "id": "testing_library_react",
-      "community": 3,
-      "community_name": "devDependencies",
-      "norm_label": "@testing-library/react"
     },
     {
       "label": "table.tsx",
@@ -40311,7 +40311,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PROJECT_STATE.md",
-      "source_location": "L33",
+      "source_location": "L37",
       "weight": 1.0,
       "_origin": "ast",
       "source": "project_state_project_state",
@@ -40322,11 +40322,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PROJECT_STATE.md",
-      "source_location": "L41",
+      "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast",
       "source": "project_state_project_state",
-      "target": "project_state_final_actions",
+      "target": "project_state_completed_handoff",
       "confidence_score": 1.0
     },
     {
@@ -50498,5 +50498,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "664729241a647f75311255ca598955a3d693f044"
+  "built_at_commit": "c3196de009392e216f7c6cdef1069a0cfebd4ded"
 }
