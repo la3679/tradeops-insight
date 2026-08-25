@@ -17,7 +17,7 @@ import { Route as ExceptionsRouteImport } from './routes/exceptions'
 import { Route as KnowledgeRouteImport } from './routes/knowledge'
 import { Route as ObservabilityRouteImport } from './routes/observability'
 import { Route as SettingsRouteImport } from './routes/settings'
-import { Route as ExceptionsExceptionIdRouteImport } from './routes/exceptions.$exceptionId'
+import { Route as ExceptionsExceptionIdRouteImport } from './routes/exceptions_.$exceptionId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -60,9 +60,9 @@ const SettingsRoute = SettingsRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExceptionsExceptionIdRoute = ExceptionsExceptionIdRouteImport.update({
-  id: '/$exceptionId',
-  path: '/$exceptionId',
-  getParentRoute: () => ExceptionsRoute,
+  id: '/exceptions_/$exceptionId',
+  path: '/exceptions/$exceptionId',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -70,7 +70,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/audit': typeof AuditRoute
   '/evaluations': typeof EvaluationsRoute
-  '/exceptions': typeof ExceptionsRouteWithChildren
+  '/exceptions': typeof ExceptionsRoute
   '/knowledge': typeof KnowledgeRoute
   '/observability': typeof ObservabilityRoute
   '/settings': typeof SettingsRoute
@@ -81,7 +81,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/audit': typeof AuditRoute
   '/evaluations': typeof EvaluationsRoute
-  '/exceptions': typeof ExceptionsRouteWithChildren
+  '/exceptions': typeof ExceptionsRoute
   '/knowledge': typeof KnowledgeRoute
   '/observability': typeof ObservabilityRoute
   '/settings': typeof SettingsRoute
@@ -93,11 +93,11 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/audit': typeof AuditRoute
   '/evaluations': typeof EvaluationsRoute
-  '/exceptions': typeof ExceptionsRouteWithChildren
+  '/exceptions': typeof ExceptionsRoute
   '/knowledge': typeof KnowledgeRoute
   '/observability': typeof ObservabilityRoute
   '/settings': typeof SettingsRoute
-  '/exceptions/$exceptionId': typeof ExceptionsExceptionIdRoute
+  '/exceptions_/$exceptionId': typeof ExceptionsExceptionIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -132,7 +132,7 @@ export interface FileRouteTypes {
     | '/knowledge'
     | '/observability'
     | '/settings'
-    | '/exceptions/$exceptionId'
+    | '/exceptions_/$exceptionId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -140,10 +140,11 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AuditRoute: typeof AuditRoute
   EvaluationsRoute: typeof EvaluationsRoute
-  ExceptionsRoute: typeof ExceptionsRouteWithChildren
+  ExceptionsRoute: typeof ExceptionsRoute
   KnowledgeRoute: typeof KnowledgeRoute
   ObservabilityRoute: typeof ObservabilityRoute
   SettingsRoute: typeof SettingsRoute
+  ExceptionsExceptionIdRoute: typeof ExceptionsExceptionIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -204,37 +205,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SettingsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/exceptions/$exceptionId': {
-      id: '/exceptions/$exceptionId'
-      path: '/$exceptionId'
+    '/exceptions_/$exceptionId': {
+      id: '/exceptions_/$exceptionId'
+      path: '/exceptions/$exceptionId'
       fullPath: '/exceptions/$exceptionId'
       preLoaderRoute: typeof ExceptionsExceptionIdRouteImport
-      parentRoute: typeof ExceptionsRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
-
-interface ExceptionsRouteChildren {
-  ExceptionsExceptionIdRoute: typeof ExceptionsExceptionIdRoute
-}
-
-const ExceptionsRouteChildren: ExceptionsRouteChildren = {
-  ExceptionsExceptionIdRoute: ExceptionsExceptionIdRoute,
-}
-
-const ExceptionsRouteWithChildren = ExceptionsRoute._addFileChildren(
-  ExceptionsRouteChildren,
-)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AuditRoute: AuditRoute,
   EvaluationsRoute: EvaluationsRoute,
-  ExceptionsRoute: ExceptionsRouteWithChildren,
+  ExceptionsRoute: ExceptionsRoute,
   KnowledgeRoute: KnowledgeRoute,
   ObservabilityRoute: ObservabilityRoute,
   SettingsRoute: SettingsRoute,
+  ExceptionsExceptionIdRoute: ExceptionsExceptionIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

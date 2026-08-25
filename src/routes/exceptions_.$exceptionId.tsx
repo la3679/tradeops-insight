@@ -26,7 +26,7 @@ import {
   type Workflow,
 } from "@/lib/tradeops-api";
 
-export const Route = createFileRoute("/exceptions/$exceptionId")({
+export const Route = createFileRoute("/exceptions_/$exceptionId")({
   component: ExceptionDetailPage,
 });
 

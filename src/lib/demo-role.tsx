@@ -1,5 +1,13 @@
-import { createContext, useContext, useMemo, useState, type ReactNode } from "react";
-import type { DemoRole } from "./tradeops-api";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+  type ReactNode,
+} from "react";
+import { demoRoles, type DemoRole } from "./tradeops-api";
 
 type DemoRoleContextValue = {
   readonly role: DemoRole;
@@ -7,10 +15,19 @@ type DemoRoleContextValue = {
 };
 
 const DemoRoleContext = createContext<DemoRoleContextValue | null>(null);
+const storageKey = "tradeops-demo-role";
 
 export function DemoRoleProvider({ children }: { readonly children: ReactNode }) {
-  const [role, setRole] = useState<DemoRole>("analyst");
-  const value = useMemo(() => ({ role, setRole }), [role]);
+  const [role, updateRole] = useState<DemoRole>("analyst");
+  useEffect(() => {
+    const stored = localStorage.getItem(storageKey);
+    if (demoRoles.some((candidate) => candidate === stored)) updateRole(stored as DemoRole);
+  }, []);
+  const setRole = useCallback((nextRole: DemoRole) => {
+    localStorage.setItem(storageKey, nextRole);
+    updateRole(nextRole);
+  }, []);
+  const value = useMemo(() => ({ role, setRole }), [role, setRole]);
   return <DemoRoleContext.Provider value={value}>{children}</DemoRoleContext.Provider>;
 }
 
