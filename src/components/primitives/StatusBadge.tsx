@@ -23,5 +23,3 @@ export type StatusBadgeProps = React.HTMLAttributes<HTMLSpanElement> &
 export function StatusBadge({ tone, className, ...props }: StatusBadgeProps) {
   return <span className={cn(badgeVariants({ tone }), className)} {...props} />;
 }
-
-export { badgeVariants };

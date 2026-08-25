@@ -53,29 +53,26 @@ function AboutPage() {
         aria-labelledby="disclaimer-heading"
         className="rounded-md border border-pending/40 bg-pending-subtle px-4 py-4"
       >
-        <h2
-          id="disclaimer-heading"
-          className="text-sm font-semibold text-pending-foreground"
-        >
+        <h2 id="disclaimer-heading" className="text-sm font-semibold text-pending-foreground">
           Disclaimer
         </h2>
         <div className="mt-2 space-y-2 text-xs leading-relaxed text-pending-foreground">
           <p>
-            TradeOps Copilot is a personal, independent portfolio project built for
-            learning and demonstration. It is <strong>not affiliated with, endorsed
-            by, or representative of</strong> any bank, broker, exchange, asset
-            manager, or other financial institution.
+            TradeOps Copilot is a personal, independent portfolio project built for learning and
+            demonstration. It is{" "}
+            <strong>not affiliated with, endorsed by, or representative of</strong> any bank,
+            broker, exchange, asset manager, or other financial institution.
           </p>
           <p>
-            The application <strong>does not execute, route, confirm, or settle
-            trades</strong> and does not connect to any trading or settlement system.
-            Every instrument, counterparty, figure, and exception shown is{" "}
-            <strong>synthetic</strong> or derived from public reference material.
+            The application <strong>does not execute, route, confirm, or settle trades</strong> and
+            does not connect to any trading or settlement system. Every instrument, counterparty,
+            figure, and exception shown is <strong>synthetic</strong> or derived from public
+            reference material.
           </p>
           <p>
-            Nothing here is investment, legal, accounting, or operational advice, and
-            no claim is made about accuracy, completeness, latency, or fitness for any
-            operational or regulatory purpose.
+            Nothing here is investment, legal, accounting, or operational advice, and no claim is
+            made about accuracy, completeness, latency, or fitness for any operational or regulatory
+            purpose.
           </p>
         </div>
       </section>

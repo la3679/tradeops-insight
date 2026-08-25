@@ -59,9 +59,7 @@ export function ExceptionTable({ rows }: { readonly rows: readonly ExceptionRow[
               <td className="px-4 py-2.5">
                 <StatusBadge tone={stateTone[row.state]}>{row.state}</StatusBadge>
               </td>
-              <td className="num px-4 py-2.5 text-right text-muted-foreground">
-                {row.ageHours}
-              </td>
+              <td className="num px-4 py-2.5 text-right text-muted-foreground">{row.ageHours}</td>
               <td className="px-4 py-2.5 text-muted-foreground">{row.owner}</td>
             </tr>
           ))}

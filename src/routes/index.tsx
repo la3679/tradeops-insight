@@ -52,9 +52,7 @@ function OverviewPage() {
         meta={
           <div className="flex flex-wrap items-center gap-2">
             <StatusBadge tone="info">Deterministic mock data</StatusBadge>
-            <span className="num text-2xs text-muted-foreground">
-              Fixture as of {dataAsOf}
-            </span>
+            <span className="num text-2xs text-muted-foreground">Fixture as of {dataAsOf}</span>
           </div>
         }
       />
@@ -102,8 +100,8 @@ function OverviewPage() {
       </div>
 
       <p className="text-2xs leading-relaxed text-muted-foreground">
-        All values above come from a checked-in fixture and do not change over time. No
-        performance, accuracy, or coverage claims are made.
+        All values above come from a checked-in fixture and do not change over time. No performance,
+        accuracy, or coverage claims are made.
       </p>
     </div>
   );

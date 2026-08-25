@@ -65,9 +65,7 @@ export function EmptyState({
     <StateFrame className={className}>
       <Inbox className="size-5 text-muted-foreground" aria-hidden="true" />
       <p className="text-sm font-medium text-foreground">{title}</p>
-      {description ? (
-        <p className="max-w-sm text-xs text-muted-foreground">{description}</p>
-      ) : null}
+      {description ? <p className="max-w-sm text-xs text-muted-foreground">{description}</p> : null}
       {action}
     </StateFrame>
   );
@@ -89,8 +87,8 @@ export function PermissionDeniedState({
       <ShieldAlert className="size-5 text-severe" aria-hidden="true" />
       <p className="text-sm font-medium text-foreground">Access not available</p>
       <p className="max-w-sm text-xs text-muted-foreground">
-        Your workspace role does not include access to {resource}. Entitlements are
-        managed outside this console.
+        Your workspace role does not include access to {resource}. Entitlements are managed outside
+        this console.
       </p>
     </StateFrame>
   );

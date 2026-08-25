@@ -5,7 +5,10 @@ export function QueueLaneList({ lanes }: { readonly lanes: readonly QueueLane[] 
   return (
     <ul className="divide-y divide-border">
       {lanes.map((lane) => (
-        <li key={lane.id} className="flex items-center justify-between gap-3 py-2.5 first:pt-0 last:pb-0">
+        <li
+          key={lane.id}
+          className="flex items-center justify-between gap-3 py-2.5 first:pt-0 last:pb-0"
+        >
           <div className="min-w-0">
             <p className="truncate text-xs font-medium text-foreground">{lane.name}</p>
             <p className="num text-2xs text-muted-foreground">{lane.open} open items</p>

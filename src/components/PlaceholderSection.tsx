@@ -12,11 +12,7 @@ export type PlaceholderSectionProps = {
  * Structural placeholder for a route that is scoped for a later change.
  * Intentionally makes no claims about behaviour that does not exist yet.
  */
-export function PlaceholderSection({
-  title,
-  summary,
-  plannedItems,
-}: PlaceholderSectionProps) {
+export function PlaceholderSection({ title, summary, plannedItems }: PlaceholderSectionProps) {
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-6">
       <PageHeader title={title} summary={summary} />
@@ -37,7 +33,10 @@ export function PlaceholderSection({
           <ul className="space-y-2">
             {plannedItems.map((item) => (
               <li key={item} className="flex gap-2 text-xs text-muted-foreground">
-                <span aria-hidden="true" className="mt-1.5 size-1 shrink-0 rounded-full bg-border" />
+                <span
+                  aria-hidden="true"
+                  className="mt-1.5 size-1 shrink-0 rounded-full bg-border"
+                />
                 <span>{item}</span>
               </li>
             ))}

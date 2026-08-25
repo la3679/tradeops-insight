@@ -12,22 +12,9 @@ export type MetricTileProps = {
 };
 
 /** Compact figure tile. No trend arrows or claims that the data cannot support. */
-export function MetricTile({
-  label,
-  value,
-  unit,
-  note,
-  tone,
-  badge,
-  className,
-}: MetricTileProps) {
+export function MetricTile({ label, value, unit, note, tone, badge, className }: MetricTileProps) {
   return (
-    <div
-      className={cn(
-        "rounded-md border border-border bg-surface px-4 py-3",
-        className,
-      )}
-    >
+    <div className={cn("rounded-md border border-border bg-surface px-4 py-3", className)}>
       <div className="flex items-start justify-between gap-2">
         <p className="text-xs font-medium text-muted-foreground">{label}</p>
         {badge ? <StatusBadge tone={tone}>{badge}</StatusBadge> : null}

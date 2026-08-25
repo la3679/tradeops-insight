@@ -28,9 +28,7 @@ export function StatusBar({ navOpen, onToggleNav }: StatusBarProps) {
       <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-4 gap-y-1">
         <StatusBadge tone="info">Synthetic data</StatusBadge>
         <StatusBadge tone="neutral">Read-only</StatusBadge>
-        <p className="num truncate text-2xs text-muted-foreground">
-          Fixture as of {dataAsOf}
-        </p>
+        <p className="num truncate text-2xs text-muted-foreground">Fixture as of {dataAsOf}</p>
       </div>
 
       <dl className="hidden items-center gap-4 md:flex">

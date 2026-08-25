@@ -15,8 +15,7 @@
   --radius-md: calc(var(--radius) - 1px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --font-sans:
-    ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
   --text-2xs: 0.6875rem;
   --spacing: 0.5rem;
