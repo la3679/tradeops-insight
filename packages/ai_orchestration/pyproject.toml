@@ -6,9 +6,11 @@ requires-python = ">=3.12,<3.14"
 license = "Apache-2.0"
 dependencies = [
   "faiss-cpu>=1.12,<2",
+  "langgraph>=1.0,<2",
   "numpy>=2,<3",
   "pydantic>=2.13,<3",
   "tradeops-domain>=0.1.0",
+  "typing-extensions>=4.16,<5",
 ]
 
 [tool.uv.sources]
