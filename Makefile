@@ -1,4 +1,4 @@
-.PHONY: bootstrap format format-check lint typecheck test build verify run-api
+.PHONY: bootstrap format format-check lint typecheck test build verify run-api infra-up infra-down infra-logs migrate
 
 bootstrap:
 	npm ci
@@ -31,3 +31,15 @@ verify: format-check lint typecheck test build
 
 run-api:
 	uv run uvicorn tradeops_api.main:app --app-dir apps/api/src --reload
+
+infra-up:
+	docker compose up -d postgres redis
+
+infra-down:
+	docker compose down
+
+infra-logs:
+	docker compose logs --tail=200 postgres redis
+
+migrate:
+	uv run alembic -c apps/api/alembic.ini upgrade head

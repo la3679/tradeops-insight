@@ -22,6 +22,7 @@ class Settings(BaseSettings):
     environment: Literal["development", "test", "production"] = "development"
     api_v1_prefix: str = Field(default="/api/v1", pattern=r"^/[a-z0-9/]+$")
     database_url: str = "postgresql+asyncpg://tradeops:tradeops-local@localhost:5432/tradeops"
+    redis_url: str = "redis://localhost:6379/0"
 
 
 @lru_cache
