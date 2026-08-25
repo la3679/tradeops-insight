@@ -16,6 +16,7 @@ TradeOps Copilot documentation is organized by the decision or audience it suppo
 - [Deterministic reconciliation](data/reconciliation.md) — rule inputs, order, outputs, and replay contract.
 - [Synthetic data methodology](data/synthetic-methodology.md) — reserved identifiers, seed control, and scenario balance.
 - [Public source adapters](data/public-sources.md) — implemented GLEIF boundary and excluded sources.
+- [Data dictionary](data/data-dictionary.md) — authoritative tables, ownership, and invariants.
 
 ## Documentation map
 

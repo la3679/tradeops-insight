@@ -21,6 +21,7 @@ class Settings(BaseSettings):
     app_name: str = "TradeOps Copilot API"
     environment: Literal["development", "test", "production"] = "development"
     api_v1_prefix: str = Field(default="/api/v1", pattern=r"^/[a-z0-9/]+$")
+    database_url: str = "postgresql+asyncpg://tradeops:tradeops-local@localhost:5432/tradeops"
 
 
 @lru_cache
