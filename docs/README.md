@@ -14,6 +14,7 @@ TradeOps Copilot documentation is organized by the decision or audience it suppo
 - [Domain glossary](product/domain-glossary.md) — synthetic trade, exception, evidence, and review language.
 - [Exception catalog](product/exception-catalog.md) — the twelve rule families and review posture.
 - [Deterministic reconciliation](data/reconciliation.md) — rule inputs, order, outputs, and replay contract.
+- [Synthetic data methodology](data/synthetic-methodology.md) — reserved identifiers, seed control, and scenario balance.
 
 ## Documentation map
 
