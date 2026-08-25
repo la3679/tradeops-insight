@@ -18,7 +18,7 @@ lint:
 
 typecheck:
 	npm run typecheck
-	uv run mypy apps/api/src apps/api/tests
+	uv run mypy apps/api/src apps/api/tests packages/domain/src packages/domain/tests
 
 test:
 	uv run pytest --cov=tradeops_api --cov-report=term-missing
