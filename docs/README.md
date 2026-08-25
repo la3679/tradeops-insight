@@ -9,15 +9,16 @@ TradeOps Copilot documentation is organized by the decision or audience it suppo
 - [Project state](../PROJECT_STATE.md) — current checkpoint, verification status, and next actions.
 - [Roadmap](../ROADMAP.md) — release phases and acceptance signals.
 - [Changelog](../CHANGELOG.md) — user-visible changes by release.
+- [Developer setup](operations/development.md) — supported runtimes, bootstrap, checks, and local API use.
 
 ## Documentation map
 
 | Area            | Purpose                                                           | Status      |
 | --------------- | ----------------------------------------------------------------- | ----------- |
 | `product/`      | Product scope, personas, workflows, and non-goals                 | In progress |
-| `architecture/` | System views, trust boundaries, and architecture decisions        | Planned     |
+| `architecture/` | System views, trust boundaries, and architecture decisions        | In progress |
 | `api/`          | API conventions, examples, and generated schema guidance          | Planned     |
-| `operations/`   | Local development, deployment, observability, and runbooks        | Planned     |
+| `operations/`   | Local development, deployment, observability, and runbooks        | In progress |
 | `security/`     | Threat model, authentication, authorization, and secure defaults  | Planned     |
 | `data/`         | Synthetic-data contracts, lineage, and source licensing           | Planned     |
 | `evaluations/`  | Quality dimensions, fixtures, and reproducible evaluation reports | Planned     |
