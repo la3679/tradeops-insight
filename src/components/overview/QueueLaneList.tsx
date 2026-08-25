@@ -7,9 +7,9 @@ export function QueueLaneList({ lanes }: { readonly lanes: readonly QueueLane[] 
       {lanes.map((lane) => (
         <li
           key={lane.id}
-          className="flex items-center justify-between gap-3 py-2.5 first:pt-0 last:pb-0"
+          className="flex flex-wrap items-center justify-between gap-2 py-2.5 first:pt-0 last:pb-0"
         >
-          <div className="min-w-0">
+          <div className="min-w-0 flex-1">
             <p className="truncate text-xs font-medium text-foreground">{lane.name}</p>
             <p className="num text-2xs text-muted-foreground">{lane.open} open items</p>
           </div>

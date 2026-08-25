@@ -16,7 +16,7 @@ export function MetricTile({ label, value, unit, note, tone, badge, className }:
   return (
     <div className={cn("rounded-md border border-border bg-surface px-4 py-3", className)}>
       <div className="flex items-start justify-between gap-2">
-        <p className="text-xs font-medium text-muted-foreground">{label}</p>
+        <p className="text-xs font-medium text-balance text-muted-foreground">{label}</p>
         {badge ? <StatusBadge tone={tone}>{badge}</StatusBadge> : null}
       </div>
       <p className="num mt-2 text-2xl leading-none font-semibold text-foreground">
