@@ -108,6 +108,19 @@
       "norm_label": "apimetrics"
     },
     {
+      "label": "WorkflowState",
+      "file_type": "code",
+      "source_file": "backend/src/tradeops/orchestration/graph.py",
+      "source_location": "L17",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "backend_src_tradeops_orchestration_graph_workflowstate",
+      "community": 101,
+      "community_name": "WorkflowState",
+      "norm_label": "workflowstate"
+    },
+    {
       "label": "Classification",
       "file_type": "code",
       "source_file": "backend/src/tradeops/orchestration/providers.py",
@@ -117,7 +130,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_classification",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "classification"
     },
     {
@@ -130,7 +143,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_mockmodelprovider",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "mockmodelprovider"
     },
     {
@@ -143,7 +156,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_modelprovider",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "modelprovider"
     },
     {
@@ -156,7 +169,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_providerunavailable",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "providerunavailable"
     },
     {
@@ -169,7 +182,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_resilientmodelprovider",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "resilientmodelprovider"
     },
     {
@@ -182,7 +195,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_resolutiondraft",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "resolutiondraft"
     },
     {
@@ -195,7 +208,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_unavailablemodelprovider",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "unavailablemodelprovider"
     },
     {
@@ -431,6 +444,32 @@
       "community": 121,
       "community_name": "exceptions_.$exceptionId.tsx",
       "norm_label": "workflow"
+    },
+    {
+      "label": "DemoConflictError",
+      "file_type": "code",
+      "source_file": "backend/src/tradeops/application/demo_operations.py",
+      "source_location": "L27",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "backend_src_tradeops_application_demo_operations_democonflicterror",
+      "community": 122,
+      "community_name": "ReconciliationPolicy",
+      "norm_label": "democonflicterror"
+    },
+    {
+      "label": "_WorkflowSession",
+      "file_type": "code",
+      "source_file": "backend/src/tradeops/application/demo_operations.py",
+      "source_location": "L70",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "backend_src_tradeops_application_demo_operations_workflowsession",
+      "community": 122,
+      "community_name": "ReconciliationPolicy",
+      "norm_label": "_workflowsession"
     },
     {
       "label": "ReconciliationPolicy",
@@ -743,32 +782,6 @@
       "community": 132,
       "community_name": "health.py",
       "norm_label": "healthresponse"
-    },
-    {
-      "label": "SyntheticTrade",
-      "file_type": "code",
-      "source_file": "backend/src/tradeops/domain/trades.py",
-      "source_location": "L19",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "backend_src_tradeops_domain_trades_synthetictrade",
-      "community": 133,
-      "community_name": "SyntheticTrade",
-      "norm_label": "synthetictrade"
-    },
-    {
-      "label": "TradeValidationError",
-      "file_type": "code",
-      "source_file": "backend/src/tradeops/domain/trades.py",
-      "source_location": "L14",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "backend_src_tradeops_domain_trades_tradevalidationerror",
-      "community": 133,
-      "community_name": "SyntheticTrade",
-      "norm_label": "tradevalidationerror"
     },
     {
       "label": "FakeDecoder",
@@ -1590,19 +1603,6 @@
       "norm_label": "auditview"
     },
     {
-      "label": "DemoConflictError",
-      "file_type": "code",
-      "source_file": "backend/src/tradeops/application/demo_operations.py",
-      "source_location": "L27",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "backend_src_tradeops_application_demo_operations_democonflicterror",
-      "community": 24,
-      "community_name": "Principal",
-      "norm_label": "democonflicterror"
-    },
-    {
       "label": "DemoNotFoundError",
       "file_type": "code",
       "source_file": "backend/src/tradeops/application/demo_operations.py",
@@ -1642,19 +1642,6 @@
       "norm_label": "queueitem"
     },
     {
-      "label": "_WorkflowSession",
-      "file_type": "code",
-      "source_file": "backend/src/tradeops/application/demo_operations.py",
-      "source_location": "L70",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "backend_src_tradeops_application_demo_operations_workflowsession",
-      "community": 24,
-      "community_name": "Principal",
-      "norm_label": "_workflowsession"
-    },
-    {
       "label": "WorkflowView",
       "file_type": "code",
       "source_file": "backend/src/tradeops/application/demo_operations.py",
@@ -1666,19 +1653,6 @@
       "community": 24,
       "community_name": "Principal",
       "norm_label": "workflowview"
-    },
-    {
-      "label": "WorkflowState",
-      "file_type": "code",
-      "source_file": "backend/src/tradeops/orchestration/graph.py",
-      "source_location": "L17",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "backend_src_tradeops_orchestration_graph_workflowstate",
-      "community": 24,
-      "community_name": "Principal",
-      "norm_label": "workflowstate"
     },
     {
       "label": "ProvenanceEntry",
@@ -2006,6 +1980,32 @@
       "norm_label": "settlementdatepolicy"
     },
     {
+      "label": "SyntheticTrade",
+      "file_type": "code",
+      "source_file": "backend/src/tradeops/domain/trades.py",
+      "source_location": "L19",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "backend_src_tradeops_domain_trades_synthetictrade",
+      "community": 99,
+      "community_name": "SettlementDatePolicy",
+      "norm_label": "synthetictrade"
+    },
+    {
+      "label": "TradeValidationError",
+      "file_type": "code",
+      "source_file": "backend/src/tradeops/domain/trades.py",
+      "source_location": "L14",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "backend_src_tradeops_domain_trades_tradevalidationerror",
+      "community": 99,
+      "community_name": "SettlementDatePolicy",
+      "norm_label": "tradevalidationerror"
+    },
+    {
       "label": "getRouter()",
       "file_type": "code",
       "source_file": "src/router.tsx",
@@ -2182,7 +2182,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_graph_build_workflow",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "build_workflow()"
     },
     {
@@ -2194,7 +2194,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_graph_step",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "_step()"
     },
     {
@@ -2206,7 +2206,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_mockmodelprovider_classify",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": ".classify()"
     },
     {
@@ -2218,7 +2218,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_mockmodelprovider_draft_resolution",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": ".draft_resolution()"
     },
     {
@@ -2230,7 +2230,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_modelprovider_classify",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": ".classify()"
     },
     {
@@ -2242,7 +2242,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_modelprovider_draft_resolution",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": ".draft_resolution()"
     },
     {
@@ -2254,7 +2254,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_modelprovider_name",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": ".name()"
     },
     {
@@ -2266,7 +2266,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_resilientmodelprovider_classify",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": ".classify()"
     },
     {
@@ -2278,7 +2278,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_resilientmodelprovider_draft_resolution",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": ".draft_resolution()"
     },
     {
@@ -2290,7 +2290,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_resilientmodelprovider_init",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": ".__init__()"
     },
     {
@@ -2302,7 +2302,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_resilientmodelprovider_name",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": ".name()"
     },
     {
@@ -2314,7 +2314,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_unavailablemodelprovider_classify",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": ".classify()"
     },
     {
@@ -2326,7 +2326,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_unavailablemodelprovider_draft_resolution",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": ".draft_resolution()"
     },
     {
@@ -2338,7 +2338,7 @@
       "_origin": "ast",
       "id": "backend_tests_orchestration_test_graph_state",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "_state()"
     },
     {
@@ -2350,7 +2350,7 @@
       "_origin": "ast",
       "id": "backend_tests_orchestration_test_graph_test_edit_and_reject_resume_paths_never_bypass_review",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "test_edit_and_reject_resume_paths_never_bypass_review()"
     },
     {
@@ -2362,7 +2362,7 @@
       "_origin": "ast",
       "id": "backend_tests_orchestration_test_graph_test_invalid_malicious_and_failed_validation_cases_escalate",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "test_invalid_malicious_and_failed_validation_cases_escalate()"
     },
     {
@@ -2374,7 +2374,7 @@
       "_origin": "ast",
       "id": "backend_tests_orchestration_test_graph_test_workflow_interrupts_and_resumes_approved_resolution",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "test_workflow_interrupts_and_resumes_approved_resolution()"
     },
     {
@@ -2386,7 +2386,7 @@
       "_origin": "ast",
       "id": "backend_tests_orchestration_test_providers_test_mock_provider_is_deterministic_and_requires_evidence",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "test_mock_provider_is_deterministic_and_requires_evidence()"
     },
     {
@@ -2398,7 +2398,7 @@
       "_origin": "ast",
       "id": "backend_tests_orchestration_test_providers_test_outage_falls_back_explicitly_and_opens_circuit",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "test_outage_falls_back_explicitly_and_opens_circuit()"
     },
     {
@@ -2410,7 +2410,7 @@
       "_origin": "ast",
       "id": "backend_tests_orchestration_test_providers_test_unavailable_provider_raises_for_both_capabilities",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "test_unavailable_provider_raises_for_both_capabilities()"
     },
     {
@@ -2450,16 +2450,16 @@
       "norm_label": "upgrade()"
     },
     {
-      "label": "StatusBar()",
+      "label": "DemoRoleProvider()",
       "file_type": "code",
-      "source_file": "src/components/shell/StatusBar.tsx",
-      "source_location": "L12",
+      "source_file": "src/lib/demo-role.tsx",
+      "source_location": "L20",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_components_shell_statusbar_statusbar",
+      "id": "src_lib_demo_role_demoroleprovider",
       "community": 118,
       "community_name": "settings.tsx",
-      "norm_label": "statusbar()"
+      "norm_label": "demoroleprovider()"
     },
     {
       "label": "useDemoRole()",
@@ -2750,18 +2750,6 @@
       "norm_label": ".__init__()"
     },
     {
-      "label": "evaluate_reconciliation()",
-      "file_type": "code",
-      "source_file": "backend/src/tradeops/domain/reconciliation.py",
-      "source_location": "L118",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "backend_src_tradeops_domain_reconciliation_evaluate_reconciliation",
-      "community": 122,
-      "community_name": "ReconciliationPolicy",
-      "norm_label": "evaluate_reconciliation()"
-    },
-    {
       "label": ".__post_init__()",
       "file_type": "code",
       "source_file": "backend/src/tradeops/domain/reconciliation.py",
@@ -2988,6 +2976,18 @@
       "community": 124,
       "community_name": "ReconciliationInput",
       "norm_label": ".trades()"
+    },
+    {
+      "label": "evaluate_reconciliation()",
+      "file_type": "code",
+      "source_file": "backend/src/tradeops/domain/reconciliation.py",
+      "source_location": "L118",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "backend_src_tradeops_domain_reconciliation_evaluate_reconciliation",
+      "community": 124,
+      "community_name": "ReconciliationInput",
+      "norm_label": "evaluate_reconciliation()"
     },
     {
       "label": "_finding()",
@@ -3504,42 +3504,6 @@
       "community": 132,
       "community_name": "health.py",
       "norm_label": "_response()"
-    },
-    {
-      "label": ".__post_init__()",
-      "file_type": "code",
-      "source_file": "backend/src/tradeops/domain/trades.py",
-      "source_location": "L32",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "backend_src_tradeops_domain_trades_synthetictrade_post_init",
-      "community": 133,
-      "community_name": "SyntheticTrade",
-      "norm_label": ".__post_init__()"
-    },
-    {
-      "label": "test_synthetic_trade_accepts_fixed_precision_and_utc_facts()",
-      "file_type": "code",
-      "source_file": "backend/tests/domain/test_trades.py",
-      "source_location": "L26",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "backend_tests_domain_test_trades_test_synthetic_trade_accepts_fixed_precision_and_utc_facts",
-      "community": 133,
-      "community_name": "SyntheticTrade",
-      "norm_label": "test_synthetic_trade_accepts_fixed_precision_and_utc_facts()"
-    },
-    {
-      "label": "test_synthetic_trade_rejects_invalid_facts()",
-      "file_type": "code",
-      "source_file": "backend/tests/domain/test_trades.py",
-      "source_location": "L46",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "backend_tests_domain_test_trades_test_synthetic_trade_rejects_invalid_facts",
-      "community": 133,
-      "community_name": "SyntheticTrade",
-      "norm_label": "test_synthetic_trade_rejects_invalid_facts()"
     },
     {
       "label": "create_engine()",
@@ -5042,16 +5006,16 @@
       "norm_label": "sidenav()"
     },
     {
-      "label": "DemoRoleProvider()",
+      "label": "StatusBar()",
       "file_type": "code",
-      "source_file": "src/lib/demo-role.tsx",
-      "source_location": "L20",
+      "source_file": "src/components/shell/StatusBar.tsx",
+      "source_location": "L12",
       "_callable": true,
       "_origin": "ast",
-      "id": "src_lib_demo_role_demoroleprovider",
+      "id": "src_components_shell_statusbar_statusbar",
       "community": 8,
       "community_name": "__root.tsx",
-      "norm_label": "demoroleprovider()"
+      "norm_label": "statusbar()"
     },
     {
       "label": "reportLovableError()",
@@ -5306,6 +5270,18 @@
       "norm_label": ".__post_init__()"
     },
     {
+      "label": ".__post_init__()",
+      "file_type": "code",
+      "source_file": "backend/src/tradeops/domain/trades.py",
+      "source_location": "L32",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "backend_src_tradeops_domain_trades_synthetictrade_post_init",
+      "community": 99,
+      "community_name": "SettlementDatePolicy",
+      "norm_label": ".__post_init__()"
+    },
+    {
       "label": "test_explicit_holiday_is_not_a_business_day()",
       "file_type": "code",
       "source_file": "backend/tests/domain/test_settlement_date_rule.py",
@@ -5426,6 +5402,30 @@
       "norm_label": "synthetic_trade()"
     },
     {
+      "label": "test_synthetic_trade_accepts_fixed_precision_and_utc_facts()",
+      "file_type": "code",
+      "source_file": "backend/tests/domain/test_trades.py",
+      "source_location": "L26",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "backend_tests_domain_test_trades_test_synthetic_trade_accepts_fixed_precision_and_utc_facts",
+      "community": 99,
+      "community_name": "SettlementDatePolicy",
+      "norm_label": "test_synthetic_trade_accepts_fixed_precision_and_utc_facts()"
+    },
+    {
+      "label": "test_synthetic_trade_rejects_invalid_facts()",
+      "file_type": "code",
+      "source_file": "backend/tests/domain/test_trades.py",
+      "source_location": "L46",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "backend_tests_domain_test_trades_test_synthetic_trade_rejects_invalid_facts",
+      "community": 99,
+      "community_name": "SettlementDatePolicy",
+      "norm_label": "test_synthetic_trade_rejects_invalid_facts()"
+    },
+    {
       "label": "router.tsx",
       "file_type": "code",
       "source_file": "src/router.tsx",
@@ -5461,17 +5461,6 @@
     {
       "label": "Route",
       "file_type": "code",
-      "source_file": "src/routes/exceptions_.$exceptionId.tsx",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "src_routes_exceptions_exceptionid_route",
-      "community": 0,
-      "community_name": "routeTree.gen.ts",
-      "norm_label": "route"
-    },
-    {
-      "label": "Route",
-      "file_type": "code",
       "source_file": "src/routes/exceptions.tsx",
       "source_location": "L17",
       "_origin": "ast",
@@ -5498,6 +5487,17 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "src_routes_root_route",
+      "community": 0,
+      "community_name": "routeTree.gen.ts",
+      "norm_label": "route"
+    },
+    {
+      "label": "Route",
+      "file_type": "code",
+      "source_file": "src/routes/settings.tsx",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "src_routes_settings_route",
       "community": 0,
       "community_name": "routeTree.gen.ts",
       "norm_label": "route"
@@ -6152,6 +6152,94 @@
       "norm_label": "scrollbar"
     },
     {
+      "label": "select.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_ui_select",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "select.tsx"
+    },
+    {
+      "label": "SelectContent",
+      "file_type": "code",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "src_components_ui_select_selectcontent",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "selectcontent"
+    },
+    {
+      "label": "SelectItem",
+      "file_type": "code",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "src_components_ui_select_selectitem",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "selectitem"
+    },
+    {
+      "label": "SelectLabel",
+      "file_type": "code",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "src_components_ui_select_selectlabel",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "selectlabel"
+    },
+    {
+      "label": "SelectScrollDownButton",
+      "file_type": "code",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "src_components_ui_select_selectscrolldownbutton",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "selectscrolldownbutton"
+    },
+    {
+      "label": "SelectScrollUpButton",
+      "file_type": "code",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "src_components_ui_select_selectscrollupbutton",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "selectscrollupbutton"
+    },
+    {
+      "label": "SelectSeparator",
+      "file_type": "code",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L129",
+      "_origin": "ast",
+      "id": "src_components_ui_select_selectseparator",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "selectseparator"
+    },
+    {
+      "label": "SelectTrigger",
+      "file_type": "code",
+      "source_file": "src/components/ui/select.tsx",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "src_components_ui_select_selecttrigger",
+      "community": 1,
+      "community_name": "cn",
+      "norm_label": "selecttrigger"
+    },
+    {
       "label": "tabs.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/tabs.tsx",
@@ -6544,7 +6632,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_graph",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "graph.py"
     },
     {
@@ -6555,7 +6643,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_graph_py_compiledstategraph",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "compiledstategraph"
     },
     {
@@ -6566,7 +6654,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_init",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "orchestration/__init__.py"
     },
     {
@@ -6577,7 +6665,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "providers.py"
     },
     {
@@ -6588,7 +6676,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_py_protocol",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "protocol"
     },
     {
@@ -6599,7 +6687,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_py_runtimeerror",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "runtimeerror"
     },
     {
@@ -6610,7 +6698,7 @@
       "_origin": "ast",
       "id": "backend_tests_orchestration_test_graph",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "test_graph.py"
     },
     {
@@ -6621,7 +6709,7 @@
       "_origin": "ast",
       "id": "backend_tests_orchestration_test_providers",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "test_providers.py"
     },
     {
@@ -6632,8 +6720,19 @@
       "_origin": "ast",
       "id": "basecheckpointsaver",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "basecheckpointsaver"
+    },
+    {
+      "label": "TypedDict",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "typeddict",
+      "community": 101,
+      "community_name": "WorkflowState",
+      "norm_label": "typeddict"
     },
     {
       "label": "Explicit typed LangGraph workflow with mandatory human review before mutation.",
@@ -6643,8 +6742,19 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_graph_rationale_1",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "explicit typed langgraph workflow with mandatory human review before mutation."
+    },
+    {
+      "label": "Versioned workflow state; steps use an append reducer across checkpoints.",
+      "file_type": "rationale",
+      "source_file": "backend/src/tradeops/orchestration/graph.py",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "backend_src_tradeops_orchestration_graph_rationale_18",
+      "community": 101,
+      "community_name": "WorkflowState",
+      "norm_label": "versioned workflow state; steps use an append reducer across checkpoints."
     },
     {
       "label": "Compile the reviewed thirteen-node graph with replayable defaults.",
@@ -6654,7 +6764,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_graph_rationale_52",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "compile the reviewed thirteen-node graph with replayable defaults."
     },
     {
@@ -6665,7 +6775,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_init_rationale_1",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "typed workflow and provider composition."
     },
     {
@@ -6676,7 +6786,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_rationale_1",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "provider abstraction with explicit mock, failure, and circuit-breaker behavior."
     },
     {
@@ -6687,7 +6797,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_rationale_28",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "only the bounded model capabilities used by the workflow."
     },
     {
@@ -6698,7 +6808,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_rationale_41",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "replayable zero-cost provider used by default and in deterministic evaluations."
     },
     {
@@ -6709,7 +6819,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_rationale_61",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "test and operational adapter representing a configured provider outage."
     },
     {
@@ -6720,7 +6830,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_rationale_73",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "bounded circuit breaker that records deterministic fallback explicitly."
     },
     {
@@ -6731,7 +6841,7 @@
       "_origin": "ast",
       "id": "backend_src_tradeops_orchestration_providers_rationale_8",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "a configured provider cannot safely complete the requested operation."
     },
     {
@@ -6742,7 +6852,7 @@
       "_origin": "ast",
       "id": "backend_tests_orchestration_test_graph_rationale_1",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "workflow routing, interrupt, resume, and escalation tests."
     },
     {
@@ -6753,7 +6863,7 @@
       "_origin": "ast",
       "id": "backend_tests_orchestration_test_providers_rationale_1",
       "community": 101,
-      "community_name": "build_workflow",
+      "community_name": "WorkflowState",
       "norm_label": "model provider fallback and circuit-breaker tests."
     },
     {
@@ -6980,17 +7090,6 @@
       "norm_label": "verification evidence"
     },
     {
-      "label": "AGENTS.md",
-      "file_type": "document",
-      "source_file": "AGENTS.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "agents",
-      "community": 108,
-      "community_name": "CONTRIBUTING.md",
-      "norm_label": "agents.md"
-    },
-    {
       "label": "Coding rules",
       "file_type": "document",
       "source_file": "AGENTS.md",
@@ -6998,7 +7097,7 @@
       "_origin": "ast",
       "id": "agents_coding_rules",
       "community": 108,
-      "community_name": "CONTRIBUTING.md",
+      "community_name": "TradeOps Copilot \u2014 agent guidelines",
       "norm_label": "coding rules"
     },
     {
@@ -7009,7 +7108,7 @@
       "_origin": "ast",
       "id": "agents_graphify",
       "community": 108,
-      "community_name": "CONTRIBUTING.md",
+      "community_name": "TradeOps Copilot \u2014 agent guidelines",
       "norm_label": "graphify"
     },
     {
@@ -7020,7 +7119,7 @@
       "_origin": "ast",
       "id": "agents_ownership_boundaries",
       "community": 108,
-      "community_name": "CONTRIBUTING.md",
+      "community_name": "TradeOps Copilot \u2014 agent guidelines",
       "norm_label": "ownership boundaries"
     },
     {
@@ -7031,7 +7130,7 @@
       "_origin": "ast",
       "id": "agents_review_requirements",
       "community": 108,
-      "community_name": "CONTRIBUTING.md",
+      "community_name": "TradeOps Copilot \u2014 agent guidelines",
       "norm_label": "review requirements"
     },
     {
@@ -7042,52 +7141,8 @@
       "_origin": "ast",
       "id": "agents_tradeops_copilot_agent_guidelines",
       "community": 108,
-      "community_name": "CONTRIBUTING.md",
+      "community_name": "TradeOps Copilot \u2014 agent guidelines",
       "norm_label": "tradeops copilot \u2014 agent guidelines"
-    },
-    {
-      "label": "CODE_OF_CONDUCT.md",
-      "file_type": "document",
-      "source_file": "CODE_OF_CONDUCT.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "code_of_conduct",
-      "community": 108,
-      "community_name": "CONTRIBUTING.md",
-      "norm_label": "code_of_conduct.md"
-    },
-    {
-      "label": "Code of Conduct",
-      "file_type": "document",
-      "source_file": "CODE_OF_CONDUCT.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "code_of_conduct_code_of_conduct",
-      "community": 108,
-      "community_name": "CONTRIBUTING.md",
-      "norm_label": "code of conduct"
-    },
-    {
-      "label": "CONTRIBUTING.md",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "contributing",
-      "community": 108,
-      "community_name": "CONTRIBUTING.md",
-      "norm_label": "contributing.md"
-    },
-    {
-      "label": "Contributing",
-      "file_type": "document",
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "contributing_contributing",
-      "community": 108,
-      "community_name": "CONTRIBUTING.md",
-      "norm_label": "contributing"
     },
     {
       "label": "0001-modular-monolith-and-worker.md",
@@ -7530,59 +7585,103 @@
       "norm_label": "type"
     },
     {
-      "label": "Architecture",
+      "label": "API and real-time contracts",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L22",
+      "source_location": "L391",
       "_origin": "ast",
-      "id": "readme_architecture",
+      "id": "readme_api_and_real_time_contracts",
       "community": 110,
       "community_name": "TradeOps Copilot",
-      "norm_label": "architecture"
+      "norm_label": "api and real-time contracts"
     },
     {
-      "label": "Primary journey",
+      "label": "Documentation coverage",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L78",
+      "source_location": "L849",
       "_origin": "ast",
-      "id": "readme_primary_journey",
+      "id": "readme_documentation_coverage",
       "community": 110,
       "community_name": "TradeOps Copilot",
-      "norm_label": "primary journey"
+      "norm_label": "documentation coverage"
     },
     {
-      "label": "Providers and data",
+      "label": "License and author",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L74",
+      "source_location": "L934",
       "_origin": "ast",
-      "id": "readme_providers_and_data",
+      "id": "readme_license_and_author",
       "community": 110,
       "community_name": "TradeOps Copilot",
-      "norm_label": "providers and data"
+      "norm_label": "license and author"
     },
     {
-      "label": "Quick start",
+      "label": "Performance baseline",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L49",
+      "source_location": "L642",
       "_origin": "ast",
-      "id": "readme_quick_start",
+      "id": "readme_performance_baseline",
       "community": 110,
       "community_name": "TradeOps Copilot",
-      "norm_label": "quick start"
+      "norm_label": "performance baseline"
     },
     {
-      "label": "Repository and limits",
+      "label": "Release status",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L101",
+      "source_location": "L87",
       "_origin": "ast",
-      "id": "readme_repository_and_limits",
+      "id": "readme_release_status",
       "community": 110,
       "community_name": "TradeOps Copilot",
-      "norm_label": "repository and limits"
+      "norm_label": "release status"
+    },
+    {
+      "label": "Repository structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L768",
+      "_origin": "ast",
+      "id": "readme_repository_structure",
+      "community": 110,
+      "community_name": "TradeOps Copilot",
+      "norm_label": "repository structure"
+    },
+    {
+      "label": "Safe usage rules",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L398",
+      "_origin": "ast",
+      "id": "readme_safe_usage_rules",
+      "community": 110,
+      "community_name": "TradeOps Copilot",
+      "norm_label": "safe usage rules"
+    },
+    {
+      "label": "Table of contents",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "readme_table_of_contents",
+      "community": 110,
+      "community_name": "TradeOps Copilot",
+      "norm_label": "table of contents"
+    },
+    {
+      "label": "Ten-minute demo",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L575",
+      "_origin": "ast",
+      "id": "readme_ten_minute_demo",
+      "community": 110,
+      "community_name": "TradeOps Copilot",
+      "norm_label": "ten-minute demo"
     },
     {
       "label": "TradeOps Copilot",
@@ -7596,224 +7695,213 @@
       "norm_label": "tradeops copilot"
     },
     {
-      "label": "Verification",
+      "label": "AGENTS.md",
       "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L87",
-      "_origin": "ast",
-      "id": "readme_verification",
-      "community": 110,
-      "community_name": "TradeOps Copilot",
-      "norm_label": "verification"
-    },
-    {
-      "label": "What it demonstrates",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "readme_what_it_demonstrates",
-      "community": 110,
-      "community_name": "TradeOps Copilot",
-      "norm_label": "what it demonstrates"
-    },
-    {
-      "label": "DEMO.md",
-      "file_type": "document",
-      "source_file": "DEMO.md",
+      "source_file": "AGENTS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "demo",
+      "id": "agents",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "demo.md"
+      "norm_label": "agents.md"
     },
     {
-      "label": "Demonstration script",
+      "label": "CODE_OF_CONDUCT.md",
       "file_type": "document",
-      "source_file": "DEMO.md",
+      "source_file": "CODE_OF_CONDUCT.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "demo_demonstration_script",
+      "id": "code_of_conduct",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "demonstration script"
+      "norm_label": "code_of_conduct.md"
     },
     {
-      "label": "overview.md",
+      "label": "Code of Conduct",
       "file_type": "document",
-      "source_file": "docs/architecture/overview.md",
+      "source_file": "CODE_OF_CONDUCT.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_architecture_overview",
+      "id": "code_of_conduct_code_of_conduct",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "overview.md"
+      "norm_label": "code of conduct"
     },
     {
-      "label": "Architecture overview",
+      "label": "CONTRIBUTING.md",
       "file_type": "document",
-      "source_file": "docs/architecture/overview.md",
+      "source_file": "CONTRIBUTING.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_architecture_overview_architecture_overview",
+      "id": "contributing",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "architecture overview"
+      "norm_label": "contributing.md"
     },
     {
-      "label": "provenance.md",
+      "label": "Contributing",
       "file_type": "document",
-      "source_file": "docs/data/provenance.md",
+      "source_file": "CONTRIBUTING.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_data_provenance",
+      "id": "contributing_contributing",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "provenance.md"
+      "norm_label": "contributing"
     },
     {
-      "label": "Data source and provenance guide",
+      "label": "0005-oidc-provider-strategy.md",
       "file_type": "document",
-      "source_file": "docs/data/provenance.md",
+      "source_file": "docs/adr/0005-oidc-provider-strategy.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_data_provenance_data_source_and_provenance_guide",
+      "id": "docs_adr_0005_oidc_provider_strategy",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "data source and provenance guide"
+      "norm_label": "0005-oidc-provider-strategy.md"
     },
     {
-      "label": "deployment.md",
+      "label": "ADR 0005: OIDC provider strategy",
       "file_type": "document",
-      "source_file": "docs/development/deployment.md",
+      "source_file": "docs/adr/0005-oidc-provider-strategy.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_development_deployment",
+      "id": "docs_adr_0005_oidc_provider_strategy_adr_0005_oidc_provider_strategy",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "deployment.md"
+      "norm_label": "adr 0005: oidc provider strategy"
     },
     {
-      "label": "Deployment guide",
+      "label": "0006-transactional-outbox.md",
       "file_type": "document",
-      "source_file": "docs/development/deployment.md",
+      "source_file": "docs/adr/0006-transactional-outbox.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_development_deployment_deployment_guide",
+      "id": "docs_adr_0006_transactional_outbox",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "deployment guide"
+      "norm_label": "0006-transactional-outbox.md"
     },
     {
-      "label": "testing.md",
+      "label": "ADR 0006: Transactional outbox and delivery",
       "file_type": "document",
-      "source_file": "docs/development/testing.md",
+      "source_file": "docs/adr/0006-transactional-outbox.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_development_testing",
+      "id": "docs_adr_0006_transactional_outbox_adr_0006_transactional_outbox_and_delivery",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "testing.md"
+      "norm_label": "adr 0006: transactional outbox and delivery"
     },
     {
-      "label": "Testing strategy",
+      "label": "0007-human-control-policy.md",
       "file_type": "document",
-      "source_file": "docs/development/testing.md",
+      "source_file": "docs/adr/0007-human-control-policy.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_development_testing_testing_strategy",
+      "id": "docs_adr_0007_human_control_policy",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "testing strategy"
+      "norm_label": "0007-human-control-policy.md"
     },
     {
-      "label": "baseline.md",
+      "label": "ADR 0007: Human-in-the-loop control",
       "file_type": "document",
-      "source_file": "docs/evaluation/baseline.md",
+      "source_file": "docs/adr/0007-human-control-policy.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_evaluation_baseline",
+      "id": "docs_adr_0007_human_control_policy_adr_0007_human_in_the_loop_control",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "baseline.md"
+      "norm_label": "adr 0007: human-in-the-loop control"
     },
     {
-      "label": "Evaluation baseline",
+      "label": "0008-model-provider-abstraction.md",
       "file_type": "document",
-      "source_file": "docs/evaluation/baseline.md",
+      "source_file": "docs/adr/0008-model-provider-abstraction.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_evaluation_baseline_evaluation_baseline",
+      "id": "docs_adr_0008_model_provider_abstraction",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "evaluation baseline"
+      "norm_label": "0008-model-provider-abstraction.md"
     },
     {
-      "label": "system-card.md",
+      "label": "ADR 0008: Model-provider abstraction and fallback",
       "file_type": "document",
-      "source_file": "docs/evaluation/system-card.md",
+      "source_file": "docs/adr/0008-model-provider-abstraction.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_evaluation_system_card",
+      "id": "docs_adr_0008_model_provider_abstraction_adr_0008_model_provider_abstraction_and_fallback",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "system-card.md"
+      "norm_label": "adr 0008: model-provider abstraction and fallback"
     },
     {
-      "label": "AI system card",
+      "label": "0009-observability-stack.md",
       "file_type": "document",
-      "source_file": "docs/evaluation/system-card.md",
+      "source_file": "docs/adr/0009-observability-stack.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_evaluation_system_card_ai_system_card",
+      "id": "docs_adr_0009_observability_stack",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "ai system card"
+      "norm_label": "0009-observability-stack.md"
     },
     {
-      "label": "runbook.md",
+      "label": "ADR 0009: OpenTelemetry, Prometheus, and Grafana",
       "file_type": "document",
-      "source_file": "docs/operations/runbook.md",
+      "source_file": "docs/adr/0009-observability-stack.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_operations_runbook",
+      "id": "docs_adr_0009_observability_stack_adr_0009_opentelemetry_prometheus_and_grafana",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "runbook.md"
+      "norm_label": "adr 0009: opentelemetry, prometheus, and grafana"
     },
     {
-      "label": "Operations runbook",
+      "label": "0010-public-synthetic-data.md",
       "file_type": "document",
-      "source_file": "docs/operations/runbook.md",
+      "source_file": "docs/adr/0010-public-synthetic-data.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_operations_runbook_operations_runbook",
+      "id": "docs_adr_0010_public_synthetic_data",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "operations runbook"
+      "norm_label": "0010-public-synthetic-data.md"
     },
     {
-      "label": "baseline-2026-08-24.md",
+      "label": "ADR 0010: Public and synthetic data licensing",
       "file_type": "document",
-      "source_file": "docs/performance/baseline-2026-08-24.md",
+      "source_file": "docs/adr/0010-public-synthetic-data.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_performance_baseline_2026_08_24",
+      "id": "docs_adr_0010_public_synthetic_data_adr_0010_public_and_synthetic_data_licensing",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "baseline-2026-08-24.md"
+      "norm_label": "adr 0010: public and synthetic data licensing"
     },
     {
-      "label": "Local performance baseline \u2014 2026-08-24",
+      "label": "exception-triage.md",
       "file_type": "document",
-      "source_file": "docs/performance/baseline-2026-08-24.md",
+      "source_file": "docs/runbooks/exception-triage.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_performance_baseline_2026_08_24_local_performance_baseline_2026_08_24",
+      "id": "docs_runbooks_exception_triage",
       "community": 111,
       "community_name": "README.md",
-      "norm_label": "local performance baseline \u2014 2026-08-24"
+      "norm_label": "exception-triage.md"
+    },
+    {
+      "label": "Deterministic exception triage",
+      "file_type": "document",
+      "source_file": "docs/runbooks/exception-triage.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_runbooks_exception_triage_deterministic_exception_triage",
+      "community": 111,
+      "community_name": "README.md",
+      "norm_label": "deterministic exception triage"
     },
     {
       "label": "security/architecture.md",
@@ -7836,6 +7924,28 @@
       "community": 111,
       "community_name": "README.md",
       "norm_label": "security architecture"
+    },
+    {
+      "label": "aws/README.md",
+      "file_type": "document",
+      "source_file": "infra/terraform/aws/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "infra_terraform_aws_readme",
+      "community": 111,
+      "community_name": "README.md",
+      "norm_label": "aws/readme.md"
+    },
+    {
+      "label": "AWS reference architecture",
+      "file_type": "document",
+      "source_file": "infra/terraform/aws/README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "infra_terraform_aws_readme_aws_reference_architecture",
+      "community": 111,
+      "community_name": "README.md",
+      "norm_label": "aws reference architecture"
     },
     {
       "label": "README.md",
@@ -8113,17 +8223,6 @@
       "norm_label": "settings.tsx"
     },
     {
-      "label": "Route",
-      "file_type": "code",
-      "source_file": "src/routes/settings.tsx",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "src_routes_settings_route",
-      "community": 118,
-      "community_name": "settings.tsx",
-      "norm_label": "route"
-    },
-    {
       "label": "sources",
       "file_type": "code",
       "source_file": "src/routes/settings.tsx",
@@ -8135,26 +8234,103 @@
       "norm_label": "sources"
     },
     {
-      "label": "exception-triage.md",
+      "label": "Architecture",
       "file_type": "document",
-      "source_file": "docs/runbooks/exception-triage.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L134",
       "_origin": "ast",
-      "id": "docs_runbooks_exception_triage",
+      "id": "readme_architecture",
       "community": 119,
-      "community_name": "exception-triage.md",
-      "norm_label": "exception-triage.md"
+      "community_name": "Architecture",
+      "norm_label": "architecture"
     },
     {
-      "label": "Deterministic exception triage",
+      "label": "Architecture decisions",
       "file_type": "document",
-      "source_file": "docs/runbooks/exception-triage.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L252",
       "_origin": "ast",
-      "id": "docs_runbooks_exception_triage_deterministic_exception_triage",
+      "id": "readme_architecture_decisions",
       "community": 119,
-      "community_name": "exception-triage.md",
-      "norm_label": "deterministic exception triage"
+      "community_name": "Architecture",
+      "norm_label": "architecture decisions"
+    },
+    {
+      "label": "Data relationships",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L211",
+      "_origin": "ast",
+      "id": "readme_data_relationships",
+      "community": 119,
+      "community_name": "Architecture",
+      "norm_label": "data relationships"
+    },
+    {
+      "label": "Failure behavior",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L240",
+      "_origin": "ast",
+      "id": "readme_failure_behavior",
+      "community": 119,
+      "community_name": "Architecture",
+      "norm_label": "failure behavior"
+    },
+    {
+      "label": "Investigation and approval sequence",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L166",
+      "_origin": "ast",
+      "id": "readme_investigation_and_approval_sequence",
+      "community": 119,
+      "community_name": "Architecture",
+      "norm_label": "investigation and approval sequence"
+    },
+    {
+      "label": "Ownership and dependency direction",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L226",
+      "_origin": "ast",
+      "id": "readme_ownership_and_dependency_direction",
+      "community": 119,
+      "community_name": "Architecture",
+      "norm_label": "ownership and dependency direction"
+    },
+    {
+      "label": "Runtime topology",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L136",
+      "_origin": "ast",
+      "id": "readme_runtime_topology",
+      "community": 119,
+      "community_name": "Architecture",
+      "norm_label": "runtime topology"
+    },
+    {
+      "label": "Scaling path",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L267",
+      "_origin": "ast",
+      "id": "readme_scaling_path",
+      "community": 119,
+      "community_name": "Architecture",
+      "norm_label": "scaling path"
+    },
+    {
+      "label": "Typed graph",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L188",
+      "_origin": "ast",
+      "id": "readme_typed_graph",
+      "community": 119,
+      "community_name": "Architecture",
+      "norm_label": "typed graph"
     },
     {
       "label": "command.tsx",
@@ -8542,6 +8718,39 @@
       "norm_label": "decisionlabels"
     },
     {
+      "label": "Route",
+      "file_type": "code",
+      "source_file": "src/routes/exceptions_.$exceptionId.tsx",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "src_routes_exceptions_exceptionid_route",
+      "community": 121,
+      "community_name": "exceptions_.$exceptionId.tsx",
+      "norm_label": "route"
+    },
+    {
+      "label": "demo_operations.py",
+      "file_type": "code",
+      "source_file": "backend/src/tradeops/application/demo_operations.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "backend_src_tradeops_application_demo_operations",
+      "community": 122,
+      "community_name": "ReconciliationPolicy",
+      "norm_label": "demo_operations.py"
+    },
+    {
+      "label": "RuntimeError",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "backend_src_tradeops_application_demo_operations_py_runtimeerror",
+      "community": 122,
+      "community_name": "ReconciliationPolicy",
+      "norm_label": "runtimeerror"
+    },
+    {
       "label": "tradeops/domain/__init__.py",
       "file_type": "code",
       "source_file": "backend/src/tradeops/domain/__init__.py",
@@ -8586,6 +8795,28 @@
       "norm_label": "random"
     },
     {
+      "label": "Deterministic local operations service used by the API and offline demo.",
+      "file_type": "rationale",
+      "source_file": "backend/src/tradeops/application/demo_operations.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "backend_src_tradeops_application_demo_operations_rationale_1",
+      "community": 122,
+      "community_name": "ReconciliationPolicy",
+      "norm_label": "deterministic local operations service used by the api and offline demo."
+    },
+    {
+      "label": "Requested change conflicts with current demo state.",
+      "file_type": "rationale",
+      "source_file": "backend/src/tradeops/application/demo_operations.py",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "backend_src_tradeops_application_demo_operations_rationale_28",
+      "community": 122,
+      "community_name": "ReconciliationPolicy",
+      "norm_label": "requested change conflicts with current demo state."
+    },
+    {
       "label": "Dependency-free domain layer for deterministic facts and rules.",
       "file_type": "rationale",
       "source_file": "backend/src/tradeops/domain/__init__.py",
@@ -8595,17 +8826,6 @@
       "community": 122,
       "community_name": "ReconciliationPolicy",
       "norm_label": "dependency-free domain layer for deterministic facts and rules."
-    },
-    {
-      "label": "Evaluate all twelve rule families without network or model calls.",
-      "file_type": "rationale",
-      "source_file": "backend/src/tradeops/domain/reconciliation.py",
-      "source_location": "L121",
-      "_origin": "ast",
-      "id": "backend_src_tradeops_domain_reconciliation_rationale_121",
-      "community": 122,
-      "community_name": "ReconciliationPolicy",
-      "norm_label": "evaluate all twelve rule families without network or model calls."
     },
     {
       "label": "Versioned tolerances and freshness bounds for the catalogue.",
@@ -8991,6 +9211,17 @@
       "community": 124,
       "community_name": "ReconciliationInput",
       "norm_label": "complete deterministic exception catalogue for synthetic trade envelopes."
+    },
+    {
+      "label": "Evaluate all twelve rule families without network or model calls.",
+      "file_type": "rationale",
+      "source_file": "backend/src/tradeops/domain/reconciliation.py",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "backend_src_tradeops_domain_reconciliation_rationale_121",
+      "community": 124,
+      "community_name": "ReconciliationInput",
+      "norm_label": "evaluate all twelve rule families without network or model calls."
     },
     {
       "label": "Synthetic/public-derived reference facts used only by deterministic checks.",
@@ -9829,92 +10060,81 @@
       "norm_label": "run the replayable, zero-cost mock evaluation baseline."
     },
     {
-      "label": "select.tsx",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L1",
+      "label": "Backup and restore",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L717",
       "_origin": "ast",
-      "id": "src_components_ui_select",
+      "id": "readme_backup_and_restore",
       "community": 131,
-      "community_name": "select.tsx",
-      "norm_label": "select.tsx"
+      "community_name": "Deployment and operations",
+      "norm_label": "backup and restore"
     },
     {
-      "label": "SelectContent",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L63",
+      "label": "Before any non-local deployment",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L684",
       "_origin": "ast",
-      "id": "src_components_ui_select_selectcontent",
+      "id": "readme_before_any_non_local_deployment",
       "community": 131,
-      "community_name": "select.tsx",
-      "norm_label": "selectcontent"
+      "community_name": "Deployment and operations",
+      "norm_label": "before any non-local deployment"
     },
     {
-      "label": "SelectItem",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L107",
+      "label": "Deployment and operations",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L664",
       "_origin": "ast",
-      "id": "src_components_ui_select_selectitem",
+      "id": "readme_deployment_and_operations",
       "community": 131,
-      "community_name": "select.tsx",
-      "norm_label": "selectitem"
+      "community_name": "Deployment and operations",
+      "norm_label": "deployment and operations"
     },
     {
-      "label": "SelectLabel",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L95",
+      "label": "Incident response",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L706",
       "_origin": "ast",
-      "id": "src_components_ui_select_selectlabel",
+      "id": "readme_incident_response",
       "community": 131,
-      "community_name": "select.tsx",
-      "norm_label": "selectlabel"
+      "community_name": "Deployment and operations",
+      "norm_label": "incident response"
     },
     {
-      "label": "SelectScrollDownButton",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L49",
+      "label": "Operations runbook",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L697",
       "_origin": "ast",
-      "id": "src_components_ui_select_selectscrolldownbutton",
+      "id": "readme_operations_runbook",
       "community": 131,
-      "community_name": "select.tsx",
-      "norm_label": "selectscrolldownbutton"
+      "community_name": "Deployment and operations",
+      "norm_label": "operations runbook"
     },
     {
-      "label": "SelectScrollUpButton",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L35",
+      "label": "SLI/SLO proposal",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L723",
       "_origin": "ast",
-      "id": "src_components_ui_select_selectscrollupbutton",
+      "id": "readme_sli_slo_proposal",
       "community": 131,
-      "community_name": "select.tsx",
-      "norm_label": "selectscrollupbutton"
+      "community_name": "Deployment and operations",
+      "norm_label": "sli/slo proposal"
     },
     {
-      "label": "SelectSeparator",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L129",
+      "label": "Verified local deployment",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L666",
       "_origin": "ast",
-      "id": "src_components_ui_select_selectseparator",
+      "id": "readme_verified_local_deployment",
       "community": 131,
-      "community_name": "select.tsx",
-      "norm_label": "selectseparator"
-    },
-    {
-      "label": "SelectTrigger",
-      "file_type": "code",
-      "source_file": "src/components/ui/select.tsx",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "src_components_ui_select_selecttrigger",
-      "community": 131,
-      "community_name": "select.tsx",
-      "norm_label": "selecttrigger"
+      "community_name": "Deployment and operations",
+      "norm_label": "verified local deployment"
     },
     {
       "label": "health.py",
@@ -10016,81 +10236,70 @@
       "norm_label": "tradeops copilot backend package."
     },
     {
-      "label": "trades.py",
-      "file_type": "code",
-      "source_file": "backend/src/tradeops/domain/trades.py",
-      "source_location": "L1",
+      "label": "Enforced controls",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L424",
       "_origin": "ast",
-      "id": "backend_src_tradeops_domain_trades",
+      "id": "readme_enforced_controls",
       "community": 133,
-      "community_name": "SyntheticTrade",
-      "norm_label": "trades.py"
+      "community_name": "Security, privacy, and threat model",
+      "norm_label": "enforced controls"
     },
     {
-      "label": "ValueError",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
+      "label": "Identity and authorization",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L420",
       "_origin": "ast",
-      "id": "backend_src_tradeops_domain_trades_py_valueerror",
+      "id": "readme_identity_and_authorization",
       "community": 133,
-      "community_name": "SyntheticTrade",
-      "norm_label": "valueerror"
+      "community_name": "Security, privacy, and threat model",
+      "norm_label": "identity and authorization"
     },
     {
-      "label": "test_trades.py",
-      "file_type": "code",
-      "source_file": "backend/tests/domain/test_trades.py",
-      "source_location": "L1",
+      "label": "Privacy and logging",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L447",
       "_origin": "ast",
-      "id": "backend_tests_domain_test_trades",
+      "id": "readme_privacy_and_logging",
       "community": 133,
-      "community_name": "SyntheticTrade",
-      "norm_label": "test_trades.py"
+      "community_name": "Security, privacy, and threat model",
+      "norm_label": "privacy and logging"
     },
     {
-      "label": "parametrize",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
+      "label": "Security, privacy, and threat model",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L418",
       "_origin": "ast",
-      "id": "backend_tests_domain_test_trades_py_parametrize",
+      "id": "readme_security_privacy_and_threat_model",
       "community": 133,
-      "community_name": "SyntheticTrade",
-      "norm_label": "parametrize"
+      "community_name": "Security, privacy, and threat model",
+      "norm_label": "security, privacy, and threat model"
     },
     {
-      "label": "Immutable synthetic trade facts.",
-      "file_type": "rationale",
-      "source_file": "backend/src/tradeops/domain/trades.py",
-      "source_location": "L1",
+      "label": "Threat model",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L434",
       "_origin": "ast",
-      "id": "backend_src_tradeops_domain_trades_rationale_1",
+      "id": "readme_threat_model",
       "community": 133,
-      "community_name": "SyntheticTrade",
-      "norm_label": "immutable synthetic trade facts."
+      "community_name": "Security, privacy, and threat model",
+      "norm_label": "threat model"
     },
     {
-      "label": "Raised when a synthetic trade violates a domain invariant.",
-      "file_type": "rationale",
-      "source_file": "backend/src/tradeops/domain/trades.py",
-      "source_location": "L15",
+      "label": "Vulnerability reporting",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L453",
       "_origin": "ast",
-      "id": "backend_src_tradeops_domain_trades_rationale_15",
+      "id": "readme_vulnerability_reporting",
       "community": 133,
-      "community_name": "SyntheticTrade",
-      "norm_label": "raised when a synthetic trade violates a domain invariant."
-    },
-    {
-      "label": "A versioned synthetic trade snapshot used as input to deterministic rules.",
-      "file_type": "rationale",
-      "source_file": "backend/src/tradeops/domain/trades.py",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "backend_src_tradeops_domain_trades_rationale_20",
-      "community": 133,
-      "community_name": "SyntheticTrade",
-      "norm_label": "a versioned synthetic trade snapshot used as input to deterministic rules."
+      "community_name": "Security, privacy, and threat model",
+      "norm_label": "vulnerability reporting"
     },
     {
       "label": "session.py",
@@ -10720,92 +10929,235 @@
       "norm_label": "roadmap"
     },
     {
-      "label": "DATA_LICENSES.md",
+      "label": "Local services",
       "file_type": "document",
-      "source_file": "DATA_LICENSES.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L479",
       "_origin": "ast",
-      "id": "data_licenses",
+      "id": "readme_local_services",
       "community": 146,
-      "community_name": "DATA_LICENSES.md",
-      "norm_label": "data_licenses.md"
+      "community_name": "Quick start",
+      "norm_label": "local services"
     },
     {
-      "label": "Data attribution and license review",
+      "label": "Prerequisites",
       "file_type": "document",
-      "source_file": "DATA_LICENSES.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L459",
       "_origin": "ast",
-      "id": "data_licenses_data_attribution_and_license_review",
+      "id": "readme_prerequisites",
       "community": 146,
-      "community_name": "DATA_LICENSES.md",
-      "norm_label": "data attribution and license review"
+      "community_name": "Quick start",
+      "norm_label": "prerequisites"
     },
     {
-      "label": "0005-oidc-provider-strategy.md",
+      "label": "Quick start",
       "file_type": "document",
-      "source_file": "docs/adr/0005-oidc-provider-strategy.md",
+      "source_file": "README.md",
+      "source_location": "L457",
+      "_origin": "ast",
+      "id": "readme_quick_start",
+      "community": 146,
+      "community_name": "Quick start",
+      "norm_label": "quick start"
+    },
+    {
+      "label": "Seeded identities",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L490",
+      "_origin": "ast",
+      "id": "readme_seeded_identities",
+      "community": 146,
+      "community_name": "Quick start",
+      "norm_label": "seeded identities"
+    },
+    {
+      "label": "Start the complete local stack",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L467",
+      "_origin": "ast",
+      "id": "readme_start_the_complete_local_stack",
+      "community": 146,
+      "community_name": "Quick start",
+      "norm_label": "start the complete local stack"
+    },
+    {
+      "label": "Stop the stack",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L501",
+      "_origin": "ast",
+      "id": "readme_stop_the_stack",
+      "community": 146,
+      "community_name": "Quick start",
+      "norm_label": "stop the stack"
+    },
+    {
+      "label": "query_20260825_140604_improve_readme_md_by_integrating_all_other_project.md",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260825_140604_improve_readme_md_by_integrating_all_other_project.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_adr_0005_oidc_provider_strategy",
+      "id": "graphify_out_memory_query_20260825_140604_improve_readme_md_by_integrating_all_other_project",
       "community": 147,
-      "community_name": "0005-oidc-provider-strategy.md",
-      "norm_label": "0005-oidc-provider-strategy.md"
+      "community_name": "Q: Improve README.md by integrating all other project Markdown into a professional one-stop handbook",
+      "norm_label": "query_20260825_140604_improve_readme_md_by_integrating_all_other_project.md"
     },
     {
-      "label": "ADR 0005: OIDC provider strategy",
+      "label": "Answer",
       "file_type": "document",
-      "source_file": "docs/adr/0005-oidc-provider-strategy.md",
-      "source_location": "L1",
+      "source_file": "graphify-out/memory/query_20260825_140604_improve_readme_md_by_integrating_all_other_project.md",
+      "source_location": "L12",
       "_origin": "ast",
-      "id": "docs_adr_0005_oidc_provider_strategy_adr_0005_oidc_provider_strategy",
+      "id": "graphify_out_memory_query_20260825_140604_improve_readme_md_by_integrating_all_other_project_answer",
       "community": 147,
-      "community_name": "0005-oidc-provider-strategy.md",
-      "norm_label": "adr 0005: oidc provider strategy"
+      "community_name": "Q: Improve README.md by integrating all other project Markdown into a professional one-stop handbook",
+      "norm_label": "answer"
     },
     {
-      "label": "0006-transactional-outbox.md",
+      "label": "Outcome",
       "file_type": "document",
-      "source_file": "docs/adr/0006-transactional-outbox.md",
-      "source_location": "L1",
+      "source_file": "graphify-out/memory/query_20260825_140604_improve_readme_md_by_integrating_all_other_project.md",
+      "source_location": "L16",
       "_origin": "ast",
-      "id": "docs_adr_0006_transactional_outbox",
+      "id": "graphify_out_memory_query_20260825_140604_improve_readme_md_by_integrating_all_other_project_outcome",
+      "community": 147,
+      "community_name": "Q: Improve README.md by integrating all other project Markdown into a professional one-stop handbook",
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Q: Improve README.md by integrating all other project Markdown into a professional one-stop handbook",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260825_140604_improve_readme_md_by_integrating_all_other_project.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260825_140604_improve_readme_md_by_integrating_all_other_project_q_improve_readme_md_by_integrating_all_other_project_markdown_into_a_professional_one_stop_handbook",
+      "community": 147,
+      "community_name": "Q: Improve README.md by integrating all other project Markdown into a professional one-stop handbook",
+      "norm_label": "q: improve readme.md by integrating all other project markdown into a professional one-stop handbook"
+    },
+    {
+      "label": "Source Nodes",
+      "file_type": "document",
+      "source_file": "graphify-out/memory/query_20260825_140604_improve_readme_md_by_integrating_all_other_project.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "graphify_out_memory_query_20260825_140604_improve_readme_md_by_integrating_all_other_project_source_nodes",
+      "community": 147,
+      "community_name": "Q: Improve README.md by integrating all other project Markdown into a professional one-stop handbook",
+      "norm_label": "source nodes"
+    },
+    {
+      "label": "Accessibility and degraded states",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L747",
+      "_origin": "ast",
+      "id": "readme_accessibility_and_degraded_states",
       "community": 148,
-      "community_name": "0006-transactional-outbox.md",
-      "norm_label": "0006-transactional-outbox.md"
+      "community_name": "Frontend, design system, and accessibility",
+      "norm_label": "accessibility and degraded states"
     },
     {
-      "label": "ADR 0006: Transactional outbox and delivery",
+      "label": "Component and interaction rules",
       "file_type": "document",
-      "source_file": "docs/adr/0006-transactional-outbox.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L735",
       "_origin": "ast",
-      "id": "docs_adr_0006_transactional_outbox_adr_0006_transactional_outbox_and_delivery",
+      "id": "readme_component_and_interaction_rules",
       "community": 148,
-      "community_name": "0006-transactional-outbox.md",
-      "norm_label": "adr 0006: transactional outbox and delivery"
+      "community_name": "Frontend, design system, and accessibility",
+      "norm_label": "component and interaction rules"
     },
     {
-      "label": "0007-human-control-policy.md",
+      "label": "Frontend, design system, and accessibility",
       "file_type": "document",
-      "source_file": "docs/adr/0007-human-control-policy.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L727",
       "_origin": "ast",
-      "id": "docs_adr_0007_human_control_policy",
-      "community": 149,
-      "community_name": "0007-human-control-policy.md",
-      "norm_label": "0007-human-control-policy.md"
+      "id": "readme_frontend_design_system_and_accessibility",
+      "community": 148,
+      "community_name": "Frontend, design system, and accessibility",
+      "norm_label": "frontend, design system, and accessibility"
     },
     {
-      "label": "ADR 0007: Human-in-the-loop control",
+      "label": "Released design language",
       "file_type": "document",
-      "source_file": "docs/adr/0007-human-control-policy.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L729",
       "_origin": "ast",
-      "id": "docs_adr_0007_human_control_policy_adr_0007_human_in_the_loop_control",
+      "id": "readme_released_design_language",
+      "community": 148,
+      "community_name": "Frontend, design system, and accessibility",
+      "norm_label": "released design language"
+    },
+    {
+      "label": "TanStack route conventions",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L751",
+      "_origin": "ast",
+      "id": "readme_tanstack_route_conventions",
+      "community": 148,
+      "community_name": "Frontend, design system, and accessibility",
+      "norm_label": "tanstack route conventions"
+    },
+    {
+      "label": "AI, RAG, and agent workflow",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L351",
+      "_origin": "ast",
+      "id": "readme_ai_rag_and_agent_workflow",
       "community": 149,
-      "community_name": "0007-human-control-policy.md",
-      "norm_label": "adr 0007: human-in-the-loop control"
+      "community_name": "AI, RAG, and agent workflow",
+      "norm_label": "ai, rag, and agent workflow"
+    },
+    {
+      "label": "Evaluation methodology and baseline",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L381",
+      "_origin": "ast",
+      "id": "readme_evaluation_methodology_and_baseline",
+      "community": 149,
+      "community_name": "AI, RAG, and agent workflow",
+      "norm_label": "evaluation methodology and baseline"
+    },
+    {
+      "label": "Provider abstraction",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L370",
+      "_origin": "ast",
+      "id": "readme_provider_abstraction",
+      "community": 149,
+      "community_name": "AI, RAG, and agent workflow",
+      "norm_label": "provider abstraction"
+    },
+    {
+      "label": "Retrieval pipeline",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L359",
+      "_origin": "ast",
+      "id": "readme_retrieval_pipeline",
+      "community": 149,
+      "community_name": "AI, RAG, and agent workflow",
+      "norm_label": "retrieval pipeline"
+    },
+    {
+      "label": "System card",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L353",
+      "_origin": "ast",
+      "id": "readme_system_card",
+      "community": 149,
+      "community_name": "AI, RAG, and agent workflow",
+      "norm_label": "system card"
     },
     {
       "label": "config.py",
@@ -10918,70 +11270,169 @@
       "norm_label": "start the explicitly configured worker."
     },
     {
-      "label": "0008-model-provider-abstraction.md",
+      "label": "Bootstrap and run",
       "file_type": "document",
-      "source_file": "docs/adr/0008-model-provider-abstraction.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L519",
       "_origin": "ast",
-      "id": "docs_adr_0008_model_provider_abstraction",
+      "id": "readme_bootstrap_and_run",
       "community": 150,
-      "community_name": "0008-model-provider-abstraction.md",
-      "norm_label": "0008-model-provider-abstraction.md"
+      "community_name": "Developer workflow",
+      "norm_label": "bootstrap and run"
     },
     {
-      "label": "ADR 0008: Model-provider abstraction and fallback",
+      "label": "Command reference",
       "file_type": "document",
-      "source_file": "docs/adr/0008-model-provider-abstraction.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L536",
       "_origin": "ast",
-      "id": "docs_adr_0008_model_provider_abstraction_adr_0008_model_provider_abstraction_and_fallback",
+      "id": "readme_command_reference",
       "community": 150,
-      "community_name": "0008-model-provider-abstraction.md",
-      "norm_label": "adr 0008: model-provider abstraction and fallback"
+      "community_name": "Developer workflow",
+      "norm_label": "command reference"
     },
     {
-      "label": "0009-observability-stack.md",
+      "label": "Developer workflow",
       "file_type": "document",
-      "source_file": "docs/adr/0009-observability-stack.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L509",
       "_origin": "ast",
-      "id": "docs_adr_0009_observability_stack",
+      "id": "readme_developer_workflow",
+      "community": 150,
+      "community_name": "Developer workflow",
+      "norm_label": "developer workflow"
+    },
+    {
+      "label": "Host prerequisites",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L511",
+      "_origin": "ast",
+      "id": "readme_host_prerequisites",
+      "community": 150,
+      "community_name": "Developer workflow",
+      "norm_label": "host prerequisites"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L559",
+      "_origin": "ast",
+      "id": "readme_troubleshooting",
+      "community": 150,
+      "community_name": "Developer workflow",
+      "norm_label": "troubleshooting"
+    },
+    {
+      "label": "Deterministic triage",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L338",
+      "_origin": "ast",
+      "id": "readme_deterministic_triage",
       "community": 151,
-      "community_name": "0009-observability-stack.md",
-      "norm_label": "0009-observability-stack.md"
+      "community_name": "Synthetic and public data",
+      "norm_label": "deterministic triage"
     },
     {
-      "label": "ADR 0009: OpenTelemetry, Prometheus, and Grafana",
+      "label": "Public reference fixtures",
       "file_type": "document",
-      "source_file": "docs/adr/0009-observability-stack.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L324",
       "_origin": "ast",
-      "id": "docs_adr_0009_observability_stack_adr_0009_opentelemetry_prometheus_and_grafana",
+      "id": "readme_public_reference_fixtures",
       "community": 151,
-      "community_name": "0009-observability-stack.md",
-      "norm_label": "adr 0009: opentelemetry, prometheus, and grafana"
+      "community_name": "Synthetic and public data",
+      "norm_label": "public reference fixtures"
     },
     {
-      "label": "0010-public-synthetic-data.md",
+      "label": "Settlement-date mismatch runbook",
       "file_type": "document",
-      "source_file": "docs/adr/0010-public-synthetic-data.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L347",
       "_origin": "ast",
-      "id": "docs_adr_0010_public_synthetic_data",
-      "community": 152,
-      "community_name": "0010-public-synthetic-data.md",
-      "norm_label": "0010-public-synthetic-data.md"
+      "id": "readme_settlement_date_mismatch_runbook",
+      "community": 151,
+      "community_name": "Synthetic and public data",
+      "norm_label": "settlement-date mismatch runbook"
     },
     {
-      "label": "ADR 0010: Public and synthetic data licensing",
+      "label": "Synthetic and public data",
       "file_type": "document",
-      "source_file": "docs/adr/0010-public-synthetic-data.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L316",
       "_origin": "ast",
-      "id": "docs_adr_0010_public_synthetic_data_adr_0010_public_and_synthetic_data_licensing",
+      "id": "readme_synthetic_and_public_data",
+      "community": 151,
+      "community_name": "Synthetic and public data",
+      "norm_label": "synthetic and public data"
+    },
+    {
+      "label": "Synthetic methodology",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L318",
+      "_origin": "ast",
+      "id": "readme_synthetic_methodology",
+      "community": 151,
+      "community_name": "Synthetic and public data",
+      "norm_label": "synthetic methodology"
+    },
+    {
+      "label": "Release evidence",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L603",
+      "_origin": "ast",
+      "id": "readme_release_evidence",
       "community": 152,
-      "community_name": "0010-public-synthetic-data.md",
-      "norm_label": "adr 0010: public and synthetic data licensing"
+      "community_name": "Verification and quality",
+      "norm_label": "release evidence"
+    },
+    {
+      "label": "Release process",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L631",
+      "_origin": "ast",
+      "id": "readme_release_process",
+      "community": 152,
+      "community_name": "Verification and quality",
+      "norm_label": "release process"
+    },
+    {
+      "label": "Reproduce the main gates",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L592",
+      "_origin": "ast",
+      "id": "readme_reproduce_the_main_gates",
+      "community": 152,
+      "community_name": "Verification and quality",
+      "norm_label": "reproduce the main gates"
+    },
+    {
+      "label": "Test strategy",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L622",
+      "_origin": "ast",
+      "id": "readme_test_strategy",
+      "community": 152,
+      "community_name": "Verification and quality",
+      "norm_label": "test strategy"
+    },
+    {
+      "label": "Verification and quality",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L590",
+      "_origin": "ast",
+      "id": "readme_verification_and_quality",
+      "community": 152,
+      "community_name": "Verification and quality",
+      "norm_label": "verification and quality"
     },
     {
       "label": "eslint",
@@ -11116,26 +11567,48 @@
       "norm_label": "globals"
     },
     {
-      "label": "aws/README.md",
+      "label": "Canonical data dictionary",
       "file_type": "document",
-      "source_file": "infra/terraform/aws/README.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L302",
       "_origin": "ast",
-      "id": "infra_terraform_aws_readme",
+      "id": "readme_canonical_data_dictionary",
       "community": 159,
-      "community_name": "aws/README.md",
-      "norm_label": "aws/readme.md"
+      "community_name": "Domain model and exception catalogue",
+      "norm_label": "canonical data dictionary"
     },
     {
-      "label": "AWS reference architecture",
+      "label": "Core terms",
       "file_type": "document",
-      "source_file": "infra/terraform/aws/README.md",
-      "source_location": "L1",
+      "source_file": "README.md",
+      "source_location": "L273",
       "_origin": "ast",
-      "id": "infra_terraform_aws_readme_aws_reference_architecture",
+      "id": "readme_core_terms",
       "community": 159,
-      "community_name": "aws/README.md",
-      "norm_label": "aws reference architecture"
+      "community_name": "Domain model and exception catalogue",
+      "norm_label": "core terms"
+    },
+    {
+      "label": "Domain model and exception catalogue",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L271",
+      "_origin": "ast",
+      "id": "readme_domain_model_and_exception_catalogue",
+      "community": 159,
+      "community_name": "Domain model and exception catalogue",
+      "norm_label": "domain model and exception catalogue"
+    },
+    {
+      "label": "Twelve exception families",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L283",
+      "_origin": "ast",
+      "id": "readme_twelve_exception_families",
+      "community": 159,
+      "community_name": "Domain model and exception catalogue",
+      "norm_label": "twelve exception families"
     },
     {
       "label": "dependencies",
@@ -11149,15 +11622,15 @@
       "norm_label": "dependencies"
     },
     {
-      "label": "class-variance-authority",
+      "label": "cmdk",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L70",
+      "source_location": "L72",
       "_origin": "ast",
-      "id": "package_dependencies_class_variance_authority",
+      "id": "package_dependencies_cmdk",
       "community": 16,
       "community_name": "dependencies",
-      "norm_label": "class-variance-authority"
+      "norm_label": "cmdk"
     },
     {
       "label": "lucide-react",
@@ -11215,15 +11688,15 @@
       "norm_label": "sonner"
     },
     {
-      "label": "class-variance-authority",
+      "label": "cmdk",
       "file_type": "concept",
       "source_file": "package.json",
-      "source_location": "L70",
+      "source_location": "L72",
       "_origin": "ast",
-      "id": "class_variance_authority",
+      "id": "cmdk",
       "community": 16,
       "community_name": "dependencies",
-      "norm_label": "class-variance-authority"
+      "norm_label": "cmdk"
     },
     {
       "label": "lucide-react",
@@ -11710,26 +12183,48 @@
       "norm_label": "vite"
     },
     {
-      "label": "@vitejs/plugin-react",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L103",
+      "label": "Code of conduct",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L839",
       "_origin": "ast",
-      "id": "package_devdependencies_vitejs_plugin_react",
+      "id": "readme_code_of_conduct",
       "community": 175,
-      "community_name": "@vitejs/plugin-react",
-      "norm_label": "@vitejs/plugin-react"
+      "community_name": "Contributing, support, and conduct",
+      "norm_label": "code of conduct"
     },
     {
-      "label": "@vitejs/plugin-react",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L103",
+      "label": "Contributing",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L828",
       "_origin": "ast",
-      "id": "vitejs_plugin_react",
+      "id": "readme_contributing",
       "community": 175,
-      "community_name": "@vitejs/plugin-react",
-      "norm_label": "@vitejs/plugin-react"
+      "community_name": "Contributing, support, and conduct",
+      "norm_label": "contributing"
+    },
+    {
+      "label": "Contributing, support, and conduct",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L826",
+      "_origin": "ast",
+      "id": "readme_contributing_support_and_conduct",
+      "community": 175,
+      "community_name": "Contributing, support, and conduct",
+      "norm_label": "contributing, support, and conduct"
+    },
+    {
+      "label": "Support",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L843",
+      "_origin": "ast",
+      "id": "readme_support",
+      "community": 175,
+      "community_name": "Contributing, support, and conduct",
+      "norm_label": "support"
     },
     {
       "label": "vitest",
@@ -12117,81 +12612,81 @@
       "norm_label": "operations.spec.ts"
     },
     {
-      "label": "input-otp.tsx",
-      "file_type": "code",
-      "source_file": "src/components/ui/input-otp.tsx",
-      "source_location": "L1",
+      "label": "Non-goals",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L77",
       "_origin": "ast",
-      "id": "src_components_ui_input_otp",
+      "id": "readme_non_goals",
       "community": 184,
-      "community_name": "input-otp.tsx",
-      "norm_label": "input-otp.tsx"
+      "community_name": "Why this project exists",
+      "norm_label": "non-goals"
     },
     {
-      "label": "InputOTP",
-      "file_type": "code",
-      "source_file": "src/components/ui/input-otp.tsx",
-      "source_location": "L7",
+      "label": "Users and intended outcomes",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L68",
       "_origin": "ast",
-      "id": "src_components_ui_input_otp_inputotp",
+      "id": "readme_users_and_intended_outcomes",
       "community": 184,
-      "community_name": "input-otp.tsx",
-      "norm_label": "inputotp"
+      "community_name": "Why this project exists",
+      "norm_label": "users and intended outcomes"
     },
     {
-      "label": "InputOTPGroup",
-      "file_type": "code",
-      "source_file": "src/components/ui/input-otp.tsx",
-      "source_location": "L23",
+      "label": "What the release demonstrates",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L54",
       "_origin": "ast",
-      "id": "src_components_ui_input_otp_inputotpgroup",
+      "id": "readme_what_the_release_demonstrates",
       "community": 184,
-      "community_name": "input-otp.tsx",
-      "norm_label": "inputotpgroup"
+      "community_name": "Why this project exists",
+      "norm_label": "what the release demonstrates"
     },
     {
-      "label": "InputOTPSeparator",
-      "file_type": "code",
-      "source_file": "src/components/ui/input-otp.tsx",
-      "source_location": "L63",
+      "label": "Why this project exists",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L50",
       "_origin": "ast",
-      "id": "src_components_ui_input_otp_inputotpseparator",
+      "id": "readme_why_this_project_exists",
       "community": 184,
-      "community_name": "input-otp.tsx",
-      "norm_label": "inputotpseparator"
+      "community_name": "Why this project exists",
+      "norm_label": "why this project exists"
     },
     {
-      "label": "InputOTPSlot",
-      "file_type": "code",
-      "source_file": "src/components/ui/input-otp.tsx",
-      "source_location": "L31",
+      "label": "Application surfaces",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L119",
       "_origin": "ast",
-      "id": "src_components_ui_input_otp_inputotpslot",
-      "community": 184,
-      "community_name": "input-otp.tsx",
-      "norm_label": "inputotpslot"
-    },
-    {
-      "label": "cmdk",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L72",
-      "_origin": "ast",
-      "id": "package_dependencies_cmdk",
+      "id": "readme_application_surfaces",
       "community": 185,
-      "community_name": "cmdk",
-      "norm_label": "cmdk"
+      "community_name": "Product experience",
+      "norm_label": "application surfaces"
     },
     {
-      "label": "cmdk",
-      "file_type": "concept",
-      "source_file": "package.json",
-      "source_location": "L72",
+      "label": "Primary journey",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L106",
       "_origin": "ast",
-      "id": "cmdk",
+      "id": "readme_primary_journey",
       "community": 185,
-      "community_name": "cmdk",
-      "norm_label": "cmdk"
+      "community_name": "Product experience",
+      "norm_label": "primary journey"
+    },
+    {
+      "label": "Product experience",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L104",
+      "_origin": "ast",
+      "id": "readme_product_experience",
+      "community": 185,
+      "community_name": "Product experience",
+      "norm_label": "product experience"
     },
     {
       "label": "@testing-library/react",
@@ -12214,6 +12709,83 @@
       "community": 186,
       "community_name": "@testing-library/react",
       "norm_label": "@testing-library/react"
+    },
+    {
+      "label": "Candidate future work",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L814",
+      "_origin": "ast",
+      "id": "readme_candidate_future_work",
+      "community": 187,
+      "community_name": "Known limitations and roadmap",
+      "norm_label": "candidate future work"
+    },
+    {
+      "label": "Current limitations",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L805",
+      "_origin": "ast",
+      "id": "readme_current_limitations",
+      "community": 187,
+      "community_name": "Known limitations and roadmap",
+      "norm_label": "current limitations"
+    },
+    {
+      "label": "Known limitations and roadmap",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L803",
+      "_origin": "ast",
+      "id": "readme_known_limitations_and_roadmap",
+      "community": 187,
+      "community_name": "Known limitations and roadmap",
+      "norm_label": "known limitations and roadmap"
+    },
+    {
+      "label": "@axe-core/playwright",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "package_devdependencies_axe_core_playwright",
+      "community": 188,
+      "community_name": "@axe-core/playwright",
+      "norm_label": "@axe-core/playwright"
+    },
+    {
+      "label": "@axe-core/playwright",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "axe_core_playwright",
+      "community": 188,
+      "community_name": "@axe-core/playwright",
+      "norm_label": "@axe-core/playwright"
+    },
+    {
+      "label": "class-variance-authority",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "package_dependencies_class_variance_authority",
+      "community": 189,
+      "community_name": "class-variance-authority",
+      "norm_label": "class-variance-authority"
+    },
+    {
+      "label": "class-variance-authority",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "class_variance_authority",
+      "community": 189,
+      "community_name": "class-variance-authority",
+      "norm_label": "class-variance-authority"
     },
     {
       "label": "domain-glossary.md",
@@ -12302,6 +12874,226 @@
       "community": 19,
       "community_name": "Domain glossary",
       "norm_label": "synthetic trade"
+    },
+    {
+      "label": "DEMO.md",
+      "file_type": "document",
+      "source_file": "DEMO.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "demo",
+      "community": 190,
+      "community_name": "DEMO.md",
+      "norm_label": "demo.md"
+    },
+    {
+      "label": "Demonstration script",
+      "file_type": "document",
+      "source_file": "DEMO.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "demo_demonstration_script",
+      "community": 190,
+      "community_name": "DEMO.md",
+      "norm_label": "demonstration script"
+    },
+    {
+      "label": "overview.md",
+      "file_type": "document",
+      "source_file": "docs/architecture/overview.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_architecture_overview",
+      "community": 191,
+      "community_name": "overview.md",
+      "norm_label": "overview.md"
+    },
+    {
+      "label": "Architecture overview",
+      "file_type": "document",
+      "source_file": "docs/architecture/overview.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_architecture_overview_architecture_overview",
+      "community": 191,
+      "community_name": "overview.md",
+      "norm_label": "architecture overview"
+    },
+    {
+      "label": "rag-design.md",
+      "file_type": "document",
+      "source_file": "docs/architecture/rag-design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_architecture_rag_design",
+      "community": 192,
+      "community_name": "rag-design.md",
+      "norm_label": "rag-design.md"
+    },
+    {
+      "label": "RAG ingestion and retrieval design",
+      "file_type": "document",
+      "source_file": "docs/architecture/rag-design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_architecture_rag_design_rag_ingestion_and_retrieval_design",
+      "community": 192,
+      "community_name": "rag-design.md",
+      "norm_label": "rag ingestion and retrieval design"
+    },
+    {
+      "label": "provenance.md",
+      "file_type": "document",
+      "source_file": "docs/data/provenance.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_data_provenance",
+      "community": 193,
+      "community_name": "provenance.md",
+      "norm_label": "provenance.md"
+    },
+    {
+      "label": "Data source and provenance guide",
+      "file_type": "document",
+      "source_file": "docs/data/provenance.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_data_provenance_data_source_and_provenance_guide",
+      "community": 193,
+      "community_name": "provenance.md",
+      "norm_label": "data source and provenance guide"
+    },
+    {
+      "label": "release.md",
+      "file_type": "document",
+      "source_file": "docs/development/release.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_development_release",
+      "community": 194,
+      "community_name": "release.md",
+      "norm_label": "release.md"
+    },
+    {
+      "label": "Release process",
+      "file_type": "document",
+      "source_file": "docs/development/release.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_development_release_release_process",
+      "community": 194,
+      "community_name": "release.md",
+      "norm_label": "release process"
+    },
+    {
+      "label": "testing.md",
+      "file_type": "document",
+      "source_file": "docs/development/testing.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_development_testing",
+      "community": 195,
+      "community_name": "testing.md",
+      "norm_label": "testing.md"
+    },
+    {
+      "label": "Testing strategy",
+      "file_type": "document",
+      "source_file": "docs/development/testing.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_development_testing_testing_strategy",
+      "community": 195,
+      "community_name": "testing.md",
+      "norm_label": "testing strategy"
+    },
+    {
+      "label": "methodology.md",
+      "file_type": "document",
+      "source_file": "docs/evaluation/methodology.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_evaluation_methodology",
+      "community": 196,
+      "community_name": "methodology.md",
+      "norm_label": "methodology.md"
+    },
+    {
+      "label": "Evaluation methodology",
+      "file_type": "document",
+      "source_file": "docs/evaluation/methodology.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_evaluation_methodology_evaluation_methodology",
+      "community": 196,
+      "community_name": "methodology.md",
+      "norm_label": "evaluation methodology"
+    },
+    {
+      "label": "system-card.md",
+      "file_type": "document",
+      "source_file": "docs/evaluation/system-card.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_evaluation_system_card",
+      "community": 197,
+      "community_name": "system-card.md",
+      "norm_label": "system-card.md"
+    },
+    {
+      "label": "AI system card",
+      "file_type": "document",
+      "source_file": "docs/evaluation/system-card.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_evaluation_system_card_ai_system_card",
+      "community": 197,
+      "community_name": "system-card.md",
+      "norm_label": "ai system card"
+    },
+    {
+      "label": "backup-restore.md",
+      "file_type": "document",
+      "source_file": "docs/operations/backup-restore.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_operations_backup_restore",
+      "community": 198,
+      "community_name": "backup-restore.md",
+      "norm_label": "backup-restore.md"
+    },
+    {
+      "label": "Backup and restore guide",
+      "file_type": "document",
+      "source_file": "docs/operations/backup-restore.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_operations_backup_restore_backup_and_restore_guide",
+      "community": 198,
+      "community_name": "backup-restore.md",
+      "norm_label": "backup and restore guide"
+    },
+    {
+      "label": "incident-response.md",
+      "file_type": "document",
+      "source_file": "docs/operations/incident-response.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_operations_incident_response",
+      "community": 199,
+      "community_name": "incident-response.md",
+      "norm_label": "incident-response.md"
+    },
+    {
+      "label": "Incident-response playbook",
+      "file_type": "document",
+      "source_file": "docs/operations/incident-response.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_operations_incident_response_incident_response_playbook",
+      "community": 199,
+      "community_name": "incident-response.md",
+      "norm_label": "incident-response playbook"
     },
     {
       "label": "input.tsx",
@@ -12841,6 +13633,28 @@
       "community": 20,
       "community_name": "Architecture Baseline",
       "norm_label": "workflow safety model"
+    },
+    {
+      "label": "troubleshooting.md",
+      "file_type": "document",
+      "source_file": "docs/user-guide/troubleshooting.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_user_guide_troubleshooting",
+      "community": 200,
+      "community_name": "troubleshooting.md",
+      "norm_label": "troubleshooting.md"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": "docs/user-guide/troubleshooting.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_user_guide_troubleshooting_troubleshooting",
+      "community": 200,
+      "community_name": "troubleshooting.md",
+      "norm_label": "troubleshooting"
     },
     {
       "label": "settlement-date-mismatch.md",
@@ -13723,28 +14537,6 @@
       "norm_label": "strenum"
     },
     {
-      "label": "demo_operations.py",
-      "file_type": "code",
-      "source_file": "backend/src/tradeops/application/demo_operations.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "backend_src_tradeops_application_demo_operations",
-      "community": 24,
-      "community_name": "Principal",
-      "norm_label": "demo_operations.py"
-    },
-    {
-      "label": "RuntimeError",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "backend_src_tradeops_application_demo_operations_py_runtimeerror",
-      "community": 24,
-      "community_name": "Principal",
-      "norm_label": "runtimeerror"
-    },
-    {
       "label": "UUID",
       "file_type": "code",
       "source_file": "",
@@ -13831,17 +14623,6 @@
       "community": 24,
       "community_name": "Principal",
       "norm_label": "reviewer"
-    },
-    {
-      "label": "TypedDict",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "typeddict",
-      "community": 24,
-      "community_name": "Principal",
-      "norm_label": "typeddict"
     },
     {
       "label": "websocket",
@@ -13932,17 +14713,6 @@
       "norm_label": "resolve labelled local identities or a fully validated production token."
     },
     {
-      "label": "Deterministic local operations service used by the API and offline demo.",
-      "file_type": "rationale",
-      "source_file": "backend/src/tradeops/application/demo_operations.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "backend_src_tradeops_application_demo_operations_rationale_1",
-      "community": 24,
-      "community_name": "Principal",
-      "norm_label": "deterministic local operations service used by the api and offline demo."
-    },
-    {
       "label": "Register a synthetic import, returning false for an exact replay.",
       "file_type": "rationale",
       "source_file": "backend/src/tradeops/application/demo_operations.py",
@@ -13965,17 +14735,6 @@
       "norm_label": "requested synthetic demo entity does not exist."
     },
     {
-      "label": "Requested change conflicts with current demo state.",
-      "file_type": "rationale",
-      "source_file": "backend/src/tradeops/application/demo_operations.py",
-      "source_location": "L28",
-      "_origin": "ast",
-      "id": "backend_src_tradeops_application_demo_operations_rationale_28",
-      "community": 24,
-      "community_name": "Principal",
-      "norm_label": "requested change conflicts with current demo state."
-    },
-    {
       "label": "In-process replayable facade; every record is visibly synthetic.",
       "file_type": "rationale",
       "source_file": "backend/src/tradeops/application/demo_operations.py",
@@ -13985,17 +14744,6 @@
       "community": 24,
       "community_name": "Principal",
       "norm_label": "in-process replayable facade; every record is visibly synthetic."
-    },
-    {
-      "label": "Versioned workflow state; steps use an append reducer across checkpoints.",
-      "file_type": "rationale",
-      "source_file": "backend/src/tradeops/orchestration/graph.py",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "backend_src_tradeops_orchestration_graph_rationale_18",
-      "community": 24,
-      "community_name": "Principal",
-      "norm_label": "versioned workflow state; steps use an append reducer across checkpoints."
     },
     {
       "label": "exports.md",
@@ -14394,17 +15142,6 @@
       "norm_label": "devdependencies"
     },
     {
-      "label": "@axe-core/playwright",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L92",
-      "_origin": "ast",
-      "id": "package_devdependencies_axe_core_playwright",
-      "community": 3,
-      "community_name": "devDependencies",
-      "norm_label": "@axe-core/playwright"
-    },
-    {
       "label": "eslint-plugin-react-refresh",
       "file_type": "code",
       "source_file": "package.json",
@@ -14427,15 +15164,15 @@
       "norm_label": "jsdom"
     },
     {
-      "label": "@axe-core/playwright",
-      "file_type": "concept",
+      "label": "@vitejs/plugin-react",
+      "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L92",
+      "source_location": "L103",
       "_origin": "ast",
-      "id": "axe_core_playwright",
+      "id": "package_devdependencies_vitejs_plugin_react",
       "community": 3,
       "community_name": "devDependencies",
-      "norm_label": "@axe-core/playwright"
+      "norm_label": "@vitejs/plugin-react"
     },
     {
       "label": "eslint-plugin-react-refresh",
@@ -14458,6 +15195,17 @@
       "community": 3,
       "community_name": "devDependencies",
       "norm_label": "jsdom"
+    },
+    {
+      "label": "@vitejs/plugin-react",
+      "file_type": "concept",
+      "source_file": "package.json",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "vitejs_plugin_react",
+      "community": 3,
+      "community_name": "devDependencies",
+      "norm_label": "@vitejs/plugin-react"
     },
     {
       "label": "table.tsx",
@@ -16209,6 +16957,61 @@
       "norm_label": "hovercardcontent"
     },
     {
+      "label": "input-otp.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/input-otp.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_components_ui_input_otp",
+      "community": 7,
+      "community_name": "utils.ts",
+      "norm_label": "input-otp.tsx"
+    },
+    {
+      "label": "InputOTP",
+      "file_type": "code",
+      "source_file": "src/components/ui/input-otp.tsx",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "src_components_ui_input_otp_inputotp",
+      "community": 7,
+      "community_name": "utils.ts",
+      "norm_label": "inputotp"
+    },
+    {
+      "label": "InputOTPGroup",
+      "file_type": "code",
+      "source_file": "src/components/ui/input-otp.tsx",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "src_components_ui_input_otp_inputotpgroup",
+      "community": 7,
+      "community_name": "utils.ts",
+      "norm_label": "inputotpgroup"
+    },
+    {
+      "label": "InputOTPSeparator",
+      "file_type": "code",
+      "source_file": "src/components/ui/input-otp.tsx",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "src_components_ui_input_otp_inputotpseparator",
+      "community": 7,
+      "community_name": "utils.ts",
+      "norm_label": "inputotpseparator"
+    },
+    {
+      "label": "InputOTPSlot",
+      "file_type": "code",
+      "source_file": "src/components/ui/input-otp.tsx",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "src_components_ui_input_otp_inputotpslot",
+      "community": 7,
+      "community_name": "utils.ts",
+      "norm_label": "inputotpslot"
+    },
+    {
       "label": "popover.tsx",
       "file_type": "code",
       "source_file": "src/components/ui/popover.tsx",
@@ -16858,6 +17661,28 @@
       "norm_label": "graphify reference: incremental update and cluster-only"
     },
     {
+      "label": "DATA_LICENSES.md",
+      "file_type": "document",
+      "source_file": "DATA_LICENSES.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_licenses",
+      "community": 84,
+      "community_name": "docs/README.md",
+      "norm_label": "data_licenses.md"
+    },
+    {
+      "label": "Data attribution and license review",
+      "file_type": "document",
+      "source_file": "DATA_LICENSES.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "data_licenses_data_attribution_and_license_review",
+      "community": 84,
+      "community_name": "docs/README.md",
+      "norm_label": "data attribution and license review"
+    },
+    {
       "label": "adr/README.md",
       "file_type": "document",
       "source_file": "docs/adr/README.md",
@@ -16900,28 +17725,6 @@
       "community": 84,
       "community_name": "docs/README.md",
       "norm_label": "api guide"
-    },
-    {
-      "label": "rag-design.md",
-      "file_type": "document",
-      "source_file": "docs/architecture/rag-design.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_architecture_rag_design",
-      "community": 84,
-      "community_name": "docs/README.md",
-      "norm_label": "rag-design.md"
-    },
-    {
-      "label": "RAG ingestion and retrieval design",
-      "file_type": "document",
-      "source_file": "docs/architecture/rag-design.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_architecture_rag_design_rag_ingestion_and_retrieval_design",
-      "community": 84,
-      "community_name": "docs/README.md",
-      "norm_label": "rag ingestion and retrieval design"
     },
     {
       "label": "scaling.md",
@@ -16990,26 +17793,26 @@
       "norm_label": "synthetic data methodology"
     },
     {
-      "label": "release.md",
+      "label": "deployment.md",
       "file_type": "document",
-      "source_file": "docs/development/release.md",
+      "source_file": "docs/development/deployment.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_development_release",
+      "id": "docs_development_deployment",
       "community": 84,
       "community_name": "docs/README.md",
-      "norm_label": "release.md"
+      "norm_label": "deployment.md"
     },
     {
-      "label": "Release process",
+      "label": "Deployment guide",
       "file_type": "document",
-      "source_file": "docs/development/release.md",
+      "source_file": "docs/development/deployment.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_development_release_release_process",
+      "id": "docs_development_deployment_deployment_guide",
       "community": 84,
       "community_name": "docs/README.md",
-      "norm_label": "release process"
+      "norm_label": "deployment guide"
     },
     {
       "label": "setup.md",
@@ -17034,70 +17837,48 @@
       "norm_label": "developer setup"
     },
     {
-      "label": "methodology.md",
+      "label": "baseline.md",
       "file_type": "document",
-      "source_file": "docs/evaluation/methodology.md",
+      "source_file": "docs/evaluation/baseline.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_evaluation_methodology",
+      "id": "docs_evaluation_baseline",
       "community": 84,
       "community_name": "docs/README.md",
-      "norm_label": "methodology.md"
+      "norm_label": "baseline.md"
     },
     {
-      "label": "Evaluation methodology",
+      "label": "Evaluation baseline",
       "file_type": "document",
-      "source_file": "docs/evaluation/methodology.md",
+      "source_file": "docs/evaluation/baseline.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_evaluation_methodology_evaluation_methodology",
+      "id": "docs_evaluation_baseline_evaluation_baseline",
       "community": 84,
       "community_name": "docs/README.md",
-      "norm_label": "evaluation methodology"
+      "norm_label": "evaluation baseline"
     },
     {
-      "label": "backup-restore.md",
+      "label": "runbook.md",
       "file_type": "document",
-      "source_file": "docs/operations/backup-restore.md",
+      "source_file": "docs/operations/runbook.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_operations_backup_restore",
+      "id": "docs_operations_runbook",
       "community": 84,
       "community_name": "docs/README.md",
-      "norm_label": "backup-restore.md"
+      "norm_label": "runbook.md"
     },
     {
-      "label": "Backup and restore guide",
+      "label": "Operations runbook",
       "file_type": "document",
-      "source_file": "docs/operations/backup-restore.md",
+      "source_file": "docs/operations/runbook.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "docs_operations_backup_restore_backup_and_restore_guide",
+      "id": "docs_operations_runbook_operations_runbook",
       "community": 84,
       "community_name": "docs/README.md",
-      "norm_label": "backup and restore guide"
-    },
-    {
-      "label": "incident-response.md",
-      "file_type": "document",
-      "source_file": "docs/operations/incident-response.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_operations_incident_response",
-      "community": 84,
-      "community_name": "docs/README.md",
-      "norm_label": "incident-response.md"
-    },
-    {
-      "label": "Incident-response playbook",
-      "file_type": "document",
-      "source_file": "docs/operations/incident-response.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_operations_incident_response_incident_response_playbook",
-      "community": 84,
-      "community_name": "docs/README.md",
-      "norm_label": "incident-response playbook"
+      "norm_label": "operations runbook"
     },
     {
       "label": "slo.md",
@@ -17120,6 +17901,28 @@
       "community": 84,
       "community_name": "docs/README.md",
       "norm_label": "sli/slo proposal"
+    },
+    {
+      "label": "baseline-2026-08-24.md",
+      "file_type": "document",
+      "source_file": "docs/performance/baseline-2026-08-24.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_performance_baseline_2026_08_24",
+      "community": 84,
+      "community_name": "docs/README.md",
+      "norm_label": "baseline-2026-08-24.md"
+    },
+    {
+      "label": "Local performance baseline \u2014 2026-08-24",
+      "file_type": "document",
+      "source_file": "docs/performance/baseline-2026-08-24.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_performance_baseline_2026_08_24_local_performance_baseline_2026_08_24",
+      "community": 84,
+      "community_name": "docs/README.md",
+      "norm_label": "local performance baseline \u2014 2026-08-24"
     },
     {
       "label": "product-requirements.md",
@@ -17219,28 +18022,6 @@
       "community": 84,
       "community_name": "docs/README.md",
       "norm_label": "user guide"
-    },
-    {
-      "label": "troubleshooting.md",
-      "file_type": "document",
-      "source_file": "docs/user-guide/troubleshooting.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_user_guide_troubleshooting",
-      "community": 84,
-      "community_name": "docs/README.md",
-      "norm_label": "troubleshooting.md"
-    },
-    {
-      "label": "Troubleshooting",
-      "file_type": "document",
-      "source_file": "docs/user-guide/troubleshooting.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "docs_user_guide_troubleshooting_troubleshooting",
-      "community": 84,
-      "community_name": "docs/README.md",
-      "norm_label": "troubleshooting"
     },
     {
       "label": "0002-python-runtime-and-task-queue.md",
@@ -17738,6 +18519,28 @@
       "norm_label": "rules/__init__.py"
     },
     {
+      "label": "trades.py",
+      "file_type": "code",
+      "source_file": "backend/src/tradeops/domain/trades.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "backend_src_tradeops_domain_trades",
+      "community": 99,
+      "community_name": "SettlementDatePolicy",
+      "norm_label": "trades.py"
+    },
+    {
+      "label": "ValueError",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "backend_src_tradeops_domain_trades_py_valueerror",
+      "community": 99,
+      "community_name": "SettlementDatePolicy",
+      "norm_label": "valueerror"
+    },
+    {
       "label": "test_settlement_date_rule.py",
       "file_type": "code",
       "source_file": "backend/tests/domain/test_settlement_date_rule.py",
@@ -17755,6 +18558,28 @@
       "source_location": "",
       "_origin": "ast",
       "id": "backend_tests_domain_test_settlement_date_rule_py_parametrize",
+      "community": 99,
+      "community_name": "SettlementDatePolicy",
+      "norm_label": "parametrize"
+    },
+    {
+      "label": "test_trades.py",
+      "file_type": "code",
+      "source_file": "backend/tests/domain/test_trades.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "backend_tests_domain_test_trades",
+      "community": 99,
+      "community_name": "SettlementDatePolicy",
+      "norm_label": "test_trades.py"
+    },
+    {
+      "label": "parametrize",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "backend_tests_domain_test_trades_py_parametrize",
       "community": 99,
       "community_name": "SettlementDatePolicy",
       "norm_label": "parametrize"
@@ -17802,6 +18627,39 @@
       "community": 99,
       "community_name": "SettlementDatePolicy",
       "norm_label": "return a typed mismatch finding, or ``none`` when the dates agree."
+    },
+    {
+      "label": "Immutable synthetic trade facts.",
+      "file_type": "rationale",
+      "source_file": "backend/src/tradeops/domain/trades.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "backend_src_tradeops_domain_trades_rationale_1",
+      "community": 99,
+      "community_name": "SettlementDatePolicy",
+      "norm_label": "immutable synthetic trade facts."
+    },
+    {
+      "label": "Raised when a synthetic trade violates a domain invariant.",
+      "file_type": "rationale",
+      "source_file": "backend/src/tradeops/domain/trades.py",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "backend_src_tradeops_domain_trades_rationale_15",
+      "community": 99,
+      "community_name": "SettlementDatePolicy",
+      "norm_label": "raised when a synthetic trade violates a domain invariant."
+    },
+    {
+      "label": "A versioned synthetic trade snapshot used as input to deterministic rules.",
+      "file_type": "rationale",
+      "source_file": "backend/src/tradeops/domain/trades.py",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "backend_src_tradeops_domain_trades_rationale_20",
+      "community": 99,
+      "community_name": "SettlementDatePolicy",
+      "norm_label": "a versioned synthetic trade snapshot used as input to deterministic rules."
     }
   ],
   "links": [
@@ -38990,6 +39848,50 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260825_140604_improve_readme_md_by_integrating_all_other_project.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260825_140604_improve_readme_md_by_integrating_all_other_project",
+      "target": "graphify_out_memory_query_20260825_140604_improve_readme_md_by_integrating_all_other_project_q_improve_readme_md_by_integrating_all_other_project_markdown_into_a_professional_one_stop_handbook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260825_140604_improve_readme_md_by_integrating_all_other_project.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260825_140604_improve_readme_md_by_integrating_all_other_project_q_improve_readme_md_by_integrating_all_other_project_markdown_into_a_professional_one_stop_handbook",
+      "target": "graphify_out_memory_query_20260825_140604_improve_readme_md_by_integrating_all_other_project_answer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260825_140604_improve_readme_md_by_integrating_all_other_project.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260825_140604_improve_readme_md_by_integrating_all_other_project_q_improve_readme_md_by_integrating_all_other_project_markdown_into_a_professional_one_stop_handbook",
+      "target": "graphify_out_memory_query_20260825_140604_improve_readme_md_by_integrating_all_other_project_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "graphify-out/memory/query_20260825_140604_improve_readme_md_by_integrating_all_other_project.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "graphify_out_memory_query_20260825_140604_improve_readme_md_by_integrating_all_other_project_q_improve_readme_md_by_integrating_all_other_project_markdown_into_a_professional_one_stop_handbook",
+      "target": "graphify_out_memory_query_20260825_140604_improve_readme_md_by_integrating_all_other_project_source_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "infra/terraform/aws/README.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -40355,29 +41257,579 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L101",
+      "source_location": "L353",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "readme_tradeops_copilot",
-      "target": "readme_repository_and_limits",
+      "source": "readme_ai_rag_and_agent_workflow",
+      "target": "readme_system_card",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L11",
+      "source_location": "L359",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "readme_tradeops_copilot",
-      "target": "readme_what_it_demonstrates",
+      "source": "readme_ai_rag_and_agent_workflow",
+      "target": "readme_retrieval_pipeline",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L22",
+      "source_location": "L370",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_ai_rag_and_agent_workflow",
+      "target": "readme_provider_abstraction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L381",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_ai_rag_and_agent_workflow",
+      "target": "readme_evaluation_methodology_and_baseline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L398",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_api_and_real_time_contracts",
+      "target": "readme_safe_usage_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L136",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_architecture",
+      "target": "readme_runtime_topology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L166",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_architecture",
+      "target": "readme_investigation_and_approval_sequence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L188",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_architecture",
+      "target": "readme_typed_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L211",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_architecture",
+      "target": "readme_data_relationships",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L226",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_architecture",
+      "target": "readme_ownership_and_dependency_direction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L240",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_architecture",
+      "target": "readme_failure_behavior",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L252",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_architecture",
+      "target": "readme_architecture_decisions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L267",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_architecture",
+      "target": "readme_scaling_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L828",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_contributing_support_and_conduct",
+      "target": "readme_contributing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L839",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_contributing_support_and_conduct",
+      "target": "readme_code_of_conduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L843",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_contributing_support_and_conduct",
+      "target": "readme_support",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L666",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_deployment_and_operations",
+      "target": "readme_verified_local_deployment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L684",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_deployment_and_operations",
+      "target": "readme_before_any_non_local_deployment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L697",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_deployment_and_operations",
+      "target": "readme_operations_runbook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L706",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_deployment_and_operations",
+      "target": "readme_incident_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L717",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_deployment_and_operations",
+      "target": "readme_backup_and_restore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L723",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_deployment_and_operations",
+      "target": "readme_sli_slo_proposal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L511",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_developer_workflow",
+      "target": "readme_host_prerequisites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L519",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_developer_workflow",
+      "target": "readme_bootstrap_and_run",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L536",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_developer_workflow",
+      "target": "readme_command_reference",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L559",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_developer_workflow",
+      "target": "readme_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L273",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_domain_model_and_exception_catalogue",
+      "target": "readme_core_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L283",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_domain_model_and_exception_catalogue",
+      "target": "readme_twelve_exception_families",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L302",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_domain_model_and_exception_catalogue",
+      "target": "readme_canonical_data_dictionary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L729",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_frontend_design_system_and_accessibility",
+      "target": "readme_released_design_language",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L735",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_frontend_design_system_and_accessibility",
+      "target": "readme_component_and_interaction_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L747",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_frontend_design_system_and_accessibility",
+      "target": "readme_accessibility_and_degraded_states",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L751",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_frontend_design_system_and_accessibility",
+      "target": "readme_tanstack_route_conventions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L805",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_known_limitations_and_roadmap",
+      "target": "readme_current_limitations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L814",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_known_limitations_and_roadmap",
+      "target": "readme_candidate_future_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_product_experience",
+      "target": "readme_primary_journey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_product_experience",
+      "target": "readme_application_surfaces",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L459",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_quick_start",
+      "target": "readme_prerequisites",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L467",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_quick_start",
+      "target": "readme_start_the_complete_local_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L479",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_quick_start",
+      "target": "readme_local_services",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L490",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_quick_start",
+      "target": "readme_seeded_identities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L501",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_quick_start",
+      "target": "readme_stop_the_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L420",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_security_privacy_and_threat_model",
+      "target": "readme_identity_and_authorization",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L424",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_security_privacy_and_threat_model",
+      "target": "readme_enforced_controls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L434",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_security_privacy_and_threat_model",
+      "target": "readme_threat_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L447",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_security_privacy_and_threat_model",
+      "target": "readme_privacy_and_logging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L453",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_security_privacy_and_threat_model",
+      "target": "readme_vulnerability_reporting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L318",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_synthetic_and_public_data",
+      "target": "readme_synthetic_methodology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L324",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_synthetic_and_public_data",
+      "target": "readme_public_reference_fixtures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L338",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_synthetic_and_public_data",
+      "target": "readme_deterministic_triage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L347",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_synthetic_and_public_data",
+      "target": "readme_settlement_date_mismatch_runbook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_product_experience",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L134",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_tradeops_copilot",
@@ -40388,7 +41840,73 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L49",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_table_of_contents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L271",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_domain_model_and_exception_catalogue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L316",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_synthetic_and_public_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L351",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_ai_rag_and_agent_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L391",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_api_and_real_time_contracts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L418",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_security_privacy_and_threat_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L457",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_tradeops_copilot",
@@ -40399,22 +41917,121 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L74",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_tradeops_copilot",
-      "target": "readme_providers_and_data",
+      "target": "readme_why_this_project_exists",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L78",
+      "source_location": "L509",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_tradeops_copilot",
-      "target": "readme_primary_journey",
+      "target": "readme_developer_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L575",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_ten_minute_demo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L590",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_verification_and_quality",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L642",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_performance_baseline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L664",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_deployment_and_operations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L727",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_frontend_design_system_and_accessibility",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L768",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_repository_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L803",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_known_limitations_and_roadmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L826",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_contributing_support_and_conduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L849",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_documentation_coverage",
       "confidence_score": 1.0
     },
     {
@@ -40425,7 +42042,95 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_tradeops_copilot",
-      "target": "readme_verification",
+      "target": "readme_release_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L934",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_tradeops_copilot",
+      "target": "readme_license_and_author",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L592",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_verification_and_quality",
+      "target": "readme_reproduce_the_main_gates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L603",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_verification_and_quality",
+      "target": "readme_release_evidence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L622",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_verification_and_quality",
+      "target": "readme_test_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L631",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_verification_and_quality",
+      "target": "readme_release_process",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_why_this_project_exists",
+      "target": "readme_what_the_release_demonstrates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_why_this_project_exists",
+      "target": "readme_users_and_intended_outcomes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme_why_this_project_exists",
+      "target": "readme_non_goals",
       "confidence_score": 1.0
     },
     {
@@ -48273,40 +49978,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L105",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "docs_development_deployment",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L105",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "roadmap",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L105",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "readme",
-      "target": "support",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L107",
+      "source_location": "L102",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
@@ -48317,62 +49989,128 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L107",
+      "source_location": "L102",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "contributing",
+      "target": "project_state",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L107",
+      "source_location": "L256",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "demo",
+      "target": "docs_adr_0001_modular_monolith_and_worker",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L107",
+      "source_location": "L257",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "docs_readme",
+      "target": "docs_adr_0002_python_runtime_and_task_queue",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L107",
+      "source_location": "L258",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "security",
+      "target": "docs_adr_0003_relational_persistence_and_idempotency",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L47",
+      "source_location": "L259",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "docs_architecture_overview",
+      "target": "docs_adr_0004_offline_retrieval_and_explicit_agent_graph",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L76",
+      "source_location": "L260",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_adr_0005_oidc_provider_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L261",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_adr_0006_transactional_outbox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L262",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_adr_0007_human_control_policy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L263",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_adr_0008_model_provider_abstraction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L264",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_adr_0009_observability_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L265",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_adr_0010_public_synthetic_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L336",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
@@ -48383,7 +50121,249 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L76",
+      "source_location": "L733",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "design_system_tradeops_copilot_master",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L830",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "agents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L830",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "code_of_conduct",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L860",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "contributing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L862",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "demo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L864",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "roadmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L865",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "security",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L866",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "support",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L867",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "backend_readme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L868",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "src_routes_readme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L870",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "infra_terraform_aws_readme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L879",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_readme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L880",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_product_brief",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L881",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_product_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L882",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_domain_glossary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L883",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L884",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_architecture_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L885",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_architecture_rag_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L886",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_architecture_scaling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L887",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_adr_readme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L906",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_api_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L907",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_data_data_dictionary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L908",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
@@ -48394,7 +50374,18 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L76",
+      "source_location": "L909",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_data_synthetic_methodology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L910",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
@@ -48405,18 +50396,18 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L97",
+      "source_location": "L911",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "docs_development_testing",
+      "target": "docs_evaluation_methodology",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L97",
+      "source_location": "L912",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
@@ -48427,18 +50418,84 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L97",
+      "source_location": "L913",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "docs_performance_baseline_2026_08_24",
+      "target": "docs_security_architecture",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L99",
+      "source_location": "L914",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_security_privacy_and_logging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L915",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_security_threat_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L916",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_development_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L917",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_development_testing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L918",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_development_deployment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L919",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_development_release",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L920",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
@@ -48449,11 +50506,88 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L99",
+      "source_location": "L921",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme",
-      "target": "docs_security_architecture",
+      "target": "docs_operations_slo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L922",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_operations_incident_response",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L923",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_operations_backup_restore",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L924",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_runbooks_exception_triage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L925",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_runbooks_settlement_date_mismatch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L926",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_user_guide_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L927",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_user_guide_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L928",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "readme",
+      "target": "docs_performance_baseline_2026_08_24",
       "confidence_score": 1.0
     },
     {
@@ -50498,5 +52632,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c3196de009392e216f7c6cdef1069a0cfebd4ded"
+  "built_at_commit": "a4880b1b5fca657c042faf5ba0e07d01496b7978"
 }
