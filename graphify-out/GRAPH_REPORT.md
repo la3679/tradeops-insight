@@ -1,16 +1,16 @@
 # Graph Report - tradeops-insight  (2026-08-25)
 
 ## Corpus Check
-- 259 files · ~65,922 words
+- 260 files · ~72,779 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1564 nodes · 2845 edges · 187 communities (88 shown, 99 thin omitted)
+- 1642 nodes · 2961 edges · 201 communities (100 shown, 101 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 181 edges (avg confidence: 0.52)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c3196de0`
+- Built from commit: `a4880b1b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -109,13 +109,13 @@
 - application/__init__.py
 - SettlementDatePolicy
 - configure_observability
-- build_workflow
+- WorkflowState
 - ports/__init__.py
 - worker/__init__.py
 - tradeops-copilot-backend
 - TradeOps Copilot Product Brief
 - Project state
-- CONTRIBUTING.md
+- TradeOps Copilot — agent guidelines
 - ADR 0001: Modular Monolith with a Background Worker
 - TradeOps Copilot
 - README.md
@@ -125,7 +125,7 @@
 - ADR 0003: Relational persistence and idempotency
 - ADR 0004: Offline retrieval and explicit agent graph
 - settings.tsx
-- exception-triage.md
+- Architecture
 - tools.py
 - exceptions_.$exceptionId.tsx
 - ReconciliationPolicy
@@ -137,9 +137,9 @@
 - Design System Master File
 - audit.tsx
 - build_golden_dataset
-- select.tsx
+- Deployment and operations
 - health.py
-- SyntheticTrade
+- Security, privacy, and threat model
 - session.py
 - checkpoints.py
 - test_api_security.py
@@ -151,20 +151,20 @@
 - pull_request_template.md
 - Security Policy
 - ROADMAP.md
-- DATA_LICENSES.md
-- 0005-oidc-provider-strategy.md
-- 0006-transactional-outbox.md
-- 0007-human-control-policy.md
-- 0008-model-provider-abstraction.md
-- 0009-observability-stack.md
-- 0010-public-synthetic-data.md
+- Quick start
+- Q: Improve README.md by integrating all other project Markdown into a professional one-stop handbook
+- Frontend, design system, and accessibility
+- AI, RAG, and agent workflow
+- Developer workflow
+- Synthetic and public data
+- Verification and quality
 - eslint
 - eslint-config-prettier
 - @eslint/js
 - eslint-plugin-prettier
 - eslint-plugin-react-hooks
 - globals
-- aws/README.md
+- Domain model and exception catalogue
 - jest-axe
 - @lovable.dev/vite-tanstack-config
 - nitro
@@ -180,16 +180,30 @@
 - typescript
 - typescript-eslint
 - vite
-- @vitejs/plugin-react
+- Contributing, support, and conduct
 - vitest
 - @vitest/coverage-v8
 - k6-import.js
 - k6-smoke.js
 - k6-websocket.js
 - check_docs.py
-- input-otp.tsx
-- cmdk
+- Why this project exists
+- Product experience
 - @testing-library/react
+- Known limitations and roadmap
+- @axe-core/playwright
+- class-variance-authority
+- DEMO.md
+- overview.md
+- rag-design.md
+- provenance.md
+- release.md
+- testing.md
+- methodology.md
+- system-card.md
+- backup-restore.md
+- incident-response.md
+- troubleshooting.md
 
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 231 edges
@@ -218,7 +232,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (187 total, 99 thin omitted)
+## Communities (201 total, 101 thin omitted)
 
 ### Community 0 - "routeTree.gen.ts"
 Cohesion: 0.10
@@ -226,7 +240,7 @@ Nodes (27): getRouter(), Route, Route, Route, Route, Route, Route, AboutRoute (+
 
 ### Community 1 - "cn"
 Cohesion: 0.06
-Nodes (46): AccordionContent, AccordionItem, AccordionTrigger, Avatar, AvatarFallback, AvatarImage, Card, CardContent (+38 more)
+Nodes (53): AccordionContent, AccordionItem, AccordionTrigger, Avatar, AvatarFallback, AvatarImage, Card, CardContent (+45 more)
 
 ### Community 2 - "sidebar.tsx"
 Cohesion: 0.06
@@ -234,7 +248,7 @@ Nodes (40): Input, Separator, SheetContent, SheetContentProps, SheetDescription,
 
 ### Community 3 - "devDependencies"
 Cohesion: 0.29
-Nodes (7): @axe-core/playwright, eslint-plugin-react-refresh, jsdom, devDependencies, @axe-core/playwright, eslint-plugin-react-refresh, jsdom
+Nodes (7): eslint-plugin-react-refresh, jsdom, devDependencies, eslint-plugin-react-refresh, jsdom, @vitejs/plugin-react, @vitejs/plugin-react
 
 ### Community 4 - "compilerOptions"
 Cohesion: 0.06
@@ -249,12 +263,12 @@ Cohesion: 0.12
 Nodes (21): AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter(), AlertDialogHeader(), AlertDialogOverlay, AlertDialogTitle (+13 more)
 
 ### Community 7 - "utils.ts"
-Cohesion: 0.09
-Nodes (15): Badge(), BadgeProps, badgeVariants, Checkbox, HoverCardContent, PopoverContent, Progress, Slider (+7 more)
+Cohesion: 0.08
+Nodes (19): Badge(), BadgeProps, badgeVariants, Checkbox, HoverCardContent, InputOTP, InputOTPGroup, InputOTPSeparator (+11 more)
 
 ### Community 8 - "__root.tsx"
 Cohesion: 0.12
-Nodes (12): AppFooter(), AppShell(), SideNav(), SideNavProps, DemoRoleProvider(), LovableErrorOptions, LovableEvents, reportLovableError() (+4 more)
+Nodes (12): AppFooter(), AppShell(), SideNav(), SideNavProps, StatusBar(), LovableErrorOptions, LovableEvents, reportLovableError() (+4 more)
 
 ### Community 9 - "server.ts"
 Cohesion: 0.16
@@ -286,7 +300,7 @@ Nodes (10): get_settings(), Validated process configuration with safe local defa
 
 ### Community 16 - "dependencies"
 Cohesion: 0.15
-Nodes (13): class-variance-authority, lucide-react, dependencies, class-variance-authority, lucide-react, @radix-ui/react-checkbox, @radix-ui/react-progress, react (+5 more)
+Nodes (13): cmdk, lucide-react, dependencies, cmdk, lucide-react, @radix-ui/react-checkbox, @radix-ui/react-progress, react (+5 more)
 
 ### Community 17 - "chart.tsx"
 Cohesion: 0.25
@@ -318,7 +332,7 @@ Nodes (24): For /graphify add and --watch, For /graphify query, For the commit h
 
 ### Community 24 - "Principal"
 Cohesion: 0.06
-Nodes (104): ANALYST, AUDITOR, ApprovalRequest, approve_workflow(), _audit(), audit_events(), AuditResponse, _exception() (+96 more)
+Nodes (96): ANALYST, AUDITOR, ApprovalRequest, approve_workflow(), _audit(), audit_events(), AuditResponse, _exception() (+88 more)
 
 ### Community 25 - "graphify reference: extra exports and benchmark"
 Cohesion: 0.22
@@ -362,7 +376,7 @@ Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphif
 
 ### Community 84 - "docs/README.md"
 Cohesion: 0.06
-Nodes (17): Architecture decisions, API guide, RAG ingestion and retrieval design, Scaling and evolution, Data dictionary, Synthetic data methodology, Release process, Developer setup (+9 more)
+Nodes (16): Data attribution and license review, Architecture decisions, API guide, Scaling and evolution, Data dictionary, Synthetic data methodology, Deployment guide, Developer setup (+8 more)
 
 ### Community 85 - "ADR 0002: Python runtime and durable task queue boundary"
 Cohesion: 0.40
@@ -373,16 +387,16 @@ Cohesion: 0.50
 Nodes (4): Alert, AlertDescription, AlertTitle, alertVariants
 
 ### Community 99 - "SettlementDatePolicy"
-Cohesion: 0.21
-Nodes (17): Independently testable deterministic rule families., evaluate_settlement_date(), Versioned convention supplied to the settlement-date rule., Return a typed mismatch finding, or ``None`` when the dates agree., SettlementDatePolicy, parametrize, test_explicit_holiday_is_not_a_business_day(), test_finding_id_is_deterministic_and_version_sensitive() (+9 more)
+Cohesion: 0.12
+Nodes (26): Independently testable deterministic rule families., evaluate_settlement_date(), Versioned convention supplied to the settlement-date rule., Return a typed mismatch finding, or ``None`` when the dates agree., SettlementDatePolicy, ValueError, Immutable synthetic trade facts., Raised when a synthetic trade violates a domain invariant. (+18 more)
 
 ### Community 100 - "configure_observability"
 Cohesion: 0.14
 Nodes (11): Safe telemetry composition., ApiMetrics, Low-cardinality Prometheus metrics for one API process., Own an isolated registry so application factories remain test-safe., configure_observability(), FastAPI, Structured logging and OpenTelemetry setup without recording domain payloads., Instrument non-test API processes and export traces through the local collector. (+3 more)
 
-### Community 101 - "build_workflow"
+### Community 101 - "WorkflowState"
 Cohesion: 0.07
-Nodes (31): build_workflow(), CompiledStateGraph, Explicit typed LangGraph workflow with mandatory human review before mutation., Compile the reviewed thirteen-node graph with replayable defaults., _step(), Typed workflow and provider composition., Classification, MockModelProvider (+23 more)
+Nodes (34): build_workflow(), CompiledStateGraph, Explicit typed LangGraph workflow with mandatory human review before mutation., Versioned workflow state; steps use an append reducer across checkpoints., Compile the reviewed thirteen-node graph with replayable defaults., _step(), WorkflowState, Typed workflow and provider composition. (+26 more)
 
 ### Community 106 - "TradeOps Copilot Product Brief"
 Cohesion: 0.25
@@ -392,21 +406,21 @@ Nodes (7): Data policy, First release journey, Non-goals, Purpose, Release princ
 Cohesion: 0.33
 Nodes (5): Completed handoff, Project state, Release checkpoint, Safety boundaries and limitations, Verification evidence
 
-### Community 108 - "CONTRIBUTING.md"
-Cohesion: 0.20
-Nodes (7): Coding rules, graphify, Ownership boundaries, Review requirements, TradeOps Copilot — agent guidelines, Code of Conduct, Contributing
+### Community 108 - "TradeOps Copilot — agent guidelines"
+Cohesion: 0.40
+Nodes (5): Coding rules, graphify, Ownership boundaries, Review requirements, TradeOps Copilot — agent guidelines
 
 ### Community 109 - "ADR 0001: Modular Monolith with a Background Worker"
 Cohesion: 0.33
 Nodes (5): ADR 0001: Modular Monolith with a Background Worker, Consequences, Context, Decision, Revisit when
 
 ### Community 110 - "TradeOps Copilot"
-Cohesion: 0.25
-Nodes (8): Architecture, Primary journey, Providers and data, Quick start, Repository and limits, TradeOps Copilot, Verification, What it demonstrates
+Cohesion: 0.20
+Nodes (10): API and real-time contracts, Documentation coverage, License and author, Performance baseline, Release status, Repository structure, Safe usage rules, Table of contents (+2 more)
 
 ### Community 111 - "README.md"
 Cohesion: 0.09
-Nodes (11): Demonstration script, Architecture overview, Data source and provenance guide, Deployment guide, Testing strategy, Evaluation baseline, AI system card, Operations runbook (+3 more)
+Nodes (12): Code of Conduct, Contributing, ADR 0005: OIDC provider strategy, ADR 0006: Transactional outbox and delivery, ADR 0007: Human-in-the-loop control, ADR 0008: Model-provider abstraction and fallback, ADR 0009: OpenTelemetry, Prometheus, and Grafana, ADR 0010: Public and synthetic data licensing (+4 more)
 
 ### Community 112 - "manifest.json"
 Cohesion: 0.50
@@ -417,28 +431,32 @@ Cohesion: 0.50
 Nodes (3): ADR 0003: Relational persistence and idempotency, Consequences, Decision
 
 ### Community 118 - "settings.tsx"
-Cohesion: 0.19
-Nodes (12): StatusBar(), StatusBarProps, DemoRoleContext, DemoRoleContextValue, useDemoRole(), DemoRole, demoRoles, AuditPage() (+4 more)
+Cohesion: 0.20
+Nodes (11): StatusBarProps, DemoRoleContext, DemoRoleContextValue, DemoRoleProvider(), useDemoRole(), DemoRole, demoRoles, AuditPage() (+3 more)
+
+### Community 119 - "Architecture"
+Cohesion: 0.22
+Nodes (9): Architecture, Architecture decisions, Data relationships, Failure behavior, Investigation and approval sequence, Ownership and dependency direction, Runtime topology, Scaling path (+1 more)
 
 ### Community 120 - "tools.py"
 Cohesion: 0.12
 Nodes (25): ApplyResolutionInput, ApplyResolutionOutput, calculate_settlement_date(), compare_trade_versions(), CompareTradeVersionsInput, CompareTradeVersionsOutput, FieldDifference, BaseModel (+17 more)
 
 ### Community 121 - "exceptions_.$exceptionId.tsx"
-Cohesion: 0.17
-Nodes (19): ApiError, approveWorkflow(), AuditEvent, auditSchema, exceptionListSchema, exceptionSchema, getAuditEvents(), getException() (+11 more)
+Cohesion: 0.16
+Nodes (20): ApiError, approveWorkflow(), AuditEvent, auditSchema, exceptionListSchema, exceptionSchema, getAuditEvents(), getException() (+12 more)
 
 ### Community 122 - "ReconciliationPolicy"
-Cohesion: 0.16
-Nodes (19): Dependency-free domain layer for deterministic facts and rules., evaluate_reconciliation(), Evaluate all twelve rule families without network or model calls., Versioned tolerances and freshness bounds for the catalogue., ReconciliationPolicy, _baseline(), generate_synthetic_dataset(), _inject() (+11 more)
+Cohesion: 0.13
+Nodes (22): DemoConflictError, RuntimeError, Deterministic local operations service used by the API and offline demo., Requested change conflicts with current demo state., _WorkflowSession, Dependency-free domain layer for deterministic facts and rules., Versioned tolerances and freshness bounds for the catalogue., ReconciliationPolicy (+14 more)
 
 ### Community 123 - "exceptions.tsx"
 Cohesion: 0.11
 Nodes (20): PlaceholderSectionProps, MetricTile(), MetricTileProps, PageHeader(), PageHeaderProps, Panel(), PanelProps, badgeVariants (+12 more)
 
 ### Community 124 - "ReconciliationInput"
-Cohesion: 0.20
-Nodes (17): Return the immutable synthetic trade fixture., ExceptionFinding, ExceptionSeverity, ExceptionType, StrEnum, Structured outputs from deterministic exception rules., An explainable, deterministic rule finding; never an automatic state change., ReviewRoute (+9 more)
+Cohesion: 0.19
+Nodes (19): Return the immutable synthetic trade fixture., ExceptionFinding, ExceptionSeverity, ExceptionType, StrEnum, Structured outputs from deterministic exception rules., An explainable, deterministic rule finding; never an automatic state change., ReviewRoute (+11 more)
 
 ### Community 125 - "api/app.py"
 Cohesion: 0.11
@@ -464,17 +482,17 @@ Nodes (6): EmptyState(), FrameProps, LoadingState(), PermissionDeniedState(), Sk
 Cohesion: 0.19
 Nodes (12): BaselineResult, build_golden_dataset(), GoldenCase, Versioned, deterministic mock evaluation dataset., Return exactly 50 independently named synthetic evaluation cases., Evaluate the deterministic expected routing contract without a model key., run_mock_baseline(), Deterministic evaluation datasets and runners. (+4 more)
 
-### Community 131 - "select.tsx"
-Cohesion: 0.25
-Nodes (7): SelectContent, SelectItem, SelectLabel, SelectScrollDownButton, SelectScrollUpButton, SelectSeparator, SelectTrigger
+### Community 131 - "Deployment and operations"
+Cohesion: 0.29
+Nodes (7): Backup and restore, Before any non-local deployment, Deployment and operations, Incident response, Operations runbook, SLI/SLO proposal, Verified local deployment
 
 ### Community 132 - "health.py"
 Cohesion: 0.26
 Nodes (11): HealthResponse, liveness(), BaseModel, get, Request, Process health contracts that do not probe unconfigured infrastructure., Confirm that the API process can serve requests., Confirm readiness for the currently dependency-free API. (+3 more)
 
-### Community 133 - "SyntheticTrade"
-Cohesion: 0.20
-Nodes (9): ValueError, Immutable synthetic trade facts., Raised when a synthetic trade violates a domain invariant., A versioned synthetic trade snapshot used as input to deterministic rules., SyntheticTrade, TradeValidationError, parametrize, test_synthetic_trade_accepts_fixed_precision_and_utc_facts() (+1 more)
+### Community 133 - "Security, privacy, and threat model"
+Cohesion: 0.33
+Nodes (6): Enforced controls, Identity and authorization, Privacy and logging, Security, privacy, and threat model, Threat model, Vulnerability reporting
 
 ### Community 134 - "session.py"
 Cohesion: 0.25
@@ -516,28 +534,72 @@ Nodes (3): Evidence and known limitations, Scope, Verification
 Cohesion: 0.50
 Nodes (4): Boundaries, Report a vulnerability, Security Policy, Supported version
 
+### Community 146 - "Quick start"
+Cohesion: 0.33
+Nodes (6): Local services, Prerequisites, Quick start, Seeded identities, Start the complete local stack, Stop the stack
+
+### Community 147 - "Q: Improve README.md by integrating all other project Markdown into a professional one-stop handbook"
+Cohesion: 0.40
+Nodes (4): Answer, Outcome, Q: Improve README.md by integrating all other project Markdown into a professional one-stop handbook, Source Nodes
+
+### Community 148 - "Frontend, design system, and accessibility"
+Cohesion: 0.40
+Nodes (5): Accessibility and degraded states, Component and interaction rules, Frontend, design system, and accessibility, Released design language, TanStack route conventions
+
+### Community 149 - "AI, RAG, and agent workflow"
+Cohesion: 0.40
+Nodes (5): AI, RAG, and agent workflow, Evaluation methodology and baseline, Provider abstraction, Retrieval pipeline, System card
+
+### Community 150 - "Developer workflow"
+Cohesion: 0.40
+Nodes (5): Bootstrap and run, Command reference, Developer workflow, Host prerequisites, Troubleshooting
+
+### Community 151 - "Synthetic and public data"
+Cohesion: 0.40
+Nodes (5): Deterministic triage, Public reference fixtures, Settlement-date mismatch runbook, Synthetic and public data, Synthetic methodology
+
+### Community 152 - "Verification and quality"
+Cohesion: 0.40
+Nodes (5): Release evidence, Release process, Reproduce the main gates, Test strategy, Verification and quality
+
+### Community 159 - "Domain model and exception catalogue"
+Cohesion: 0.50
+Nodes (4): Canonical data dictionary, Core terms, Domain model and exception catalogue, Twelve exception families
+
 ### Community 166 - "Q: Okay i am back you can start again and complete the project just tell me how much time will it take now and how much is already complete"
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Okay i am back you can start again and complete the project just tell me how much time will it take now and how much is already complete, Source Nodes
 
-### Community 184 - "input-otp.tsx"
-Cohesion: 0.40
-Nodes (4): InputOTP, InputOTPGroup, InputOTPSeparator, InputOTPSlot
+### Community 175 - "Contributing, support, and conduct"
+Cohesion: 0.50
+Nodes (4): Code of conduct, Contributing, Contributing, support, and conduct, Support
+
+### Community 184 - "Why this project exists"
+Cohesion: 0.50
+Nodes (4): Non-goals, Users and intended outcomes, What the release demonstrates, Why this project exists
+
+### Community 185 - "Product experience"
+Cohesion: 0.67
+Nodes (3): Application surfaces, Primary journey, Product experience
+
+### Community 187 - "Known limitations and roadmap"
+Cohesion: 0.67
+Nodes (3): Candidate future work, Current limitations, Known limitations and roadmap
 
 ## Knowledge Gaps
-- **397 isolated node(s):** `tradeops-copilot-backend`, `$schema`, `style`, `rsc`, `tsx` (+392 more)
+- **458 isolated node(s):** `tradeops-copilot-backend`, `$schema`, `style`, `rsc`, `tsx` (+453 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **99 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **101 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `cn()` connect `cn` to `audit.tsx`, `sidebar.tsx`, `select.tsx`, `pagination.tsx`, `utils.ts`, `__root.tsx`, `carousel.tsx`, `command.tsx`, `menubar.tsx`, `form.tsx`, `navigation-menu.tsx`, `chart.tsx`, `input-otp.tsx`, `exceptions.tsx`, `alert.tsx`, `table.tsx`, `breadcrumb.tsx`?**
-  _High betweenness centrality (0.042) - this node is a cross-community bridge._
+- **Why does `cn()` connect `cn` to `audit.tsx`, `sidebar.tsx`, `pagination.tsx`, `utils.ts`, `__root.tsx`, `carousel.tsx`, `command.tsx`, `menubar.tsx`, `form.tsx`, `navigation-menu.tsx`, `chart.tsx`, `exceptions.tsx`, `alert.tsx`, `table.tsx`, `breadcrumb.tsx`?**
+  _High betweenness centrality (0.040) - this node is a cross-community bridge._
 - **Why does `ReconciliationPolicy` connect `ReconciliationPolicy` to `Principal`, `models.py`, `SettlementDatePolicy`, `ReconciliationInput`?**
-  _High betweenness centrality (0.025) - this node is a cross-community bridge._
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **Why does `Settings` connect `Settings` to `health.py`, `configure_observability`, `session.py`, `checkpoints.py`, `test_api_security.py`, `test_api_operations.py`, `test_api_platform.py`, `TokenDecoder`, `config.py`, `Principal`, `api/app.py`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Are the 6 inferred relationships involving `Settings` (e.g. with `HealthResponse` and `OidcTokenDecoder`) actually correct?**
   _`Settings` has 6 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 17 inferred relationships involving `Principal` (e.g. with `ApprovalRequest` and `AuditResponse`) actually correct?**
@@ -545,4 +607,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 19 inferred relationships involving `SettlementDatePolicy` (e.g. with `ReconciliationFinding` and `ReconciliationInput`) actually correct?**
   _`SettlementDatePolicy` has 19 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `tradeops-copilot-backend`, `$schema`, `style` to the rest of the system?**
-  _397 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _458 weakly-connected nodes found - possible documentation gaps or missing edges._
