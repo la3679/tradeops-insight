@@ -1,41 +1,59 @@
-# TradeOps Insight
+# TradeOps Copilot
 
-Create a new project named "TradeOps Copilot". This first change is only the reviewed frontend foundation, not the complete application.
+Auditable agentic AI platform for triaging, investigating, and resolving synthetic fixed-income trade exceptions with deterministic controls, LangGraph, retrieval-augmented generation, human approval, and full-stack observability.
 
-Product: an independent educational portfolio operations console for investigating synthetic fixed-income trade exceptions. It is not affiliated with any financial institution, does not execute trades, and uses only synthetic/public data.
+> [!IMPORTANT]
+> TradeOps Copilot is an independent educational portfolio project built with synthetic and public data. It is not affiliated with, endorsed by, or derived from the proprietary systems of any financial institution. It does not execute trades or provide financial advice.
 
-Build only:
-- React + TypeScript strict-mode foundation using the project’s supported Vite, Tailwind, and shadcn/ui stack
-- accessible application shell with left navigation, top status bar, responsive layout, keyboard-visible focus states, and semantic landmarks
-- deep navy/slate neutral palette, restrained teal verified state, amber pending state, red only for genuine high severity
-- compact professional typography and 8-point spacing; no crypto/neon aesthetic, glassmorphism, giant marketing cards, gradients, or fake market drama
-- route structure/placeholders for Overview, Exception Queue, Knowledge, Evaluations, Observability, Audit, Settings, and About
-- a polished Overview screen with clearly labeled deterministic mock data only
-- a persistent visible portfolio disclaimer in About and a concise footer
-- reusable design tokens and small focused components
-- loading, empty, and permission-denied state primitives
-- no backend, database, authentication implementation, API secrets, financial rules, or model calls in this change
-- no casual any, no production console.log, and no invented performance/accuracy claims
+## Current status
 
-Include a concise root AGENTS.md stating that security, authorization, financial rules, and backend logic are owned outside Lovable; all Lovable output requires review and tests. Keep the change coherent and componentized.
+The repository is under active initial-release development. The reviewed frontend foundation currently provides an accessible operations shell, a deterministic synthetic overview, and honest placeholders for planned workflows. Backend, workflow, retrieval, authentication, and data capabilities are added only after their tests and architecture decisions are committed.
 
-This project was built with [Lovable](https://lovable.dev).
+See [`PROJECT_STATE.md`](PROJECT_STATE.md) for the exact phase, verified commands, known issues, and next actions.
 
-## Build with Lovable
+## Implemented foundation
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/d5b87042-8fcf-41cf-aa66-075bf21f45ba).
+- Strict TypeScript and TanStack Start/Vite application.
+- Responsive institutional operations shell with semantic navigation and skip link.
+- Deterministic synthetic overview metrics, exception table, queue lanes, and category visualization.
+- About page with clean-room scope and full disclaimer.
+- Placeholder routes that do not claim unfinished behavior.
+- Light/dark design tokens and explicit verified, pending, severe, and informational states.
+- Documented clean-room, security, review, and contribution standards.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Local frontend setup
 
-## Development
+Requirements: Node.js 22 or 24 and npm.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
+npm ci
 npm run dev
 ```
+
+Open the local URL printed by Vite. The current frontend uses checked-in deterministic mock data and requires no API key.
+
+## Quality commands
+
+```bash
+npm run format:check
+npm run lint
+npm run typecheck
+npm run build
+npm run verify
+```
+
+The root `Makefile` exposes equivalent commands for a consistent repository interface.
+
+## Scope and safety
+
+- Product brief: [`docs/product/product-brief.md`](docs/product/product-brief.md)
+- Non-goals: [`docs/product/non-goals.md`](docs/product/non-goals.md)
+- Data decisions: [`DATA_LICENSES.md`](DATA_LICENSES.md)
+- Security reporting: [`SECURITY.md`](SECURITY.md)
+- Contribution workflow: [`CONTRIBUTING.md`](CONTRIBUTING.md)
+
+All trades, memos, policies, approvals, outcomes, users, and operational metrics are synthetic. Public records may provide reference context only when provenance and current terms are recorded.
+
+## License
+
+Source code and project-authored documentation are available under the [Apache License 2.0](LICENSE). Third-party software and public data remain under their respective terms.
