@@ -9,7 +9,7 @@ description = "Typed API and worker foundation for the TradeOps Copilot portfoli
 readme = "README.md"
 requires-python = ">=3.14,<3.15"
 dependencies = [
-  "alembic==1.19.1",
+  "alembic==1.19.2",
   "celery==5.6.3",
   "faiss-cpu==1.15.0",
   "fastapi==0.141.1",
